@@ -1,0 +1,2266 @@
+@import "variables";
+@import "functions";
+@import "mixins";
+@import "normalize";
+@import "settings";
+@import "utilities";
+@import "pallette";
+@import "adjusters";
+
+// Convex and Concave
+.bg-white {
+  .concave, &.concave, .convex, &.convex {
+    box-shadow: 10px 10px 40px #d9d9d9, -10px -10px 40px #ffffff;
+  }
+
+  .convex, &.convex {
+    background: linear-gradient(145deg, #ffffff, #e6e6e6);
+  }
+
+  .concave, &.concave {
+    background: linear-gradient(145deg, #e6e6e6, #ffffff);
+  }
+}
+
+.bg-neu-fresh {
+  .concave, &.concave, .convex, &.convex {
+    box-shadow: 10px 10px 40px #568bd9, -10px -10px 40px #74bbff;
+  }
+
+  .convex, &.convex {
+    background: linear-gradient(145deg, #6caeff, #5b93e6);
+  }
+
+  .concave, &.concave {
+    background: linear-gradient(145deg, #5b93e6, #6caeff);
+  }
+}
+
+.bg-neu-note {
+  .concave, &.concave, .convex, &.convex {
+    box-shadow: 20px 20px 40px #ba463d, -20px -20px 40px #fc5e53;
+  }
+
+  .convex, &.convex {
+    background: linear-gradient(145deg, #ea584d, #c54a41);
+  }
+
+  .concave, &.concave {
+    background: linear-gradient(145deg, #c54a41, #ea584d);
+  }
+}
+
+.bg-neu-info {
+  .concave, &.concave, .convex, &.convex {
+    box-shadow: 20px 20px 40px #2f61d9, -20px -20px 40px #3f83ff;
+  }
+
+  .convex, &.convex {
+    background: linear-gradient(145deg, #3b7aff, #3267e6);
+  }
+
+  .concave, &.concave {
+    background: linear-gradient(145deg, #3267e6, #3b7aff);
+  }
+}
+
+.bg-neu-warning {
+  .concave, &.concave, .convex, &.convex {
+    box-shadow: 20px 20px 40px #d9a029, -20px -20px 40px #ffd837;
+  }
+
+  .convex, &.convex {
+    background: linear-gradient(145deg, #ffc933, #e6a92b);
+  }
+
+  .concave, &.concave {
+    background: linear-gradient(145deg, #e6a92b, #ffc933);
+  }
+}
+
+.bg-neu-success {
+  .concave, &.concave, .convex, &.convex {
+    box-shadow: 20px 20px 40px #17a274, -20px -20px 40px #1fdc9e;
+  }
+
+  .convex, &.convex {
+    background: linear-gradient(145deg, #1dcc93, #18ac7b);
+  }
+
+  .concave, &.concave {
+    background: linear-gradient(145deg, #18ac7b, #1dcc93);
+  }
+}
+
+.bg-neu-error {
+  .concave, &.concave, .convex, &.convex {
+    box-shadow: 20px 20px 40px #bf3314, -20px -20px 40px #ff451a;
+  }
+
+  .convex, &.convex {
+    background: linear-gradient(145deg, #f14019, #cb3615);
+  }
+
+  .concave, &.concave {
+    background: linear-gradient(145deg, #cb3615, #f14019);
+  }
+}
+
+.bg-neu-dark-gray {
+  .concave, &.concave, .convex, &.convex {
+    box-shadow: 20px 20px 40px #535661, -20px -20px 40px #717483;
+  }
+
+  .convex, &.convex {
+    background: linear-gradient(145deg, #696c7a, #585b67);
+  }
+
+  .concave, &.concave {
+    background: linear-gradient(145deg, #585b67, #696c7a);
+  }
+}
+
+.bg-neu-medium-gray {
+  .concave, &.concave, .convex, &.convex {
+    box-shadow: 20px 20px 40px #808189, -20px -20px 40px #adafb9;
+  }
+
+  .convex, &.convex {
+    background: linear-gradient(145deg, #a1a3ac, #878991);
+  }
+
+  .concave, &.concave {
+    background: linear-gradient(145deg, #878991, #a1a3ac);
+  }
+}
+
+.bg-neu-light-gray {
+  .concave, &.concave, .convex, &.convex {
+    box-shadow: 20px 20px 40px #c3c3c3, -20px -20px 40px #ffffff;
+  }
+
+  .convex, &.convex {
+    background: linear-gradient(145deg, #f5f5f5, #cecece);
+  }
+
+  .concave, &.concave {
+    background: linear-gradient(145deg, #cecece, #f5f5f5);
+  }
+}
+
+.bg-neu-dark {
+  .concave, &.concave, .convex, &.convex {
+    box-shadow: 20px 20px 40px #262a38, -20px -20px 40px #34384c;
+  }
+
+  .convex, &.convex {
+    background: linear-gradient(145deg, #303447, #292c3b);
+  }
+
+  .concave, &.concave {
+    background: linear-gradient(145deg, #292c3b, #303447);
+  }
+}
+
+.bg-neu-light {
+  .concave, &.concave, .convex, &.convex {
+    box-shadow: 20px 20px 40px #cbcbcb, -20px -20px 40px #ffffff;
+  }
+
+  .convex, &.convex {
+    background: linear-gradient(145deg, #ffffff, #d7d7d7);
+  }
+
+  .concave, &.concave {
+    background: linear-gradient(145deg, #d7d7d7, #ffffff);
+  }
+}
+
+.bg-neu-gray {
+  .concave, &.concave, .convex, &.convex {
+    box-shadow: 20px 20px 40px #adadb1, -20px -20px 40px #e9ebef;
+  }
+
+  .convex, &.convex {
+    background: linear-gradient(145deg, #d9dadf, #b7b8bb);
+  }
+
+  .concave, &.concave {
+    background: linear-gradient(145deg, #b7b8bb, #d9dadf);
+  }
+}
+
+.bg-gray {
+  .concave, &.concave, .convex, &.convex {
+    box-shadow: 20px 20px 40px #868686, -20px -20px 40px #b6b6b6;
+  }
+
+  .convex, &.convex {
+    background: linear-gradient(145deg, #a9a9a9, #8e8e8e);
+  }
+
+  .concave, &.concave {
+    background: linear-gradient(145deg, #8e8e8e, #a9a9a9);
+  }
+}
+
+.bg-red {
+  .concave, &.concave, .convex, &.convex {
+    box-shadow: 20px 20px 40px #cf392e, -20px -20px 40px #ff4d3e;
+  }
+
+  .convex, &.convex {
+    background: linear-gradient(145deg, #ff483a, #dc3c31);
+  }
+
+  .concave, &.concave {
+    background: linear-gradient(145deg, #dc3c31, #ff483a);
+  }
+}
+
+.bg-pink {
+  .concave, &.concave, .convex, &.convex {
+    box-shadow: 20px 20px 40px #c61a54, -20px -20px 40px #ff2372;
+  }
+
+  .convex, &.convex {
+    background: linear-gradient(145deg, #f9206a, #d21b59);
+  }
+
+  .concave, &.concave {
+    background: linear-gradient(145deg, #d21b59, #f9206a);
+  }
+}
+
+.bg-purple {
+  .concave, &.concave, .convex, &.convex {
+    box-shadow: 20px 20px 40px #852196, -20px -20px 40px #b32dca;
+  }
+
+  .convex, &.convex {
+    background: linear-gradient(145deg, #a72abc, #8c239e);
+  }
+
+  .concave, &.concave {
+    background: linear-gradient(145deg, #8c239e, #a72abc);
+  }
+}
+
+.bg-deep-purple {
+  .concave, &.concave, .convex, &.convex {
+    box-shadow: 20px 20px 40px #58319c, -20px -20px 40px #7643d2;
+  }
+
+  .convex, &.convex {
+    background: linear-gradient(145deg, #6e3ec4, #5d34a5);
+  }
+
+  .concave, &.concave {
+    background: linear-gradient(145deg, #5d34a5, #6e3ec4);
+  }
+}
+
+.bg-indigo {
+  .concave, &.concave, .convex, &.convex {
+    box-shadow: 10px 10px 40px #36459a, -10px -10px 40px #485dd0;
+  }
+
+  .convex, &.convex {
+    background: linear-gradient(145deg, #4357c2, #3949a3);
+  }
+
+  .concave, &.concave {
+    background: linear-gradient(145deg, #3949a3, #4357c2);
+  }
+}
+
+.bg-blue {
+  .concave, &.concave, .convex, &.convex {
+    box-shadow: 20px 20px 40px #1c80cf, -20px -20px 40px #26adff;
+  }
+
+  .convex, &.convex {
+    background: linear-gradient(145deg, #23a1ff, #1e87db);
+  }
+
+  .concave, &.concave {
+    background: linear-gradient(145deg, #1e87db, #23a1ff);
+  }
+}
+
+.bg-light-blue {
+  .concave, &.concave, .convex, &.convex {
+    box-shadow: 20px 20px 40px #0390cf, -20px -20px 40px #03c2ff;
+  }
+
+  .convex, &.convex {
+    background: linear-gradient(145deg, #03b5ff, #0398dc);
+  }
+
+  .concave, &.concave {
+    background: linear-gradient(145deg, #0398dc, #03b5ff);
+  }
+}
+
+.bg-cyan {
+  .concave, &.concave, .convex, &.convex {
+    box-shadow: 20px 20px 40px #00a0b4, -20px -20px 40px #00d8f4;
+  }
+
+  .convex, &.convex {
+    background: linear-gradient(145deg, #00c9e3, #00a9bf);
+  }
+
+  .concave, &.concave {
+    background: linear-gradient(145deg, #00a9bf, #00c9e3);
+  }
+}
+
+.bg-teal {
+  .concave, &.concave, .convex, &.convex {
+    box-shadow: 20px 20px 40px #008074, -20px -20px 40px #00ad9c;
+  }
+
+  .convex, &.convex {
+    background: linear-gradient(145deg, #00a192, #00877a);
+  }
+
+  .concave, &.concave {
+    background: linear-gradient(145deg, #00877a, #00a192);
+  }
+}
+
+.bg-green {
+  .concave, &.concave, .convex, &.convex {
+    box-shadow: 20px 20px 40px #419544, -20px -20px 40px #57c95c;
+  }
+
+  .convex, &.convex {
+    background: linear-gradient(145deg, #51bb56, #449e48);
+  }
+
+  .concave, &.concave {
+    background: linear-gradient(145deg, #449e48, #51bb56);
+  }
+}
+
+.bg-light-green {
+  .concave, &.concave, .convex, &.convex {
+    box-shadow: 20px 20px 40px #76a63f, -20px -20px 40px #a0e055;
+  }
+
+  .convex, &.convex {
+    background: linear-gradient(145deg, #95d14f, #7db043);
+  }
+
+  .concave, &.concave {
+    background: linear-gradient(145deg, #7db043, #95d14f);
+  }
+}
+
+.bg-lime {
+  .concave, &.concave, .convex, &.convex {
+    box-shadow: 20px 20px 40px #aebb30, -20px -20px 40px #ecfd42;
+  }
+
+  .convex, &.convex {
+    background: linear-gradient(145deg, #dbeb3d, #b9c633);
+  }
+
+  .concave, &.concave {
+    background: linear-gradient(145deg, #b9c633, #dbeb3d);
+  }
+}
+
+.bg-yellow {
+  .concave, &.concave, .convex, &.convex {
+    box-shadow: 20px 20px 40px #d9c832, -20px -20px 40px #ffff44;
+  }
+
+  .convex, &.convex {
+    background: linear-gradient(145deg, #fffb3f, #e6d435);
+  }
+
+  .concave, &.concave {
+    background: linear-gradient(145deg, #e6d435, #fffb3f);
+  }
+}
+
+.bg-amber {
+  .concave, &.concave, .convex, &.convex {
+    box-shadow: 20px 20px 40px #d9a406, -20px -20px 40px #ffde08;
+  }
+
+  .convex, &.convex {
+    background: linear-gradient(145deg, #ffcf07, #e6ae06);
+  }
+
+  .concave, &.concave {
+    background: linear-gradient(145deg, #e6ae06, #ffcf07);
+  }
+}
+
+.bg-orange {
+  .concave, &.concave, .convex, &.convex {
+    box-shadow: 20px 20px 40px #d97400, -20px -20px 40px #ff9e00;
+  }
+
+  .convex, &.convex {
+    background: linear-gradient(145deg, #ff9300, #e67b00);
+  }
+
+  .concave, &.concave {
+    background: linear-gradient(145deg, #e67b00, #ff9300);
+  }
+}
+
+.bg-deep-orange {
+  .concave, &.concave, .convex, &.convex {
+    box-shadow: 20px 20px 40px #d94a1d, -20px -20px 40px #ff6427;
+  }
+
+  .convex, &.convex {
+    background: linear-gradient(145deg, #ff5d24, #e64e1f);
+  }
+
+  .concave, &.concave {
+    background: linear-gradient(145deg, #e64e1f, #ff5d24);
+  }
+}
+
+.bg-brown {
+  .concave, &.concave, .convex, &.convex {
+    box-shadow: 20px 20px 40px #67483d, -20px -20px 40px #8b6253;
+  }
+
+  .convex, &.convex {
+    background: linear-gradient(145deg, #815b4d, #6d4d41);
+  }
+
+  .concave, &.concave {
+    background: linear-gradient(145deg, #6d4d41, #815b4d);
+  }
+}
+
+.bg-blue-gray {
+  .concave, &.concave, .convex, &.convex {
+    box-shadow: 20px 20px 40px #526a76, -20px -20px 40px #6e90a0;
+  }
+
+  .convex, &.convex {
+    background: linear-gradient(145deg, #678695, #56717d);
+  }
+
+  .concave, &.concave {
+    background: linear-gradient(145deg, #56717d, #678695);
+  }
+}
+
+// Disabled Buttons
+.bg-white, .bg-neu-fresh, .bg-neu-note, .bg-neu-info, .bg-neu-warning, .bg-neu-success, .bg-neu-error, .bg-neu-dark-gray, .bg-neu-medium-gray, .bg-neu-light-gray, .bg-neu-gray, .bg-neu-dark, .bg-neu-light, .bg-gray, .bg-red, .bg-pink, .bg-purple, .bg-deep-purple, .bg-indigo, .bg-blue, .bg-light-blue, .bg-cyan, .bg-teal, .bg-green, .bg-light-green, .bg-lime, .bg-yellow, .bg-amber, .bg-orange, .bg-deep-orange, .bg-brown, .bg-blue-gray {
+  button, .button, input[type="submit"], input[type="button"] {
+    &:disabled {
+      background: $neu-transparent;
+      box-shadow: 20px 20px 40px #c3c3c4, -20px -20px 40px #ffffff;
+    }
+  }
+}
+
+// Placeholders, Panel (inheritance), Shadows, Card (inheritance)
+.bg-white {
+  @include placeholder(white);
+
+  input:disabled::placeholder, textarea:disabled::placeholder, textarea:disabled::placeholder {
+    text-decoration: line-through;
+    color: #333;
+  }
+
+  .panel, .shadow-white, .card {
+    box-shadow: 10px 10px 40px #d9d9d9, -10px -10px 40px #ffffff;
+  }
+
+  input, textarea {
+    box-shadow: inset 10px 10px 40px #d9d9d9, inset -10px -10px 40px #ffffff;
+
+    &:disabled {
+      background-color: $neu-transparent;
+    }
+  }
+
+  button, .button, input[type="button"], input[type="submit"] {
+
+    background: #ffffff;
+    box-shadow: 10px 10px 40px #d9d9d9, -10px -10px 40px #ffffff;
+
+    &:focus {
+      background: #ffffff;
+      box-shadow: inset 10px 10px 40px #d9d9d9, inset -10px -10px 40px #ffffff;
+    }
+
+    &.convex {
+      background: linear-gradient(145deg, #ffffff, #e6e6e6);
+      box-shadow: 10px 10px 40px #d9d9d9, -10px -10px 40px #ffffff;
+
+      &:focus {
+        background: linear-gradient(145deg, #e6e6e6, #ffffff);
+      }
+    }
+  }
+}
+
+.bg-neu-dark {
+  @include placeholder($neu-dark);
+
+  input:disabled::placeholder, textarea:disabled::placeholder {
+    text-decoration: line-through;
+    color: #333;
+  }
+
+  .panel, .shadow-neu-dark, .card {
+    box-shadow: 10px 10px 40px #262a38, -10px -10px 40px #34384c;
+  }
+
+  input, textarea {
+    box-shadow: inset 10px 10px 40px #262a38, inset -10px -10px 40px #34384c;
+
+    &:disabled {
+      background-color: $neu-transparent;
+    }
+  }
+
+  button, .button, input[type="button"], input[type="submit"] {
+
+    background: $neu-dark;
+    box-shadow: 10px 10px 40px #262a38, -10px -10px 40px #34384c;
+
+    &:focus {
+      background: $neu-dark;
+      box-shadow: inset 10px 10px 40px #262a38, inset -10px -10px 40px #34384c;
+    }
+
+    &.convex {
+      background: linear-gradient(145deg, #303447, #292c3b);
+      box-shadow: 20px 20px 40px #262a38, -20px -20px 40px #34384c;
+
+      &:focus {
+        background: linear-gradient(145deg, #292c3b, #303447);
+      }
+    }
+  }
+}
+
+.bg-neu-dark-gray {
+  @include placeholder($neu-dark-gray);
+
+  input:disabled::placeholder, textarea:disabled::placeholder {
+    text-decoration: line-through;
+    color: #333;
+  }
+
+  .panel, .shadow-neu-dark-gray, .card-gray {
+    box-shadow: 10px 10px 40px #535661, -10px -10px 40px #717483;
+  }
+
+  input, textarea {
+    box-shadow: inset 10px 10px 40px #535661, inset -10px -10px 40px #717483;
+
+    &:disabled {
+      background-color: $neu-transparent;
+    }
+  }
+
+  button, .button, input[type="button"], input[type="submit"] {
+
+    background: $neu-dark-gray;
+    box-shadow: 10px 10px 40px #535661, -10px -10px 40px #717483;
+
+    &:focus {
+      background: $neu-dark-gray;
+      box-shadow: inset 10px 10px 40px #535661, inset -10px -10px 40px #717483;
+    }
+
+    &.convex {
+      background: linear-gradient(145deg, #696c7a, #585b67);
+      box-shadow: 20px 20px 40px #535661, -20px -20px 40px #717483;
+
+      &:focus {
+        background: linear-gradient(145deg, #585b67, #696c7a);
+      }
+    }
+  }
+}
+
+.bg-neu-gray {
+  @include placeholder($neu-gray);
+
+  input:disabled::placeholder, textarea:disabled::placeholder {
+    text-decoration: line-through;
+    color: #333;
+  }
+
+  .panel, .shadow-neu-gray, .card {
+    box-shadow: 10px 10px 40px #adadb1, -10px -10px 40px #e9ebef;
+  }
+
+  input, textarea {
+    box-shadow: inset 10px 10px 40px #adadb1, inset -10px -10px 40px #e9ebef;
+
+    &:disabled {
+      background-color: $neu-transparent;
+    }
+  }
+
+  button, .button, input[type="button"], input[type="submit"] {
+
+    background: $neu-gray;
+    box-shadow: 10px 10px 40px #adadb1, -10px -10px 40px #e9ebef;
+
+    &:focus {
+      background: $neu-gray;
+      box-shadow: inset 10px 10px 40px #adadb1, inset -10px -10px 40px #e9ebef;
+    }
+
+    &.convex {
+      background: linear-gradient(145deg, #d9dadf, #b7b8bb);
+      box-shadow: 20px 20px 40px #adadb1, -20px -20px 40px #e9ebef;
+
+      &:focus {
+        background: linear-gradient(145deg, #b7b8bb, #d9dadf);
+      }
+    }
+  }
+}
+
+.bg-neu-medium-gray {
+  @include placeholder($neu-medium-gray);
+
+  input:disabled::placeholder, textarea:disabled::placeholder {
+    text-decoration: line-through;
+    color: #333;
+  }
+
+  .panel, .shadow-neu-medium-gray, .card-gray {
+    box-shadow: 10px 10px 40px #808189, -10px -10px 40px #adafb9;
+  }
+
+  input, textarea {
+    box-shadow: inset 10px 10px 40px #808189, inset -10px -10px 40px #adafb9;
+
+    &:disabled {
+      background-color: $neu-transparent;
+    }
+  }
+
+  button, .button, input[type="button"], input[type="submit"] {
+
+    background: $neu-medium-gray;
+    box-shadow: 10px 10px 40px #808189, -10px -10px 40px #adafb9;
+
+    &:focus {
+      background: $neu-medium-gray;
+      box-shadow: inset 10px 10px 40px #808189, inset -10px -10px 40px #adafb9;
+    }
+
+    &.convex {
+      background: linear-gradient(145deg, #a1a3ac, #878991);
+      box-shadow: 20px 20px 40px #808189, -20px -20px 40px #adafb9;
+
+      &:focus {
+        background: linear-gradient(145deg, #878991, #a1a3ac);
+      }
+    }
+  }
+}
+
+.bg-neu-light-gray {
+  @include placeholder($neu-light-gray);
+
+  input:disabled::placeholder, textarea:disabled::placeholder {
+    text-decoration: line-through;
+    color: #333;
+  }
+
+  .panel, .shadow-neu-light-gray, .card-gray {
+    box-shadow: 10px 10px 40px #c3c3c4, -10px -10px 40px #ffffff;
+  }
+
+  input, textarea {
+    box-shadow: inset 10px 10px 40px #c3c3c4, inset -10px -10px 40px #ffffff;
+
+    &:disabled {
+      background-color: $neu-transparent;
+    }
+  }
+
+  button, .button, input[type="button"], input[type="submit"] {
+
+    background: $neu-light-gray;
+    box-shadow: 10px 10px 40px #c3c3c4, -10px -10px 40px #ffffff;
+
+    &:focus {
+      background: $neu-light-gray;
+      box-shadow: inset 10px 10px 40px #c3c3c4, inset -10px -10px 40px #ffffff;
+    }
+
+    &.convex {
+      background: linear-gradient(145deg, #f5f5f5, #cecece);
+      box-shadow: 20px 20px 40px #c3c3c3, -20px -20px 40px #ffffff;
+
+      &:focus {
+        background: linear-gradient(145deg, #cecece, #f5f5f5);
+      }
+    }
+  }
+}
+
+.bg-neu-error {
+  @include placeholder($neu-error);
+
+  input:disabled::placeholder, textarea:disabled::placeholder {
+    text-decoration: line-through;
+    color: #333;
+  }
+;
+
+  .panel, .shadow-neu-error, .card {
+    box-shadow: 10px 10px 40px #bf3314, -10px -10px 40px #ff451a;
+  }
+
+  input, textarea {
+    box-shadow: inset 10px 10px 40px #bf3314, inset -10px -10px 40px #ff451a;
+
+    &:disabled {
+      background-color: $neu-transparent;
+    }
+  }
+
+  button, .button, input[type="button"], input[type="submit"] {
+
+    background: $neu-error;
+    box-shadow: 10px 10px 40px #bf3314, -10px -10px 40px #ff451a;
+
+    &:focus {
+      background: $neu-error;
+      box-shadow: inset 10px 10px 40px #bf3314, inset -10px -10px 40px #ff451a;
+    }
+
+    &.convex {
+      background: linear-gradient(145deg, #f14019, #cb3615);
+      box-shadow: 20px 20px 40px #bf3314, -20px -20px 40px #ff451a;
+
+      &:focus {
+        background: linear-gradient(145deg, #cb3615, #f14019);
+      }
+    }
+  }
+}
+
+.bg-neu-success {
+  @include placeholder($neu-success);
+
+  input:disabled::placeholder, textarea:disabled::placeholder {
+    text-decoration: line-through;
+    color: #333;
+  }
+
+  .panel, .shadow-neu-success, .card {
+    box-shadow: 10px 10px 40px #17a274, -10px -10px 40px #1fdc9e;
+  }
+
+  input, textarea {
+    box-shadow: inset 10px 10px 40px #17a274, inset -10px -10px 40px #1fdc9e;
+
+    &:disabled {
+      background-color: $neu-transparent;
+    }
+  }
+
+  button, .button, input[type="button"], input[type="submit"] {
+
+    background: $neu-success;
+    box-shadow: 10px 10px 40px #17a274, -10px -10px 40px #1fdc9e;
+
+
+    &:focus {
+      background: $neu-success;
+      box-shadow: inset 10px 10px 40px #17a274, inset -10px -10px 40px #1fdc9e;
+    }
+
+    &.convex {
+      background: linear-gradient(145deg, #1dcc93, #18ac7b);
+      box-shadow: 20px 20px 40px #17a274, -20px -20px 40px #1fdc9e;
+
+      &:focus {
+        background: linear-gradient(145deg, #18ac7b, #1dcc93);
+      }
+    }
+  }
+}
+
+.bg-neu-warning {
+  @include placeholder($neu-warning);
+
+  input:disabled::placeholder, textarea:disabled::placeholder {
+    text-decoration: line-through;
+    color: #333;
+  }
+
+  .panel, .shadow-neu-warning, .card {
+    box-shadow: 10px 10px 40px #d9a029, -10px -10px 40px #ffd837;
+  }
+
+  input, textarea {
+    box-shadow: inset 10px 10px 40px #d9a029, inset -10px -10px 40px #ffd837;
+
+    &:disabled {
+      background-color: $neu-transparent;
+    }
+
+  }
+
+  button, .button, input[type="button"], input[type="submit"] {
+
+    background: $neu-warning;
+    box-shadow: 10px 10px 40px #d9a029, -10px -10px 40px #ffd837;
+
+    &:focus {
+      background: $neu-warning;
+      box-shadow: inset 10px 10px 40px #d9a029, inset -10px -10px 40px #ffd837;
+    }
+
+    &.convex {
+      background: linear-gradient(145deg, #ffc933, #e6a92b);
+      box-shadow: 20px 20px 40px #d9a029, -20px -20px 40px #ffd837;
+
+      &:focus {
+        background: linear-gradient(145deg, #e6a92b, #ffc933);
+      }
+    }
+  }
+}
+
+.bg-neu-info {
+  @include placeholder($neu-info);
+
+  input:disabled::placeholder, textarea:disabled::placeholder {
+    text-decoration: line-through;
+    color: #333;
+  }
+
+  .panel, .shadow-neu-info, .card {
+    box-shadow: 10px 10px 40px #2f61d9, -10px -10px 40px #3f83ff;
+  }
+
+  input, textarea {
+    box-shadow: inset 10px 10px 40px #2f61d9, inset -10px -10px 40px #3f83ff;
+
+    &:disabled {
+      background-color: $neu-transparent;
+    }
+
+  }
+
+  button, .button, input[type="button"], input[type="submit"] {
+
+    background: $neu-info;
+    box-shadow: 10px 10px 40px #2f61d9, -10px -10px 40px #3f83ff;
+
+    &:focus {
+      background: $neu-info;
+      box-shadow: inset 10px 10px 40px #2f61d9, inset -10px -10px 40px #3f83ff;
+    }
+
+    &.convex {
+      background: linear-gradient(145deg, #3b7aff, #3267e6);
+      box-shadow: 20px 20px 40px #2f61d9, -20px -20px 40px #3f83ff;
+
+      &:focus {
+        background: linear-gradient(145deg, #3267e6, #3b7aff);
+      }
+    }
+  }
+}
+
+.bg-neu-note {
+  @include placeholder($neu-note);
+
+  input:disabled::placeholder, textarea:disabled::placeholder {
+    text-decoration: line-through;
+    color: #333;
+  }
+
+  .panel, .shadow-neu-note, .card {
+    box-shadow: 10px 10px 40px #ba463d, -10px -10px 40px #fc5e53;
+  }
+
+  input, textarea {
+    box-shadow: inset 10px 10px 40px #ba463d, inset -10px -10px 40px #fc5e53;
+
+    &:disabled {
+      background-color: $neu-transparent;
+    }
+  }
+
+  button, .button, input[type="button"], input[type="submit"] {
+
+    background: $neu-note;
+    box-shadow: 10px 10px 40px #ba463d, -10px -10px 40px #fc5e53;
+
+    &:focus {
+      background: $neu-note;
+      box-shadow: inset 10px 10px 40px #ba463d, inset -10px -10px 40px #fc5e53;
+    }
+
+    &.convex {
+      background: linear-gradient(145deg, #ea584d, #c54a41);
+      box-shadow: 20px 20px 40px #ba463d, -20px -20px 40px #fc5e53;
+
+      &:focus {
+        background: linear-gradient(145deg, #c54a41, #ea584d);
+      }
+    }
+  }
+}
+
+.bg-neu-fresh {
+  @include placeholder($neu-fresh);
+
+  input:disabled::placeholder, textarea:disabled::placeholder {
+    text-decoration: line-through;
+    color: #333;
+  }
+
+  .panel, .shadow-neu-fresh, .card {
+    box-shadow: 10px 10px 40px #568bd9, -10px -10px 40px #74bbff;
+  }
+
+  input, textarea {
+    box-shadow: inset 10px 10px 40px #568bd9, inset -10px -10px 40px #74bbff;
+
+    &:disabled {
+      background-color: $neu-transparent;
+    }
+  }
+
+  button, .button, input[type="button"], input[type="submit"] {
+
+    background: #65a3ff;
+    box-shadow: 10px 10px 40px #568bd9, -10px -10px 40px #74bbff;
+
+    &:focus {
+      background: #65a3ff;
+      box-shadow: inset 10px 10px 40px #568bd9, inset -10px -10px 40px #74bbff;
+    }
+
+    &.convex {
+      background: linear-gradient(145deg, #6caeff, #5b93e6);
+      box-shadow: 10px 10px 40px #568bd9, -10px -10px 40px #74bbff;
+
+      &:focus {
+        background: linear-gradient(145deg, #5b93e6, #6caeff);
+      }
+    }
+  }
+}
+
+.bg-neu-light {
+  @include placeholder($neu-light);
+
+  input:disabled::placeholder, textarea:disabled::placeholder {
+    text-decoration: line-through;
+    color: #333;
+  }
+
+  .panel, .shadow-neu-light, .card {
+    box-shadow: 10px 10px 40px #cbcbd9, -10px -10px 40px #ffffff;
+  }
+
+  input, textarea {
+    box-shadow: inset 10px 10px 40px #cbcbd9, inset -10px -10px 40px #ffffff;
+
+    &:disabled {
+      background-color: $neu-transparent;
+    }
+
+  }
+
+  button, .button, input[type="button"], input[type="submit"] {
+
+    background: $neu-light;
+    box-shadow: 10px 10px 40px #cbcbd9, -10px -10px 40px #ffffff;
+
+    &:focus {
+      background: $neu-light;
+      box-shadow: inset 10px 10px 40px #cbcbd9, inset -10px -10px 40px #ffffff;
+    }
+
+    &.convex {
+      background: linear-gradient(145deg, #ffffff, #d7d7d7);
+      box-shadow: 20px 20px 40px #cbcbcb, -20px -20px 40px #ffffff;
+
+      &:focus {
+        background: linear-gradient(145deg, #d7d7d7, #ffffff);
+      }
+    }
+  }
+}
+
+.bg-red {
+  @include placeholder($red);
+
+  input:disabled::placeholder, textarea:disabled::placeholder {
+    text-decoration: line-through;
+    color: #333;
+  }
+
+  .panel, .shadow-red, .card {
+    box-shadow: 10px 10px 40px #cf392e, -10px -10px 40px #ff4d3e;
+  }
+
+  input, textarea {
+    box-shadow: inset 10px 10px 40px #cf392e, inset -10px -10px 40px #ff4d3e;
+
+    &:disabled {
+      background-color: $neu-transparent;
+    }
+  }
+
+  button, .button, input[type="button"], input[type="submit"] {
+
+    background: $red;
+    box-shadow: 10px 10px 40px #cf392e, -10px -10px 40px #ff4d3e;
+
+    &:focus {
+      background: $red;
+      box-shadow: inset 10px 10px 40px #cf392e, inset -10px -10px 40px #ff4d3e;
+    }
+
+    &.convex {
+      background: linear-gradient(145deg, #ff483a, #dc3c31);
+      box-shadow: 20px 20px 40px #cf392e, -20px -20px 40px #ff4d3e;
+
+
+      &:focus {
+        background: linear-gradient(145deg, #dc3c31, #ff483a);
+      }
+    }
+  }
+}
+
+.bg-pink {
+  @include placeholder($pink);
+
+  input:disabled::placeholder, textarea:disabled::placeholder {
+    text-decoration: line-through;
+    color: #333;
+  }
+
+  .panel, .shadow-pink, .card {
+    box-shadow: 10px 10px 40px #c61a54, -10px -10px 40px #ff2372;
+  }
+
+  input, textarea {
+    box-shadow: inset 10px 10px 40px #c61a54, inset -10px -10px 40px #ff2372;
+
+    &:disabled {
+      background-color: $neu-transparent;
+    }
+
+  }
+
+  button, .button, input[type="button"], input[type="submit"] {
+
+    background: $pink;
+    box-shadow: 10px 10px 40px #c61a54, -10px -10px 40px #ff2372;
+
+    &:focus {
+      background: $pink;
+      box-shadow: inset 10px 10px 40px #c61a54, inset -10px -10px 40px #ff2372;
+    }
+
+    &.convex {
+      background: linear-gradient(145deg, #f9206a, #d21b59);
+      box-shadow: 20px 20px 40px #c61a54, -20px -20px 40px #ff2372;
+
+      &:focus {
+        background: linear-gradient(145deg, #d21b59, #f9206a);
+      }
+    }
+  }
+}
+
+.bg-purple {
+  @include placeholder($purple);
+
+  input:disabled::placeholder, textarea:disabled::placeholder {
+    text-decoration: line-through;
+    color: #333;
+  }
+
+  .panel, .shadow-purple, .card {
+    box-shadow: 10px 10px 40px #852196, -10px -10px 40px #b32dca;
+  }
+
+  input, textarea {
+    box-shadow: inset 10px 10px 40px #852196, inset -10px -10px 40px #b32dca;
+
+    &:disabled {
+      background-color: $neu-transparent;
+    }
+  }
+
+  button, .button, input[type="button"], input[type="submit"] {
+
+    background: $purple;
+    box-shadow: 10px 10px 40px #852196, -10px -10px 40px #b32dca;
+
+    &:focus {
+      background: $purple;
+      box-shadow: inset 10px 10px 40px #852196, inset -10px -10px 40px #b32dca;
+    }
+
+    &.convex {
+      background: linear-gradient(145deg, #a72abc, #8c239e);
+      box-shadow: 20px 20px 40px #852196, -20px -20px 40px #b32dca;
+
+      &:focus {
+        background: linear-gradient(145deg, #8c239e, #a72abc);
+      }
+    }
+  }
+}
+
+.bg-deep-purple {
+  @include placeholder($deep-purple);
+
+  input:disabled::placeholder, textarea:disabled::placeholder {
+    text-decoration: line-through;
+    color: #333;
+  }
+
+  .panel, .shadow-dee, .card-purple {
+    box-shadow: 10px 10px 40px #58319c, -10px -10px 40px #7643d2;
+  }
+
+  input, textarea {
+    box-shadow: inset 10px 10px 40px #58319c, inset -10px -10px 40px #7643d2;
+
+    &:disabled {
+      background-color: $neu-transparent;
+    }
+  }
+
+  button, .button, input[type="button"], input[type="submit"] {
+
+    background: $deep-purple;
+    box-shadow: 10px 10px 40px #58319c, -10px -10px 40px #7643d2;
+
+    &:focus {
+      background: $deep-purple;
+      box-shadow: inset 10px 10px 40px #58319c, inset -10px -10px 40px #7643d2;
+    }
+
+    &.convex {
+      background: linear-gradient(145deg, #6e3ec4, #5d34a5);
+      box-shadow: 20px 20px 40px #58319c, -20px -20px 40px #7643d2;
+
+      &:focus {
+        background: linear-gradient(145deg, #5d34a5, #6e3ec4);
+      }
+    }
+  }
+}
+
+.bg-indigo {
+  @include placeholder($indigo);
+
+  input:disabled::placeholder, textarea:disabled::placeholder {
+    text-decoration: line-through;
+    color: #333;
+  }
+
+  .panel, .shadow-indigo, .card {
+    box-shadow: 10px 10px 40px #36459a, -10px -10px 40px #485dd0;
+  }
+
+  input, textarea {
+    box-shadow: inset 10px 10px 40px #36459a, inset -10px -10px 40px #485dd0;
+
+    &:disabled {
+      background-color: $neu-transparent;
+    }
+  }
+
+  button, .button, input[type="button"], input[type="submit"] {
+
+    background: $indigo;
+    box-shadow: 10px 10px 40px #36459a, -10px -10px 40px #485dd0;
+
+    &:focus {
+      background: $indigo;
+      box-shadow: inset 10px 10px 40px #36459a, inset -10px -10px 40px #485dd0;
+    }
+
+    &.convex {
+      background: linear-gradient(145deg, #4357c2, #3949a3);
+      box-shadow: 10px 10px 40px #36459a, -10px -10px 40px #485dd0;
+
+      &:focus {
+        background: linear-gradient(145deg, #3949a3, #4357c2);
+      }
+    }
+  }
+}
+
+.bg-blue {
+  @include placeholder($blue);
+
+  input:disabled::placeholder, textarea:disabled::placeholder {
+    text-decoration: line-through;
+    color: #333;
+  }
+
+  .panel, .shadow-blue, .card {
+    box-shadow: 10px 10px 40px #1c80cf, -10px -10px 40px #26adff;
+  }
+
+  input, textarea {
+    box-shadow: inset 10px 10px 40px #1c80cf, inset -10px -10px 40px #26adff;
+
+    &:disabled {
+      background-color: $neu-transparent;
+    }
+  }
+
+  button, .button, input[type="button"], input[type="submit"] {
+
+    background: $blue;
+    box-shadow: 10px 10px 40px #1c80cf, -10px -10px 40px #26adff;
+
+    &:focus {
+      background: $blue;
+      box-shadow: inset 10px 10px 40px #1c80cf, inset -10px -10px 40px #26adff;
+    }
+
+    &.convex {
+      background: linear-gradient(145deg, #23a1ff, #1e87db);
+      box-shadow: 20px 20px 40px #1c80cf, -20px -20px 40px #26adff;
+
+      &:focus {
+        background: linear-gradient(145deg, #1e87db, #23a1ff);
+      }
+    }
+  }
+}
+
+.bg-light-blue {
+  @include placeholder($light-blue);
+
+  input:disabled::placeholder, textarea:disabled::placeholder {
+    text-decoration: line-through;
+    color: #333;
+  }
+
+  .panel, .shadow-ligh, .card-blue {
+    box-shadow: 10px 10px 40px #0390cf, -10px -10px 40px #03c2ff;
+  }
+
+  input, textarea {
+    box-shadow: inset 10px 10px 40px #0390cf, inset -10px -10px 40px #03c2ff;
+
+    &:disabled {
+      background-color: $neu-transparent;
+    }
+
+  }
+
+  button, .button, input[type="button"], input[type="submit"] {
+
+    background: $light-blue;
+    box-shadow: 10px 10px 40px #0390cf, -10px -10px 40px #03c2ff;
+
+    &:focus {
+      background: $light-blue;
+      box-shadow: inset 10px 10px 40px #0390cf, inset -10px -10px 40px #03c2ff;
+    }
+
+    &.convex {
+      background: linear-gradient(145deg, #03b5ff, #0398dc);
+      box-shadow: 20px 20px 40px #0390cf, -20px -20px 40px #03c2ff;
+
+      &:focus {
+        background: linear-gradient(145deg, #0398dc, #03b5ff);
+      }
+    }
+  }
+}
+
+.bg-cyan {
+  @include placeholder($cyan);
+
+  input:disabled::placeholder, textarea:disabled::placeholder {
+    text-decoration: line-through;
+    color: #333;
+  }
+
+  .panel, .shadow-cyan, .card {
+    box-shadow: 10px 10px 40px #00a0b4, -10px -10px 40px #00d8f4;
+  }
+
+  input, textarea {
+    box-shadow: inset 10px 10px 40px #00a0b4, inset -10px -10px 40px #00d8f4;
+
+    &:disabled {
+      background-color: $neu-transparent;
+    }
+
+  }
+
+  button, .button, input[type="button"], input[type="submit"] {
+
+    background: $cyan;
+    box-shadow: 10px 10px 40px #00a0b4, -10px -10px 40px #00d8f4;
+
+    &:focus {
+      background: $cyan;
+      box-shadow: inset 10px 10px 40px #00a0b4, inset -10px -10px 40px #00d8f4;
+    }
+
+    &.convex {
+      background: linear-gradient(145deg, #00c9e3, #00a9bf);
+      box-shadow: 20px 20px 40px #00a0b4, -20px -20px 40px #00d8f4;
+
+      &:focus {
+        background: linear-gradient(145deg, #00a9bf, #00c9e3);
+      }
+    }
+  }
+}
+
+.bg-teal {
+  @include placeholder($teal);
+
+  input:disabled::placeholder, textarea:disabled::placeholder {
+    text-decoration: line-through;
+    color: #333;
+  }
+
+  .panel, .shadow-teal, .card {
+    box-shadow: 10px 10px 40px #008074, -10px -10px 40px #00ad9c;
+  }
+
+  input, textarea {
+    box-shadow: inset 10px 10px 40px #008074, inset -10px -10px 40px #00ad9c;
+
+    &:disabled {
+      background-color: $neu-transparent;
+    }
+  }
+
+  button, .button, input[type="button"], input[type="submit"] {
+
+    background: $teal;
+    box-shadow: 10px 10px 40px #008074, -10px -10px 40px #00ad9c;
+
+    &:focus {
+      background: $teal;
+      box-shadow: inset 10px 10px 40px #008074, inset -10px -10px 40px #00ad9c;
+    }
+
+    &.convex {
+      background: linear-gradient(145deg, #00a192, #00877a);
+      box-shadow: 20px 20px 40px #008074, -20px -20px 40px #00ad9c;
+
+      &:focus {
+        background: linear-gradient(145deg, #00877a, #00a192);
+      }
+    }
+  }
+}
+
+.bg-green {
+  @include placeholder($green);
+
+  input:disabled::placeholder, textarea:disabled::placeholder {
+    text-decoration: line-through;
+    color: #333;
+  }
+
+  .panel, .shadow-green, .card {
+    box-shadow: 10px 10px 40px #419544, -10px -10px 40px #57c95c;
+  }
+
+  input, textarea {
+    box-shadow: inset 10px 10px 40px #419544, inset -10px -10px 40px #57c95c;
+
+    &:disabled {
+      background-color: $neu-transparent;
+    }
+  }
+
+  button, .button, input[type="button"], input[type="submit"] {
+
+    background: $green;
+    box-shadow: 10px 10px 40px #419544, -10px -10px 40px #57c95c;
+
+    &:focus {
+      background: $green;
+      box-shadow: inset 10px 10px 40px #419544, inset -10px -10px 40px #57c95c;
+    }
+
+    &.convex {
+      background: linear-gradient(145deg, #51bb56, #449e48);
+      box-shadow: 20px 20px 40px #419544, -20px -20px 40px #57c95c;
+
+      &:focus {
+        background: linear-gradient(145deg, #449e48, #51bb56);
+      }
+    }
+  }
+}
+
+.bg-light-green {
+  @include placeholder($light-green);
+
+  input:disabled::placeholder, textarea:disabled::placeholder {
+    text-decoration: line-through;
+    color: #333;
+  }
+
+  .panel, .shadow-ligh, .card-green {
+    box-shadow: 10px 10px 40px #76a63f, -10px -10px 40px #a0e055;
+  }
+
+  input, textarea {
+    box-shadow: inset 10px 10px 40px #76a63f, inset -10px -10px 40px #a0e055;
+
+    &:disabled {
+      background-color: $neu-transparent;
+    }
+  }
+
+  button, .button, input[type="button"], input[type="submit"] {
+
+    background: $light-green;
+    box-shadow: 10px 10px 40px #76a63f, -10px -10px 40px #a0e055;
+
+    &:focus {
+      background: $light-green;
+      box-shadow: inset 10px 10px 40px #76a63f, inset -10px -10px 40px #a0e055;
+    }
+
+    &.convex {
+      background: linear-gradient(145deg, #95d14f, #7db043);
+      box-shadow: 20px 20px 40px #76a63f, -20px -20px 40px #a0e055;
+
+      &:focus {
+        background: linear-gradient(145deg, #7db043, #95d14f);
+      }
+    }
+  }
+}
+
+.bg-lime {
+  @include placeholder($lime);
+
+  input:disabled::placeholder, textarea:disabled::placeholder {
+    text-decoration: line-through;
+    color: #333;
+  }
+
+  .panel, .shadow-lime, .card {
+    box-shadow: 10px 10px 40px #aebb30, -10px -10px 40px #ecfd42;
+  }
+
+  input, textarea {
+    box-shadow: inset 10px 10px 40px #aebb30, inset -10px -10px 40px #ecfd42;
+
+    &:disabled {
+      background-color: $neu-transparent;
+    }
+  }
+
+  button, .button, input[type="button"], input[type="submit"] {
+
+    background: $lime;
+    box-shadow: 10px 10px 40px #aebb30, -10px -10px 40px #ecfd42;
+
+    &:focus {
+      background: $lime;
+      box-shadow: inset 10px 10px 40px #aebb30, inset -10px -10px 40px #ecfd42;
+    }
+
+    &.convex {
+      background: linear-gradient(145deg, #dbeb3d, #b9c633);
+      box-shadow: 20px 20px 40px #aebb30, -20px -20px 40px #ecfd42;
+
+      &:focus {
+        background: linear-gradient(145deg, #b9c633, #dbeb3d);
+      }
+    }
+  }
+}
+
+.bg-yellow {
+  @include placeholder($yellow);
+
+  input:disabled::placeholder, textarea:disabled::placeholder {
+    text-decoration: line-through;
+    color: #333;
+  }
+
+  .panel, .shadow-yellow, .card {
+    box-shadow: 10px 10px 40px #d9c832, -10px -10px 40px #ffff44;
+  }
+
+  input, textarea {
+    box-shadow: inset 10px 10px 40px #d9c832, inset -10px -10px 40px #ffff44;
+
+    &:disabled {
+      background-color: $neu-transparent;
+    }
+  }
+
+  button, .button, input[type="button"], input[type="submit"] {
+
+    background: $yellow;
+    box-shadow: 10px 10px 40px #d9c832, -10px -10px 40px #ffff44;
+
+    &:focus {
+      background: $yellow;
+      box-shadow: inset 10px 10px 40px #d9c832, inset -10px -10px 40px #ffff44;
+    }
+
+    &.convex {
+      background: linear-gradient(145deg, #fffb3f, #e6d435);
+      box-shadow: 20px 20px 40px #d9c832, -20px -20px 40px #ffff44;
+
+      &:focus {
+        background: linear-gradient(145deg, #e6d435, #fffb3f);
+      }
+    }
+  }
+}
+
+.bg-amber {
+  @include placeholder($amber);
+
+  input:disabled::placeholder, textarea:disabled::placeholder {
+    text-decoration: line-through;
+    color: #333;
+  }
+
+  .panel, .shadow-amber, .card {
+    box-shadow: 10px 10px 40px #d9a406, -10px -10px 40px #ffde08;
+  }
+
+  input, textarea {
+    box-shadow: inset 10px 10px 40px #d9a406, inset -10px -10px 40px #ffde08;
+
+    &:disabled {
+      background-color: $neu-transparent;
+    }
+  }
+
+  button, .button, input[type="button"], input[type="submit"] {
+
+    background: $amber;
+    box-shadow: 10px 10px 40px #d9a406, -10px -10px 40px #ffde08;
+
+    &:focus {
+      background: $amber;
+      box-shadow: inset 10px 10px 40px #d9a406, inset -10px -10px 40px #ffde08;
+    }
+
+    &.convex {
+      background: linear-gradient(145deg, #ffcf07, #e6ae06);
+      box-shadow: 20px 20px 40px #d9a406, -20px -20px 40px #ffde08;
+
+      &:focus {
+        background: linear-gradient(145deg, #e6ae06, #ffcf07);
+      }
+    }
+  }
+}
+
+.bg-orange {
+  @include placeholder($orange);
+
+  input:disabled::placeholder, textarea:disabled::placeholder {
+    text-decoration: line-through;
+    color: #333;
+  }
+
+  .panel, .shadow-orange, .card {
+    box-shadow: 10px 10px 40px #d98100, -10px -10px 40px #ffaf00;
+  }
+
+  input, textarea {
+    box-shadow: inset 10px 10px 40px #d98100, inset -10px -10px 40px #ffaf00;
+
+    &:disabled {
+      background-color: $neu-transparent;
+    }
+  }
+
+  button, .button, input[type="button"], input[type="submit"] {
+
+    background: $orange;
+    box-shadow: 10px 10px 40px #d98100, -10px -10px 40px #ffaf00;
+
+    &:focus {
+      background: $orange;
+      box-shadow: inset 10px 10px 40px #d98100, inset -10px -10px 40px #ffaf00;
+    }
+
+    &.convex {
+      background: linear-gradient(145deg, #ff9300, #e67b00);
+      box-shadow: 20px 20px 40px #d97400, -20px -20px 40px #ff9e00;
+
+      &:focus {
+        background: linear-gradient(145deg, #e67b00, #ff9300);
+      }
+    }
+  }
+}
+
+.bg-deep-orange {
+  @include placeholder($deep-orange);
+
+  input:disabled::placeholder, textarea:disabled::placeholder {
+    text-decoration: line-through;
+    color: #333;
+  }
+
+  .panel, .shadow-dee, .card-orange {
+    box-shadow: 10px 10px 40px #d94a1d, -10px -10px 40px #ff6427;
+  }
+
+  input, textarea {
+    box-shadow: inset 10px 10px 40px #d94a1d, inset -10px -10px 40px #ff6427;
+
+    &:disabled {
+      background-color: $neu-transparent;
+    }
+  }
+
+  button, .button, input[type="button"], input[type="submit"] {
+
+    background: $deep-orange;
+    box-shadow: 10px 10px 40px #d94a1d, -10px -10px 40px #ff6427;
+
+    &:focus {
+      background: $deep-orange;
+      box-shadow: inset 10px 10px 40px #d94a1d, inset -10px -10px 40px #ff6427;
+    }
+
+    &.convex {
+      background: linear-gradient(145deg, #ff5d24, #e64e1f);
+      box-shadow: 20px 20px 40px #d94a1d, -20px -20px 40px #ff6427;
+
+      &:focus {
+        background: linear-gradient(145deg, #e64e1f, #ff5d24);
+      }
+    }
+  }
+}
+
+.bg-brown {
+  @include placeholder($brown);
+
+  input:disabled::placeholder, textarea:disabled::placeholder {
+    text-decoration: line-through;
+    color: #333;
+  }
+
+  .panel, .shadow-brown, .card {
+    box-shadow: 10px 10px 40px #67483d, -10px -10px 40px #8b6253;
+  }
+
+  input, textarea {
+    box-shadow: inset 10px 10px 40px #67483d, inset -10px -10px 40px #8b6253;
+
+    &:disabled {
+      background-color: $neu-transparent;
+    }
+  }
+
+  button, .button, input[type="button"], input[type="submit"] {
+
+    background: $brown;
+    box-shadow: 10px 10px 40px #67483d, -10px -10px 40px #8b6253;
+
+    &:focus {
+      background: $brown;
+      box-shadow: inset 10px 10px 40px #67483d, inset -10px -10px 40px #8b6253;
+    }
+
+    &.convex {
+      background: linear-gradient(145deg, #815b4d, #6d4d41);
+      box-shadow: 20px 20px 40px #67483d, -20px -20px 40px #8b6253;
+
+      &:focus {
+        background: linear-gradient(145deg, #6d4d41, #815b4d);
+      }
+    }
+  }
+}
+
+.bg-gray {
+  @include placeholder($gray);
+
+  input:disabled::placeholder, textarea:disabled::placeholder {
+    text-decoration: line-through;
+    color: #333;
+  }
+
+  .panel, .shadow-gray, .card {
+    box-shadow: 10px 10px 40px #868686, -10px -10px 40px #b6b6b6;
+  }
+
+  input, textarea {
+    box-shadow: inset 10px 10px 40px #868686, inset -10px -10px 40px #b6b6b6;
+
+    &:disabled {
+      background-color: $neu-transparent;
+    }
+  }
+
+  button, .button, input[type="button"], input[type="submit"] {
+
+    background: $gray;
+    box-shadow: 10px 10px 40px #868686, -10px -10px 40px #b6b6b6;
+
+    &:focus {
+      background: $gray;
+      box-shadow: inset 10px 10px 40px #868686, inset -10px -10px 40px #b6b6b6;
+    }
+
+    &.convex {
+      background: linear-gradient(145deg, #a9a9a9, #8e8e8e);
+      box-shadow: 20px 20px 40px #868686, -20px -20px 40px #b6b6b6;
+
+      &:focus {
+        background: linear-gradient(145deg, #8e8e8e, #a9a9a9);
+      }
+    }
+  }
+}
+
+.bg-blue-gray {
+  @include placeholder($blue-gray);
+
+  input:disabled::placeholder, textarea:disabled::placeholder {
+    text-decoration: line-through;
+    color: #333;
+  }
+
+  .panel, .shadow-blue-gray, .card {
+    box-shadow: 10px 10px 40px #526a76, -10px -10px 40px #6e90a0;
+  }
+
+  input, textarea {
+    box-shadow: inset 10px 10px 40px #526a76, inset -10px -10px 40px #6e90a0;
+
+    &:disabled {
+      background-color: $neu-transparent;
+    }
+  }
+
+  button, .button, input[type="button"], input[type="submit"] {
+
+    background: $blue-gray;
+    box-shadow: 10px 10px 40px #526a76, -10px -10px 40px #6e90a0;
+
+    &:focus {
+      background: $blue-gray;
+      box-shadow: inset 10px 10px 40px #526a76, inset -10px -10px 40px #6e90a0;
+    }
+
+    &.convex {
+      background: linear-gradient(145deg, #678695, #56717d);
+      box-shadow: 20px 20px 40px #526a76, -20px -20px 40px #6e90a0;
+
+      &:focus {
+        background: linear-gradient(145deg, #56717d, #678695);
+      }
+    }
+  }
+}
+
+// Grid view classes for mobile devices
+.grid-columns-2, .grid-columns-3, .grid-columns-4, .grid-columns-5, .grid-columns-6, .grid-columns-7, .grid-columns-8 {
+  @extend .grid;
+  @include gridColumns(1);
+}
+
+
+.grid {
+  img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .grid-columns-2, .grid-columns-3, .grid-columns-4, .grid-columns-5, .grid-columns-6, .grid-columns-7, .grid-columns-8 {
+    @include gridColumns(2);
+  }
+}
+
+
+// Grid view classes for 992+ px screens
+@media only screen and (min-width: 992px) {
+  .grid-columns-2 {
+    //@extend .grid;
+    @include gridColumns(2);
+  }
+
+  .grid-columns-3 {
+    //@extend .grid;
+    @include gridColumns(3);
+  }
+
+  .grid-columns-4 {
+    //@extend .grid;
+    @include gridColumns(4);
+  }
+
+  .grid-columns-5 {
+    //@extend .grid;
+    @include gridColumns(5);
+  }
+
+  .grid-columns-6 {
+    //@extend .grid;
+    @include gridColumns(6);
+  }
+
+  .grid-columns-7 {
+    //@extend .grid;
+    @include gridColumns(7);
+  }
+
+  .grid-columns-8 {
+    //@extend .grid;
+    @include gridColumns(8);
+  }
+}
+
+// Panel (Associated with background classes)
+.panel {
+  //width: 100%;
+  //max-width: 100%;
+  border-radius: 30px;
+  padding: 2rem;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+
+  &:first-child {margin-top:0!important;}
+  &:last-child {margin-bottom:0!important;}
+
+  &.bg-white {
+    box-shadow: 10px 10px 40px #d9d9d9, -10px -10px 40px #ffffff;;
+  }
+
+  &.bg-neu-dark {
+    box-shadow: 10px 10px 40px #262a38, -10px -10px 40px #34384c;
+  }
+
+  &.bg-neu-dark-gray {
+    box-shadow: 10px 10px 40px #535661, -10px -10px 40px #717483;
+  }
+
+  &.bg-neu-medium-gray {
+    box-shadow: 10px 10px 40px #808189, -10px -10px 40px #adafb9;
+  }
+
+  &.bg-neu-gray {
+    box-shadow: 10px 10px 40px #adadb1, -10px -10px 40px #e9ebef;
+  }
+
+  &.bg-neu-light-gray {
+    box-shadow: 10px 10px 40px #c3c3c4, -10px -10px 40px #ffffff;
+  }
+
+  &.bg-neu-info {
+    box-shadow: 10px 10px 40px #2f61d9, -10px -10px 40px #3f83ff;
+  }
+
+  &.bg-neu-warning {
+    box-shadow: 10px 10px 40px #d9a029, -10px -10px 40px #ffd837;
+  }
+
+  &.bg-neu-error {
+    box-shadow: 10px 10px 40px #bf3314, -10px -10px 40px #ff451a;
+  }
+
+  &.bg-neu-success {
+    box-shadow: 10px 10px 40px #17a274, -10px -10px 40px #1fdc9e;
+  }
+
+  &.bg-neu-fresh {
+    box-shadow: 10px 10px 40px #568bd9, -10px -10px 40px #74bbff;
+  }
+
+  &.bg-neu-note {
+    box-shadow: 10px 10px 40px #ba463d, -10px -10px 40px #fc5e53;
+  }
+
+  &.bg-neu-light {
+    box-shadow: 10px 10px 40px #cbcbd9, -10px -10px 40px #ffffff;
+  }
+
+  &.bg-gray {
+    box-shadow: 10px 10px 40px #868686, -10px -10px 40px #b6b6b6;
+  }
+
+  &.bg-red {
+    box-shadow: 10px 10px 40px #cf392e, -10px -10px 40px #ff4d3e;
+  }
+
+  &.bg-pink {
+    box-shadow: 10px 10px 40px #c61a54, -10px -10px 40px #ff2372;
+  }
+
+  &.bg-purple {
+    box-shadow: 10px 10px 40px #852196, -10px -10px 40px #b32dca;
+  }
+
+  &.bg-deep-purple {
+    box-shadow: 10px 10px 40px #58319c, -10px -10px 40px #7643d2;
+  }
+
+  &.bg-indigo {
+    box-shadow: 10px 10px 40px #36459a, -10px -10px 40px #485dd0;
+  }
+
+  &.bg-blue {
+    box-shadow: 10px 10px 40px #1c80cf, -10px -10px 40px #26adff;
+  }
+
+  &.bg-light-blue {
+    box-shadow: 10px 10px 40px #0390cf, -10px -10px 40px #03c2ff;
+  }
+
+  &.bg-cyan {
+    box-shadow: 10px 10px 40px #00a0b4, -10px -10px 40px #00d8f4;
+  }
+
+  &.bg-teal {
+    box-shadow: 10px 10px 40px #008074, -10px -10px 40px #00ad9c;
+  }
+
+  &.bg-green {
+    box-shadow: 10px 10px 40px #419544, -10px -10px 40px #57c95c;
+  }
+
+  &.bg-light-green {
+    box-shadow: 10px 10px 40px #76a63f, -10px -10px 40px #a0e055;
+  }
+
+  &.bg-lime {
+    box-shadow: 10px 10px 40px #aebb30, -10px -10px 40px #ecfd42;
+  }
+
+  &.bg-yellow {
+    box-shadow: 10px 10px 40px #d9c832, -10px -10px 40px #ffff44;
+  }
+
+  &.bg-amber {
+    box-shadow: 10px 10px 40px #d9a406, -10px -10px 40px #ffde08;
+  }
+
+  &.bg-orange {
+    box-shadow: 10px 10px 40px #d98100, -10px -10px 40px #ffaf00;
+  }
+
+  &.bg-deep-orange {
+    box-shadow: 10px 10px 40px #d94a1d, -10px -10px 40px #ff6427;
+  }
+
+  &.bg-brown {
+    box-shadow: 10px 10px 40px #67483d, -10px -10px 40px #8b6253;
+  }
+
+  &.bg-blue-gray {
+    box-shadow: 10px 10px 40px #526a76, -10px -10px 40px #6e90a0;
+  }
+}
+
+//card (Associated with background classes)
+.card {
+  width: auto;
+  height: 350px;
+  border-radius: 30px;
+  padding: 1rem 1.5rem;
+  overflow: hidden;
+  overflow: -moz-hidden-unscrollable;
+  white-space: normal;
+  text-overflow: ellipsis;
+
+  &.bg-white {
+    box-shadow: 10px 10px 40px #d9d9d9, -10px -10px 40px #ffffff;;
+  }
+
+  &.bg-neu-dark {
+    box-shadow: 10px 10px 40px #262a38, -10px -10px 40px #34384c;
+  }
+
+  &.bg-neu-dark-gray {
+    box-shadow: 10px 10px 40px #535661, -10px -10px 40px #717483;
+  }
+
+  &.bg-neu-medium-gray {
+    box-shadow: 10px 10px 40px #808189, -10px -10px 40px #adafb9;
+  }
+
+  &.bg-neu-gray {
+    box-shadow: 10px 10px 40px #adadb1, -10px -10px 40px #e9ebef;
+  }
+
+  &.bg-neu-light-gray {
+    box-shadow: 10px 10px 40px #c3c3c4, -10px -10px 40px #ffffff;
+  }
+
+  &.bg-neu-info {
+    box-shadow: 10px 10px 40px #2f61d9, -10px -10px 40px #3f83ff;
+  }
+
+  &.bg-neu-warning {
+    box-shadow: 10px 10px 40px #d9a029, -10px -10px 40px #ffd837;
+  }
+
+  &.bg-neu-error {
+    box-shadow: 10px 10px 40px #bf3314, -10px -10px 40px #ff451a;
+  }
+
+  &.bg-neu-success {
+    box-shadow: 10px 10px 40px #17a274, -10px -10px 40px #1fdc9e;
+  }
+
+  &.bg-neu-fresh {
+    box-shadow: 10px 10px 40px #568bd9, -10px -10px 40px #74bbff;
+  }
+
+  &.bg-neu-note {
+    box-shadow: 10px 10px 40px #ba463d, -10px -10px 40px #fc5e53;
+  }
+
+  &.bg-neu-light {
+    box-shadow: 10px 10px 40px #cbcbd9, -10px -10px 40px #ffffff;
+  }
+
+  &.bg-gray {
+    box-shadow: 10px 10px 40px #868686, -10px -10px 40px #b6b6b6;
+  }
+
+  &.bg-red {
+    box-shadow: 10px 10px 40px #cf392e, -10px -10px 40px #ff4d3e;
+  }
+
+  &.bg-pink {
+    box-shadow: 10px 10px 40px #c61a54, -10px -10px 40px #ff2372;
+  }
+
+  &.bg-purple {
+    box-shadow: 10px 10px 40px #852196, -10px -10px 40px #b32dca;
+  }
+
+  &.bg-deep-purple {
+    box-shadow: 10px 10px 40px #58319c, -10px -10px 40px #7643d2;
+  }
+
+  &.bg-indigo {
+    box-shadow: 10px 10px 40px #36459a, -10px -10px 40px #485dd0;
+  }
+
+  &.bg-blue {
+    box-shadow: 10px 10px 40px #1c80cf, -10px -10px 40px #26adff;
+  }
+
+  &.bg-light-blue {
+    box-shadow: 10px 10px 40px #0390cf, -10px -10px 40px #03c2ff;
+  }
+
+  &.bg-cyan {
+    box-shadow: 10px 10px 40px #00a0b4, -10px -10px 40px #00d8f4;
+  }
+
+  &.bg-teal {
+    box-shadow: 10px 10px 40px #008074, -10px -10px 40px #00ad9c;
+  }
+
+  &.bg-green {
+    box-shadow: 10px 10px 40px #419544, -10px -10px 40px #57c95c;
+  }
+
+  &.bg-light-green {
+    box-shadow: 10px 10px 40px #76a63f, -10px -10px 40px #a0e055;
+  }
+
+  &.bg-lime {
+    box-shadow: 10px 10px 40px #aebb30, -10px -10px 40px #ecfd42;
+  }
+
+  &.bg-yellow {
+    box-shadow: 10px 10px 40px #d9c832, -10px -10px 40px #ffff44;
+  }
+
+  &.bg-amber {
+    box-shadow: 10px 10px 40px #d9a406, -10px -10px 40px #ffde08;
+  }
+
+  &.bg-orange {
+    box-shadow: 10px 10px 40px #d98100, -10px -10px 40px #ffaf00;
+  }
+
+  &.bg-deep-orange {
+    box-shadow: 10px 10px 40px #d94a1d, -10px -10px 40px #ff6427;
+  }
+
+  &.bg-brown {
+    box-shadow: 10px 10px 40px #67483d, -10px -10px 40px #8b6253;
+  }
+
+  &.bg-blue-gray {
+    box-shadow: 10px 10px 40px #526a76, -10px -10px 40px #6e90a0;
+  }
+}
+
+// Text Resizers
+.s-text {
+  font-size: 10px
+}
+
+.m-text {
+  font-size: 12px
+}
+
+.n-text {
+  font-size: 16px
+}
+
+.l-text {
+  font-size: 28px
+}
+
+.x-text {
+  font-size: 36px
+}
+
+.xx-text {
+  font-size: 40px
+}
+
+.xxx-text {
+  font-size: 45px
+}
+
+nav, .nav {
+  @extend .flex;
+  @extend .row;
+
+  ol, ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+  }
+
+  a {
+    text-decoration: none;
+    background: inherit;
+    color: inherit;
+  }
+
+  a, li {
+    padding: 1rem .5rem !important;
+    display: inline-block !important;
+  }
+}
+
+.grid, .flex, .row {
+  @include alignItems(center);
+}
+
+.justify-content {
+  &.center {
+    @include justifyContent(center)
+  }
+
+  &.flex-end {
+    @include justifyContent(flex-end)
+  }
+
+  &.flex-start {
+    @include justifyContent(flex-start)
+  }
+
+  &.space-between {
+    @include justifyContent(space-between)
+  }
+
+  &.space-around {
+    @include justifyContent(space-around)
+  }
+
+  &.space-evenly {
+    @include justifyContent(space-evenly)
+  }
+}
+
+.text-align {
+  &-justify {
+    text-align: justify;
+  }
+
+  &-center {
+    text-align: center;
+  }
+
+  &-right {
+    text-align: right;
+  }
+
+  &-left {
+    text-align: left;
+  }
+}
+
+.align-self {
+  &-center {
+    @include alignSelf(center);
+  }
+  &-stretch {
+    @include alignSelf(stretch);
+  }
+  &-flex-start {
+    @include alignSelf(flex-start);
+  }
+  &-flex-end {
+    @include alignSelf(flex-end);
+  }
+  &-baseline {
+    @include alignSelf(baseline);
+  }
+}
+
+.top {
+  top: 0
+}
+
+.bottom {
+  bottom: 0
+}
+
+.right {
+  right: 0
+}
+
+.left {
+  left: 0
+}
+
+.bordered {
+  border-radius: 30px;
+}

@@ -1,0 +1,15 @@
+@function setPlaceholderColor($backgroundColor) {
+  @if (lightness($backgroundColor) < 70) {
+    @return #ccc;
+  } @else {
+    @return #333;
+  }
+}
+
+@function bodyNeuEffectCondition($backgroundColor) {
+  @if $backgroundColor == white {
+    @return none;
+  } @else {
+    @return inherit;
+  }
+}

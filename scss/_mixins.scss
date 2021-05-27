@@ -1,0 +1,44 @@
+@import "functions";
+
+@mixin placeholder($color) {
+  ::placeholder {
+    color: setPlaceholderColor($color)
+  }
+}
+
+@mixin transform($property) {
+  --webkit-transform: $property;
+  -ms-transform: $property;
+  transform: $property;
+}
+
+@mixin gridColumns($number) {
+  grid-template-columns: repeat($number,1fr);
+}
+
+@mixin flexDirection($value) {
+  flex-direction: $value;
+  -ms-flex-direction: $value;
+  -webkit-flex-direction: $value;
+}
+
+@mixin alignItems($value) {
+  align-items: $value;
+  -webkit-align-items: $value;
+}
+
+@mixin justifyContent($value) {
+  justify-content: $value;
+  -webkit-justify-content: $value;
+}
+
+@mixin alignContent($value) {
+  align-content: $value;
+  -webkit-align-content: $value;
+}
+
+@mixin alignSelf($value) {
+  align-self: $value;
+  -webkit-align-self: $value;
+}
+

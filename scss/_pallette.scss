@@ -1,0 +1,398 @@
+@import "variables";
+@import "functions";
+
+/* COLORS */
+.text-white {
+  color: #ffffff;
+}
+
+.text-neu-fresh {
+  color: $neu-fresh;
+}
+
+.text-neu-note {
+  color: $neu-note;
+}
+
+.text-neu-info {
+  color: $neu-info;
+}
+
+.text-neu-warning {
+  color: $neu-warning;
+}
+
+.text-neu-success {
+  color: $neu-success;
+}
+
+.text-neu-error {
+  color: $neu-error;
+}
+
+.text-neu-transparent {
+  color: $neu-transparent;
+}
+
+.text-neu-dark-gray {
+  color: $neu-dark-gray;
+}
+
+.text-neu-medium-gray {
+  color: $neu-medium-gray;
+}
+
+.text-neu-light-gray {
+  color: $neu-light-gray;
+}
+
+.text-neu-gray {
+  color: $neu-gray;
+}
+
+.text-neu-dark {
+  color: $neu-dark;
+}
+
+.text-neu-light {
+  color: $neu-light;
+}
+
+.text-gray {
+  color: $gray;
+}
+
+.text-red {
+  color: $red;
+}
+
+.text-pink {
+  color: $pink;
+}
+
+.text-purple {
+  color: $purple;
+}
+
+.text-deep-purple {
+  color: $deep-purple;
+}
+
+.text-indigo {
+  color: $indigo;
+}
+
+.text-blue {
+  color: $blue;
+}
+
+.text-light-blue {
+  color: $light-blue;
+}
+
+.text-cyan {
+  color: $cyan;
+}
+
+.text-teal {
+  color: $teal;
+}
+
+.text-green {
+  color: $green;
+}
+
+.text-light-green {
+  color: $light-green;
+}
+
+.text-lime {
+  color: $lime;
+}
+
+.text-yellow {
+  color: $yellow;
+}
+
+.text-amber {
+  color: $amber;
+}
+
+.text-orange {
+  color: $orange;
+}
+
+.text-deep-orange {
+  color: $deep-orange;
+}
+
+.text-brown {
+  color: $brown;
+}
+
+.text-gray {
+  color: $gray;
+}
+
+.text-blue-gray {
+  color: $blue-gray;
+}
+
+/* BACKGROUND */
+.bg-white {
+  background-color: #ffffff;
+}
+
+.bg-neu-fresh {
+  background-color: $neu-fresh;
+}
+
+.bg-neu-note {
+  background-color: $neu-note;
+}
+
+.bg-neu-info {
+  background-color: $neu-info;
+}
+
+.bg-neu-warning {
+  background-color: $neu-warning;
+}
+
+.bg-neu-success {
+  background-color: $neu-success;
+}
+
+.bg-neu-error {
+  background-color: $neu-error
+}
+
+.bg-neu-dark-gray {
+  background-color: $neu-dark-gray;
+}
+
+.bg-neu-medium-gray {
+  background-color: $neu-medium-gray;
+}
+
+.bg-neu-light-gray {
+  background-color: $neu-light-gray;
+}
+
+.bg-neu-dark {
+  background-color: $neu-dark;
+}
+
+.bg-neu-light {
+  background-color: $neu-light;
+}
+
+.bg-neu-gray {
+  background: $neu-gray;
+}
+
+.bg-gray {
+  background-color: $gray;
+}
+
+.bg-red {
+  background-color: $red;
+}
+
+.bg-pink {
+  background-color: $pink;
+}
+
+.bg-purple {
+  background-color: $purple;
+}
+
+.bg-deep-purple {
+  background-color: $deep-purple;
+}
+
+.bg-indigo {
+  background-color: $indigo;
+}
+
+.bg-blue {
+  background-color: $blue;
+}
+
+.bg-light-blue {
+  background-color: $light-blue;
+}
+
+.bg-cyan {
+  background-color: $cyan;
+}
+
+.bg-teal {
+  background-color: $teal;
+}
+
+.bg-green {
+  background-color: $green;
+}
+
+.bg-light-green {
+  background-color: $light-green;
+}
+
+.bg-lime {
+  background-color: $lime;
+}
+
+.bg-yellow {
+  background-color: $yellow;
+}
+
+.bg-amber {
+  background-color: $amber;
+}
+
+.bg-orange {
+  background-color: $orange;
+}
+
+.bg-deep-orange {
+  background-color: $deep-orange;
+}
+
+.bg-brown {
+  background-color: $brown;
+}
+
+.bg-blue-gray {
+  background-color: $blue-gray;
+}
+
+// Shadows
+.shadow-white {
+  box-shadow: 10px 10px 40px #d9d9d9, -10px -10px 40px #ffffff;
+}
+
+.shadow-neu-fresh {
+  box-shadow: 10px 10px 40px #568bd9, -10px -10px 40px #74bbff;
+}
+
+.shadow-neu-note {
+  box-shadow: 10px 10px 40px #ba463d, -10px -10px 40px #fc5e53;
+}
+
+.shadow-neu-info {
+  box-shadow: 10px 10px 40px #2f61d9, -10px -10px 40px #3f83ff;
+}
+
+.shadow-neu-warning {
+  box-shadow: 10px 10px 40px #d9a029, -10px -10px 40px #ffd837;
+}
+
+.shadow-neu-success {
+  box-shadow: 10px 10px 40px #17a274, -10px -10px 40px #1fdc9e;
+}
+
+.shadow-neu-error {
+  box-shadow: 10px 10px 40px #bf3314, -10px -10px 40px #ff451a;
+}
+
+.shadow-neu-dark-gray {
+  box-shadow: 10px 10px 40px #535661, -10px -10px 40px #717483;
+}
+
+.shadow-neu-medium-gray {
+  box-shadow: 10px 10px 40px #808189, -10px -10px 40px #adafb9;
+}
+
+.shadow-neu-light-gray {
+  box-shadow: 10px 10px 40px #c3c3c4, -10px -10px 40px #ffffff;
+}
+
+.shadow-neu-dark {
+  box-shadow: 10px 10px 40px #262a38, -10px -10px 40px #34384c;
+}
+
+.shadow-neu-light {
+  box-shadow: 10px 10px 40px #cbcbd9, -10px -10px 40px #ffffff;
+}
+
+.shadow-neu-gray {
+  box-shadow: 10px 10px 40px #adadb1, -10px -10px 40px #e9ebef;
+}
+
+.shadow-red {
+  box-shadow: 10px 10px 40px #cf392e, -10px -10px 40px #ff4d3e;
+}
+
+.shadow-pink {
+  box-shadow: 10px 10px 40px #c61a54, -10px -10px 40px #ff2372;
+}
+
+.shadow-purple {
+  box-shadow: 10px 10px 40px #852196, -10px -10px 40px #b32dca;
+}
+
+.shadow-deep-purple {
+  box-shadow: 10px 10px 40px #58319c, -10px -10px 40px #7643d2;
+}
+
+.shadow-indigo {
+  box-shadow: 10px 10px 40px #36459a, -10px -10px 40px #485dd0;
+}
+
+.shadow-blue {
+  box-shadow: 10px 10px 40px #1c80cf, -10px -10px 40px #26adff;
+}
+
+.shadow-light-blue {
+  box-shadow: 10px 10px 40px #0390cf, -10px -10px 40px #03c2ff;
+}
+
+.shadow-cyan {
+  box-shadow: 10px 10px 40px #00a0b4, -10px -10px 40px #00d8f4;
+}
+
+.shadow-teal {
+  box-shadow: 10px 10px 40px #008074, -10px -10px 40px #00ad9c;
+}
+
+.shadow-green {
+  box-shadow: 10px 10px 40px #419544, -10px -10px 40px #57c95c;
+}
+
+.shadow-light-green {
+  box-shadow: 10px 10px 40px #76a63f, -10px -10px 40px #a0e055;
+}
+
+.shadow-lime {
+  box-shadow: 10px 10px 40px #aebb30, -10px -10px 40px #ecfd42;
+}
+
+.shadow-yellow {
+  box-shadow: 10px 10px 40px #d9c832, -10px -10px 40px #ffff44;
+}
+
+.shadow-amber {
+  box-shadow: 10px 10px 40px #d9a406, -10px -10px 40px #ffde08;
+}
+
+.shadow-orange {
+  box-shadow: 10px 10px 40px #d98100, -10px -10px 40px #ffaf00;
+}
+
+.shadow-deep-orange {
+  box-shadow: 10px 10px 40px #d94a1d, -10px -10px 40px #ff6427;
+}
+
+.shadow-brown {
+  box-shadow: 10px 10px 40px #67483d, -10px -10px 40px #8b6253;
+}
+
+.shadow-gray {
+  box-shadow: 10px 10px 40px #868686, -10px -10px 40px #b6b6b6;
+}
+
+.shadow-blue-gray {
+  box-shadow: 10px 10px 40px #526a76, -10px -10px 40px #6e90a0;
+}
+

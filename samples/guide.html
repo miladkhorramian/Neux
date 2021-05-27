@@ -1,0 +1,261 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>NeumorphismCSS Guide</title>
+    <link rel="stylesheet" href="nue.css">
+    <style>
+        body {
+            background: #D1D1D1;
+        }
+
+        section {
+            margin-top: 1rem;
+            padding-top: 1rem !important;
+            padding-bottom: 1rem !important;
+        }
+
+        #text-colors .text-yellow, #text-colors .text-lime, #text-colors .text-light-green, #text-colors .text-white, #text-colors .text-neu-light, #text-colors .text-neu-light-gray, #text-colors .text-neu-gray {
+            background: #777;
+            border-radius: 5px;
+            padding-left: 3px;
+        }
+
+        .grid-columns-5 div, .grid-columns-4 div, .test-div {
+            border-radius: 12px;
+            padding: 1rem .5rem;
+        }
+    </style>
+</head>
+<body>
+<nav>
+    <ul>
+        <li>link 1</li>
+        <li>link 1</li>
+        <li>link 1</li>
+        <li>link 1</li>
+    </ul>
+</nav>
+<section class="container">
+    <h1>NeumorphismCSS Complete Guide</h1>
+    <p>This markup page will notify important aspects of neu.css</p>
+</section>
+<section class="container">
+    <h2>Important Notes:</h2>
+    <br>
+    <h4>1. Neumorphism is not a new deliverance in this project</h4>
+    <p>The Neumorphism abstract has been around for quite a time and UI designers have released many design concepts on
+        multiple platforms like dribbble.com.</p>
+    <br>
+    <h4>2. Neu.css was built from SASS</h4>
+    <p>Inspired by design concepts and its predecessors, Neu.CSS was written in SASS. SASS brings pseudo-programming
+        features in writing css including functions and inheritance.</p>
+    <br>
+    <h4>3. The Neu.css file</h4>
+    <p>This page and other pages' style are based on the compiled css file but this page discusses the SASS file.</p>
+
+</section>
+<section class="container" style="">
+    <h2>Colors, backgrounds and shadows</h2>
+    <p>The _variables.scss file contains of 32 rgba color variables which includes 19 common Material colors and 13 Neu
+        colors that were extracted through experience. The defined colors have their own respective text, background
+        and shadow classes excluding the <code>neu-tranparent</code></p>
+    <p>Below you can see these colors as text shades and background colors. </p>
+    <div id="text-colors" class="mv-1">
+        <p class="text-red">This is a .text-red text.</p>
+        <p class="text-pink">This is a .text-pink text.</p>
+        <p class="text-purple">This is a .text-purple text.</p>
+        <p class="text-deep-purple">This is a .text-deep-purple text.</p>
+        <p class="text-indigo">This is a .text-indigo text.</p>
+        <p class="text-blue">This is a .text-blue text.</p>
+        <p class="text-light-blue">This is a .text-light-blue text.</p>
+        <p class="text-cyan">This is a .text-cyan text.</p>
+        <p class="text-teal">This is a .text-teal text.</p>
+        <p class="text-green">This is a .text-green text.</p>
+        <p class="text-light-green">This is a .text-light-green text.</p>
+        <p class="text-lime">This is a .text-lime text.</p>
+        <p class="text-yellow">This is a .text-yellow text.</p>
+        <p class="text-amber">This is a .text-amber text.</p>
+        <p class="text-orange">This is a .text-orange text.</p>
+        <p class="text-deep-orange">This is a .text-deep-orange text.</p>
+        <p class="text-brown">This is a .text-brown text.</p>
+        <p class="text-gray">This is a .text-gray text.</p>
+        <p class="text-blue-gray">This is a .text-blue-gray text.</p>
+        <p class="text-white">This is a .text-white text. (White is not a variable but relative classes were written to
+            deliver more convenience.)</p>
+        <p class="text-neu-dark">This is a .text-neu-dark text.</p>
+        <p class="text-neu-dark-gray">This is a .text-neu-dark-gray text.</p>
+        <p class="text-neu-medium-gray">This is a .text-neu-medium-gray text.</p>
+        <p class="text-neu-gray">This is a .text-neu-gray text.</p>
+        <p class="text-neu-light-gray">This is a .text-neu-light-gray text.</p>
+        <p class="text-neu-error">This is a .text-neu-error text.</p>
+        <p class="text-neu-success">This is a .text-neu-success text.</p>
+        <p class="text-neu-warning">This is a .text-neu-warning text.</p>
+        <p class="text-neu-info">This is a .text-neu-info text.</p>
+        <p class="text-neu-fresh">This is a .text-neu-fresh text.</p>
+        <p class="text-neu-note">This is a .text-neu-note text.</p>
+        <p class="text-neu-light">This is a .text-neu-light text.</p>
+    </div>
+    <div class="grid-columns-5 mv-1">
+        <div class="bg-red">bg-red</div>
+        <div class="bg-pink">bg-pink</div>
+        <div class="bg-purple">bg-purple</div>
+        <div class="bg-deep-purple">bg-deep-purple</div>
+        <div class="bg-indigo">bg-indigo</div>
+        <div class="bg-blue">bg-blue</div>
+        <div class="bg-light-blue">bg-light-blue</div>
+        <div class="bg-cyan">bg-cyan</div>
+        <div class="bg-teal">bg-teal</div>
+        <div class="bg-green">bg-green</div>
+        <div class="bg-light-green">bg-light-green</div>
+        <div class="bg-lime">bg-lime</div>
+        <div class="bg-yellow">bg-yellow</div>
+        <div class="bg-amber">bg-amber</div>
+        <div class="bg-orange">bg-orange</div>
+        <div class="bg-deep-orange">bg-deep-orange</div>
+        <div class="bg-brown">bg-brown</div>
+        <div class="bg-gray">bg-gray</div>
+        <div class="bg-blue-gray">bg-blue-gray</div>
+        <div class="bg-white">bg-white</div>
+        <div class="bg-neu-dark">bg-neu-dark</div>
+        <div class="bg-neu-dark-gray">bg-neu-dark-gray</div>
+        <div class="bg-neu-medium-gray m-text">bg-neu-medium-gray</div>
+        <div class="bg-neu-gray">bg-neu-gray</div>
+        <div class="bg-neu-light-gray">bg-neu-light-gray</div>
+        <div class="bg-neu-success">bg-neu-success</div>
+        <div class="bg-neu-error">bg-neu-error</div>
+        <div class="bg-neu-warning">bg-neu-warning</div>
+        <div class="bg-neu-info">bg-neu-info</div>
+        <div class="bg-neu-note">bg-neu-note</div>
+        <div class="bg-neu-fresh">bg-neu-fresh</div>
+        <div class="bg-neu-light">bg-neu-light</div>
+    </div>
+    <div class="grid-columns-4 mt-3">
+        <div class="mh-1 mv-2 shadow-red">shadow-red</div>
+        <div class="mh-1 mv-2 shadow-pink">shadow-pink</div>
+        <div class="mh-1 mv-2 shadow-purple">shadow-purple</div>
+        <div class="mh-1 mv-2 shadow-deep-purple">shadow-deep-purple</div>
+        <div class="mh-1 mv-2 shadow-indigo">shadow-indigo</div>
+        <div class="mh-1 mv-2 shadow-blue">shadow-blue</div>
+        <div class="mh-1 mv-2 shadow-light-blue">shadow-light-blue</div>
+        <div class="mh-1 mv-2 shadow-cyan">shadow-cyan</div>
+        <div class="mh-1 mv-2 shadow-teal">shadow-teal</div>
+        <div class="mh-1 mv-2 shadow-green">shadow-green</div>
+        <div class="mh-1 mv-2 shadow-light-green">shadow-light-green</div>
+        <div class="mh-1 mv-2 shadow-lime">shadow-lime</div>
+        <div class="mh-1 mv-2 shadow-yellow">shadow-yellow</div>
+        <div class="mh-1 mv-2 shadow-amber">shadow-amber</div>
+        <div class="mh-1 mv-2 shadow-orange">shadow-orange</div>
+        <div class="mh-1 mv-2 shadow-deep-orange">shadow-deep-orange</div>
+        <div class="mh-1 mv-2 shadow-brown">shadow-brown</div>
+        <div class="mh-1 mv-2 shadow-gray">shadow-gray</div>
+        <div class="mh-1 mv-2 shadow-blue-gray">shadow-blue-gray</div>
+        <div class="mh-1 mv-2 shadow-white">shadow-white</div>
+        <div class="mh-1 mv-2 shadow-neu-dark">shadow-neu-dark</div>
+        <div class="mh-1 mv-2 shadow-neu-dark-gray m-text">shadow-neu-dark-gray</div>
+        <div class="mh-1 mv-2 shadow-neu-medium-gray m-text">shadow-neu-medium-gray</div>
+        <div class="mh-1 mv-2 shadow-neu-gray">shadow-neu-gray</div>
+        <div class="mh-1 mv-2 shadow-neu-light-gray m-text">shadow-neu-light-gray</div>
+        <div class="mh-1 mv-2 test" style="transition: box-shadow 1s">shadow-neu-success</div>
+        <div class="mh-1 mv-2 shadow-neu-error">shadow-neu-error</div>
+        <div class="mh-1 mv-2 shadow-neu-warning">shadow-neu-warning</div>
+        <div class="mh-1 mv-2 shadow-neu-info">shadow-neu-info</div>
+        <div class="mh-1 mv-2 shadow-neu-note">shadow-neu-note</div>
+        <div class="mh-1 mv-2 shadow-neu-fresh">shadow-neu-fresh</div>
+        <div class="mh-1 mv-2 shadow-neu-light">shadow-neu-light</div>
+    </div>
+</section>
+<section class="container">
+    <h2>Utilizing and adjusters Classes</h2>
+    <p>Many front-end frameworks include classes to utilize. As other frameworks, Neu.css intends to let designers skip
+        the curve of creating responsive and adjustments. To achieve this goal, _adjusters.scss and _adjusters
+        include:</p>
+    <ol>
+        <li>Common display attributes like <code>.flex</code> and <code>.grid</code></li>
+        <li>Couple of classes are written to contain the elements inside; <code>.container</code> and <code>.row</code>.
+        </li>
+        <li>Two sets of column grid classes have been coded which work with containers and rows.</li>
+        <li>In addition to above, margin and padding adjusters are also available: <code>.5rem</code>, <code>1rem</code>,
+            <code>2rem</code>, <code>3rem</code>, <code>4rem</code>, <code>5rem</code>.
+        </li>
+        <li>Also, up to 8 columns are written from <code>grid-template-columns</code> css attribute for <code>display:
+            grid/ inline-grid</code> e.g. <code>.grid-columns-3</code></li>
+    </ol>
+</section>
+<section class="container">
+    <h4 class=""><code>.row</code> associated with <code>.col-n</code> (n defers from 1 to 11)</h4>
+    <div class="row mt-1">
+        <div class="col-3 test-div bg-red">col-3</div>
+        <div class="col-3 test-div bg-blue-gray">col-3</div>
+        <div class="col-3 test-div bg-green">col-3</div>
+        <div class="col-3 test-div bg-indigo">col-3</div>
+    </div>
+    <div class="row mt-1">
+        <div class="col-5 test-div bg-yellow">col-5</div>
+    </div>
+    <div class="row mt-1">
+        <div class="col-2 test-div bg-neu-success">col-2</div>
+        <div class="col-6 test-div bg-neu-dark-gray">col-6</div>
+        <div class="col-4 test-div bg-neu-fresh">col-4</div>
+    </div>
+    <div class="row mt-1">
+        <div class="col-6 test-div bg-deep-orange">col-6</div>
+        <div class="col-6 test-div bg-deep-purple">col-6</div>
+    </div>
+    <div class="row mt-1">
+        <div class="col-1 test-div bg-neu-info">col-1</div>
+        <div class="col-11 test-div bg-amber">col-11</div>
+    </div>
+    <div class="mt-2">
+        <h4><code>.grid</code> associated with <code>.grid-columns-n</code> (n defers from 2 to 8)</h4>
+        <div class="mt-1 grid-columns-2">
+            <div class="bg-lime test-div">Column</div>
+            <div class="bg-cyan test-div">Column</div>
+        </div>
+        <div class="mt-1 grid-columns-7">
+            <div class="bg-neu-fresh test-div">Column</div>
+            <div class="bg-neu-dark test-div text-white">Column</div>
+            <div class="bg-purple text-neu-gray test-div">Column</div>
+            <div class="bg-neu-medium-gray test-div">Column</div>
+            <div class="bg-neu-error test-div">Column</div>
+            <div class="bg-neu-dark-gray test-div">Column</div>
+            <div class="bg-green test-div">Column</div>
+        </div>
+        <div class="mt-1 grid-columns-3">
+            <div class="bg-green test-div">Column</div>
+            <div class="bg-blue-gray test-div text-white">Column</div>
+            <div class="bg-purple text-neu-gray test-div">Column</div>
+        </div>
+        <div class="mt-1 grid-columns-8">
+            <div class="text-white bg-neu-dark test-div">Column</div>
+            <div class="bg-white test-div">Column</div>
+            <div class="bg-neu-light test-div">Column</div>
+            <div class="bg-neu-light-gray test-div">Column</div>
+            <div class="bg-neu-gray test-div">Column</div>
+            <div class="bg-neu-medium-gray test-div">Column</div>
+            <div class="text-white bg-neu-dark-gray test-div">Column</div>
+            <div class="text-white bg-neu-dark test-div">Column</div>
+        </div>
+    </div>
+</section>
+<section>
+    <h2>Page Design; A New Approach...</h2>
+    <p>Neumorphism is a new concept in design and inherits the basic Skeumorphism design aspects but in a more modern
+        way. This neon-like fresh-looking design, significantly defers from material design provided by Google. In
+        Neumorphism, everything stands on its parent rather than float over it. The shadow classes provided in the
+        document are in due to achieve this goal.</p>
+    <p>To reach the maximum convenience, all background classes have their own set of code blocks which provide flat,
+        concave and convex elements with shadows individually. In addition, <code>.panel</code> and <code>.card</code> are also provided. Different inputs are set as <code>.concave</code> .</p>
+</section>
+<script>
+    window.onload = () => {
+        setTimeout(() => {
+            document.querySelector(".test").classList.add("shadow-neu-success");
+        }, 4000)
+    }
+</script>
+</body>
+</html>
