@@ -11,7 +11,6 @@
 }
 
 
-
 audio:not([controls]) {
   display: none;
   height: 0;
@@ -47,11 +46,11 @@ label {
   margin: 0 auto .1rem 2rem;
 }
 
-label + input {
+label + input, label + textarea, label + button {
   margin-top: .3rem;
 }
 
-input + input {
+input + input, textarea + input, input + textarea, textarea + input, textarea + button, input + button, button + button {
   margin-top: 1rem;
 }
 
@@ -86,7 +85,10 @@ h6 {
   margin-bottom: .5rem;
 }
 
-h1, h2, h3, h4, h5, h6 {font-family: Lato, sans-serif}
+h1, h2, h3, h4, h5, h6 {
+  font-family: Lato, sans-serif
+}
+
 a, p, div, span, strong, abbr, ol, ul, li {
   font-family: Montserrat, serif;
   margin-bottom: .3rem;

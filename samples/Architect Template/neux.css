@@ -563,18 +563,6 @@ textarea {
   display: -moz-inline-block;
 }
 
-.inline-grid {
-  display: grid;
-  display: -ms-grid;
-  display: -moz-grid;
-}
-
-.inline-flex {
-  display: inline-flex;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-}
-
 @media (min-width: 576px) {
   .container {
     /*max-width: 540px;*/
@@ -589,12 +577,6 @@ textarea {
   width: 100%;
   display: flex;
   flex-direction: column;
-}
-
-.row-firm {
-  width: 100%;
-  display: flex;
-  flex-direction: row;
 }
 
 .row::before, nav::before, .nav::before, .row::after, nav::after, .nav::after {
@@ -628,12 +610,12 @@ textarea {
     padding: 0 12rem;
   }
 }
-.half, .full, .full-small {
+.half, .full, .full.small {
   width: 100%;
 }
 
-.half-small {
-  width: 50% !important;
+.half.small {
+  width: 50%;
 }
 
 .col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .half, .one-third, .two-third, .one-fourth, .three-fourth, .one-fifth, .two-fifth, .three-fifth, .four-fifth, .one-seventh, .two-seventh, .three-seventh, .four-seventh, .five-seventh, .six-seventh, .col-10 {
@@ -747,7 +729,7 @@ textarea {
     width: 50%;
   }
 
-  .full-small {
+  .full.small {
     width: initial;
   }
 }
