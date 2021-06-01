@@ -34,10 +34,6 @@
   color: $neu-error;
 }
 
-.text-neu-transparent {
-  color: $neu-transparent;
-}
-
 .text-neu-dark-gray {
   color: $neu-dark-gray;
 }
@@ -400,3 +396,688 @@
   box-shadow: 10px 10px 40px #526a76, -10px -10px 40px #6e90a0;
 }
 
+// Borders
+// All Sides
+.border-white {
+  border-color: #ffffff;
+}
+
+.border-light {
+  border-color: $neu-light;
+}
+
+.border-neu-fresh {
+  border-color: $neu-fresh;
+}
+
+.border-neu-note {
+  border-color: $neu-note;
+}
+
+.border-neu-info {
+  border-color: $neu-info;
+}
+
+.border-neu-warning {
+  border-color: $neu-warning;
+}
+
+.border-neu-success {
+  border-color: $neu-success;
+}
+
+.border-neu-error {
+  border-color: $neu-error;
+}
+
+.border-neu-dark-gray {
+  border-color: $neu-dark-gray;
+}
+
+.border-neu-medium-gray {
+  border-color: $neu-medium-gray;
+}
+
+.border-neu-light-gray {
+  border-color: $neu-light-gray;
+}
+
+.border-neu-gray {
+  border-color: $neu-gray;
+}
+
+.border-neu-dark {
+  border-color: $neu-dark;
+}
+
+.border-neu-light {
+  border-color: $neu-light;
+}
+
+.border-gray {
+  border-color: $gray;
+}
+
+.border-red {
+  border-color: $red;
+}
+
+.border-pink {
+  border-color: $pink;
+}
+
+.border-purple {
+  border-color: $purple;
+}
+
+.border-deep-purple {
+  border-color: $deep-purple;
+}
+
+.border-indigo {
+  border-color: $indigo;
+}
+
+.border-blue {
+  border-color: $blue;
+}
+
+.border-light-blue {
+  border-color: $light-blue;
+}
+
+.border-cyan {
+  border-color: $cyan;
+}
+
+.border-teal {
+  border-color: $teal;
+}
+
+.border-green {
+  border-color: $green;
+}
+
+.border-light-green {
+  border-color: $light-green;
+}
+
+.border-lime {
+  border-color: $lime;
+}
+
+.border-yellow {
+  border-color: $yellow;
+}
+
+.border-amber {
+  border-color: $amber;
+}
+
+.border-orange {
+  border-color: $orange;
+}
+
+.border-deep-orange {
+  border-color: $deep-orange;
+}
+
+.border-brown {
+  border-color: $brown;
+}
+
+.border-gray {
+  border-color: $gray;
+}
+
+.border-blue-gray {
+  border-color: $blue-gray;
+}
+
+// Top
+.border-top-white {
+  border-top-color: #ffffff;
+}
+
+.border-top-light {
+  border-top-color: $neu-light;
+}
+
+.border-top-neu-fresh {
+  border-top-color: $neu-fresh;
+}
+
+.border-top-neu-note {
+  border-top-color: $neu-note;
+}
+
+.border-top-neu-info {
+  border-top-color: $neu-info;
+}
+
+.border-top-neu-warning {
+  border-top-color: $neu-warning;
+}
+
+.border-top-neu-success {
+  border-top-color: $neu-success;
+}
+
+.border-top-neu-error {
+  border-top-color: $neu-error;
+}
+
+.border-top-neu-dark-gray {
+  border-top-color: $neu-dark-gray;
+}
+
+.border-top-neu-medium-gray {
+  border-top-color: $neu-medium-gray;
+}
+
+.border-top-neu-light-gray {
+  border-top-color: $neu-light-gray;
+}
+
+.border-top-neu-gray {
+  border-top-color: $neu-gray;
+}
+
+.border-top-neu-dark {
+  border-top-color: $neu-dark;
+}
+
+.border-top-neu-light {
+  border-top-color: $neu-light;
+}
+
+.border-top-gray {
+  border-top-color: $gray;
+}
+
+.border-top-red {
+  border-top-color: $red;
+}
+
+.border-top-pink {
+  border-top-color: $pink;
+}
+
+.border-top-purple {
+  border-top-color: $purple;
+}
+
+.border-top-deep-purple {
+  border-top-color: $deep-purple;
+}
+
+.border-top-indigo {
+  border-top-color: $indigo;
+}
+
+.border-top-blue {
+  border-top-color: $blue;
+}
+
+.border-top-light-blue {
+  border-top-color: $light-blue;
+}
+
+.border-top-cyan {
+  border-top-color: $cyan;
+}
+
+.border-top-teal {
+  border-top-color: $teal;
+}
+
+.border-top-green {
+  border-top-color: $green;
+}
+
+.border-top-light-green {
+  border-top-color: $light-green;
+}
+
+.border-top-lime {
+  border-top-color: $lime;
+}
+
+.border-top-yellow {
+  border-top-color: $yellow;
+}
+
+.border-top-amber {
+  border-top-color: $amber;
+}
+
+.border-top-orange {
+  border-top-color: $orange;
+}
+
+.border-top-deep-orange {
+  border-top-color: $deep-orange;
+}
+
+.border-top-brown {
+  border-top-color: $brown;
+}
+
+.border-top-gray {
+  border-top-color: $gray;
+}
+
+.border-top-blue-gray {
+  border-top-color: $blue-gray;
+}
+
+// Bottom
+.border-bottom-white {
+  border-bottom-color: #ffffff;
+}
+
+.border-bottom-light {
+  border-bottom-color: $neu-light;
+}
+
+.border-bottom-neu-fresh {
+  border-bottom-color: $neu-fresh;
+}
+
+.border-bottom-neu-note {
+  border-bottom-color: $neu-note;
+}
+
+.border-bottom-neu-info {
+  border-bottom-color: $neu-info;
+}
+
+.border-bottom-neu-warning {
+  border-bottom-color: $neu-warning;
+}
+
+.border-bottom-neu-success {
+  border-bottom-color: $neu-success;
+}
+
+.border-bottom-neu-error {
+  border-bottom-color: $neu-error;
+}
+
+.border-bottom-neu-dark-gray {
+  border-bottom-color: $neu-dark-gray;
+}
+
+.border-bottom-neu-medium-gray {
+  border-bottom-color: $neu-medium-gray;
+}
+
+.border-bottom-neu-light-gray {
+  border-bottom-color: $neu-light-gray;
+}
+
+.border-bottom-neu-gray {
+  border-bottom-color: $neu-gray;
+}
+
+.border-bottom-neu-dark {
+  border-bottom-color: $neu-dark;
+}
+
+.border-bottom-neu-light {
+  border-bottom-color: $neu-light;
+}
+
+.border-bottom-gray {
+  border-bottom-color: $gray;
+}
+
+.border-bottom-red {
+  border-bottom-color: $red;
+}
+
+.border-bottom-pink {
+  border-bottom-color: $pink;
+}
+
+.border-bottom-purple {
+  border-bottom-color: $purple;
+}
+
+.border-bottom-deep-purple {
+  border-bottom-color: $deep-purple;
+}
+
+.border-bottom-indigo {
+  border-bottom-color: $indigo;
+}
+
+.border-bottom-blue {
+  border-bottom-color: $blue;
+}
+
+.border-bottom-light-blue {
+  border-bottom-color: $light-blue;
+}
+
+.border-bottom-cyan {
+  border-bottom-color: $cyan;
+}
+
+.border-bottom-teal {
+  border-bottom-color: $teal;
+}
+
+.border-bottom-green {
+  border-bottom-color: $green;
+}
+
+.border-bottom-light-green {
+  border-bottom-color: $light-green;
+}
+
+.border-bottom-lime {
+  border-bottom-color: $lime;
+}
+
+.border-bottom-yellow {
+  border-bottom-color: $yellow;
+}
+
+.border-bottom-amber {
+  border-bottom-color: $amber;
+}
+
+.border-bottom-orange {
+  border-bottom-color: $orange;
+}
+
+.border-bottom-deep-orange {
+  border-bottom-color: $deep-orange;
+}
+
+.border-bottom-brown {
+  border-bottom-color: $brown;
+}
+
+.border-bottom-gray {
+  border-bottom-color: $gray;
+}
+
+.border-bottom-blue-gray {
+  border-bottom-color: $blue-gray;
+}
+
+// Right
+.border-right-white {
+  border-right-color: #ffffff;
+}
+
+.border-right-light {
+  border-right-color: $neu-light;
+}
+
+.border-right-neu-fresh {
+  border-right-color: $neu-fresh;
+}
+
+.border-right-neu-note {
+  border-right-color: $neu-note;
+}
+
+.border-right-neu-info {
+  border-right-color: $neu-info;
+}
+
+.border-right-neu-warning {
+  border-right-color: $neu-warning;
+}
+
+.border-right-neu-success {
+  border-right-color: $neu-success;
+}
+
+.border-right-neu-error {
+  border-right-color: $neu-error;
+}
+
+.border-right-neu-dark-gray {
+  border-right-color: $neu-dark-gray;
+}
+
+.border-right-neu-medium-gray {
+  border-right-color: $neu-medium-gray;
+}
+
+.border-right-neu-light-gray {
+  border-right-color: $neu-light-gray;
+}
+
+.border-right-neu-gray {
+  border-right-color: $neu-gray;
+}
+
+.border-right-neu-dark {
+  border-right-color: $neu-dark;
+}
+
+.border-right-neu-light {
+  border-right-color: $neu-light;
+}
+
+.border-right-gray {
+  border-right-color: $gray;
+}
+
+.border-right-red {
+  border-right-color: $red;
+}
+
+.border-right-pink {
+  border-right-color: $pink;
+}
+
+.border-right-purple {
+  border-right-color: $purple;
+}
+
+.border-right-deep-purple {
+  border-right-color: $deep-purple;
+}
+
+.border-right-indigo {
+  border-right-color: $indigo;
+}
+
+.border-right-blue {
+  border-right-color: $blue;
+}
+
+.border-right-light-blue {
+  border-right-color: $light-blue;
+}
+
+.border-right-cyan {
+  border-right-color: $cyan;
+}
+
+.border-right-teal {
+  border-right-color: $teal;
+}
+
+.border-right-green {
+  border-right-color: $green;
+}
+
+.border-right-light-green {
+  border-right-color: $light-green;
+}
+
+.border-right-lime {
+  border-right-color: $lime;
+}
+
+.border-right-yellow {
+  border-right-color: $yellow;
+}
+
+.border-right-amber {
+  border-right-color: $amber;
+}
+
+.border-right-orange {
+  border-right-color: $orange;
+}
+
+.border-right-deep-orange {
+  border-right-color: $deep-orange;
+}
+
+.border-right-brown {
+  border-right-color: $brown;
+}
+
+.border-right-gray {
+  border-right-color: $gray;
+}
+
+.border-right-blue-gray {
+  border-right-color: $blue-gray;
+}
+
+// Left
+.border-left-white {
+  border-left-color: #ffffff;
+}
+
+.border-left-light {
+  border-left-color: $neu-light;
+}
+
+.border-left-neu-fresh {
+  border-left-color: $neu-fresh;
+}
+
+.border-left-neu-note {
+  border-left-color: $neu-note;
+}
+
+.border-left-neu-info {
+  border-left-color: $neu-info;
+}
+
+.border-left-neu-warning {
+  border-left-color: $neu-warning;
+}
+
+.border-left-neu-success {
+  border-left-color: $neu-success;
+}
+
+.border-left-neu-error {
+  border-left-color: $neu-error;
+}
+
+.border-left-neu-dark-gray {
+  border-left-color: $neu-dark-gray;
+}
+
+.border-left-neu-medium-gray {
+  border-left-color: $neu-medium-gray;
+}
+
+.border-left-neu-light-gray {
+  border-left-color: $neu-light-gray;
+}
+
+.border-left-neu-gray {
+  border-left-color: $neu-gray;
+}
+
+.border-left-neu-dark {
+  border-left-color: $neu-dark;
+}
+
+.border-left-neu-light {
+  border-left-color: $neu-light;
+}
+
+.border-left-gray {
+  border-left-color: $gray;
+}
+
+.border-left-red {
+  border-left-color: $red;
+}
+
+.border-left-pink {
+  border-left-color: $pink;
+}
+
+.border-left-purple {
+  border-left-color: $purple;
+}
+
+.border-left-deep-purple {
+  border-left-color: $deep-purple;
+}
+
+.border-left-indigo {
+  border-left-color: $indigo;
+}
+
+.border-left-blue {
+  border-left-color: $blue;
+}
+
+.border-left-light-blue {
+  border-left-color: $light-blue;
+}
+
+.border-left-cyan {
+  border-left-color: $cyan;
+}
+
+.border-left-teal {
+  border-left-color: $teal;
+}
+
+.border-left-green {
+  border-left-color: $green;
+}
+
+.border-left-light-green {
+  border-left-color: $light-green;
+}
+
+.border-left-lime {
+  border-left-color: $lime;
+}
+
+.border-left-yellow {
+  border-left-color: $yellow;
+}
+
+.border-left-amber {
+  border-left-color: $amber;
+}
+
+.border-left-orange {
+  border-left-color: $orange;
+}
+
+.border-left-deep-orange {
+  border-left-color: $deep-orange;
+}
+
+.border-left-brown {
+  border-left-color: $brown;
+}
+
+.border-left-gray {
+  border-left-color: $gray;
+}
+
+.border-left-blue-gray {
+  border-left-color: $blue-gray;
+}

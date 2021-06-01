@@ -42,3 +42,8 @@
   -webkit-align-self: $value;
 }
 
+@mixin flexDirection($value) {
+  flex-direction: $value;
+  -webkit-flex-direction: $value;
+  -ms-flex-direction: $value;
+}

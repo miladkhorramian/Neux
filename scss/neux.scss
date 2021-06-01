@@ -1855,8 +1855,13 @@
   margin-top: 3rem;
   margin-bottom: 3rem;
 
-  &:first-child {margin-top:0!important;}
-  &:last-child {margin-bottom:0!important;}
+  &:first-child {
+    margin-top: 0 !important;
+  }
+
+  &:last-child {
+    margin-bottom: 0 !important;
+  }
 
   &.bg-white {
     box-shadow: 10px 10px 40px #d9d9d9, -10px -10px 40px #ffffff;;
@@ -2189,29 +2194,90 @@ nav, .nav {
   @include alignItems(center);
 }
 
+.row-firm {
+  @include alignItems(stretch);
+}
+
+.flex-direction {
+  &-row {
+    @include flexDirection(row);
+
+    &-reverse {
+      @include flexDirection(row-reverse);
+    }
+  }
+
+  &-column {
+    @include flexDirection(column);
+
+    &-reverse {
+      @include flexDirection(column-reverse);
+    }
+  }
+}
+
 .justify-content {
-  &.center {
+  &-center {
     @include justifyContent(center)
   }
 
-  &.flex-end {
+  &-flex-end {
     @include justifyContent(flex-end)
   }
 
-  &.flex-start {
+  &-flex-start {
     @include justifyContent(flex-start)
   }
 
-  &.space-between {
+  &-space-between {
     @include justifyContent(space-between)
   }
 
-  &.space-around {
+  &-space-around {
     @include justifyContent(space-around)
   }
 
-  &.space-evenly {
+  &-space-evenly {
     @include justifyContent(space-evenly)
+  }
+}
+
+.align-items {
+  &-flex-start {
+    @include alignItems(flex-start)
+  }
+  &-flex-end {
+    @include alignItems(flex-end)
+  }
+  &-center {
+    @include alignItems(center)
+  }
+  &-stretch {
+    @include alignItems(stretch)
+  }
+  &-baseline {
+    @include alignItems(baseline)
+  }
+}
+
+.align-content {
+  &-flex-start {
+    @include alignContent(flex-start)
+  }
+  &-flex-end {
+    @include alignContent(flex-end)
+  }
+  &-center {
+    @include alignContent(center)
+  }
+  &-stretch {
+    @include alignContent(stretch)
+  }
+  &-space-between {
+    @include alignContent(space-between)
+  }
+  &-space-around {
+    @include alignContent(space-around)
   }
 }
 
@@ -2237,42 +2303,53 @@ nav, .nav {
   &-center {
     @include alignSelf(center);
   }
+
   &-stretch {
     @include alignSelf(stretch);
   }
+
   &-flex-start {
     @include alignSelf(flex-start);
   }
+
   &-flex-end {
     @include alignSelf(flex-end);
   }
+
   &-baseline {
     @include alignSelf(baseline);
   }
 }
 
-.top {
-  top: 0
+.justify-items {
+  &-center {
+    justify-items: center;
+  }
+  &-start {
+    justify-items: start;
+  }
+  &-end {
+    justify-items: end;
+  }
+  &-stretch {
+    justify-items: stretch;
+  }
 }
 
-.bottom {
-  bottom: 0
+.place-items {
+  &-center {
+    place-items: center;
+    @include alignItems(center);
+    @include justifyContent(center);
+  }
 }
 
-.right {
-  right: 0
-}
-
-.left {
-  left: 0
-}
-
-.bordered {
-  border-radius: 30px;
-}
-
-.rounded {
-  border-radius: 50%;
+.place-content {
+  &-center {
+    place-content: center;
+    @include justifyContent(center);
+    @include alignContent(center);
+  }
 }
 
 img.panel {
@@ -2281,28 +2358,5 @@ img.panel {
   box-shadow: inherit;
 }
 
-.no-border-radius {
-  border-radius: 0;
-}
-
-.no-border-bottom-right-radius {
-  border-bottom-right-radius: 0;
-  -webkit-border-bottom-right-radius: 0;
-}
-
-.no-border-bottom-left-radius {
-  border-bottom-left-radius: 0;
-  -webkit-border-bottom-left-radius: 0;
-}
-
-.no-border-top-right-radius {
-  border-top-right-radius: 0;
-  -webkit-border-top-right-radius: 0;
-}
-
-.no-border-top-right-radius {
-  border-top-right-radius: 0;
-  -webkit-border-top-right-radius: 0;
-}
-
 @import "adjusters";
+

@@ -13,8 +13,7 @@ multiple platforms like dribbble.com. Neux is inspired by patents and predecesso
 Colors, backgrounds and shadows
 -------------------------------
 
-The \_variables.scss file contains of 32 rgba color variables which includes 19 common Material colors and 13 Neu colors
-that were extracted through experience. The defined colors have their own respective text, background and shadow classes
+The \_variables.scss file contains of 32 rgba color variables which includes 19 common Material colors and 13 Neu colors. The defined colors have their own respective text, background, shadow and border classes
 excluding the `neu-tranparent`. The `neu-transparent`
 can be seen used in minor events like `:disabled`.
 
@@ -38,48 +37,43 @@ creating responsive and adjustments. To achieve this goal, \_adjusters.scss and 
 2. Couple of classes are written to contain the elements inside;
    `.container` and `.row`.
 
-   `.row-firm` keeps the flexing direction at row on every device.
-
+   `.row-firm` keeps the flexing direction at row on every device. However, in `.row-firm` the items' alignment is set to `stretch` while in `row` and `container` the items align in center. 
 
 3. Two sets of column grid classes have been coded which work with containers and rows.
 
+4. In addition to above, margin and padding adjusters are also available.
 
-4. In addition to above, margin and padding adjusters are also available: `0`, `.5rem`, `1rem`, `2rem`, `3rem`, `4rem`
-   , `5rem`.
-
-5. Also, up to 8 columns are written from `grid-template-columns` css attribute for `display: grid/ inline-grid`
-
-   e.g. `.grid-columns-3`.
+5. Also, up to 8 columns are written from `grid-template-columns` css attribute for `display: grid/ inline-grid`; e.g. `.grid-columns-3`.
 
 ### Margin classes:
 
 ##### Top margin:
 
-`.mt-0`, `.mt-half`, `.mt-1`, `.mt-2`, `.mt-3`, `.mt-4`, `.mt-5`.
+`.mt0` `.mthalf` `.mt1` `.mt2` `.mt3` `.mt4` `.mt5`.
 
 ##### Right margin:
 
-`.mr-0`, `.mr-half`, `.mr-1`, `.mr-2`, `.mr-3`, `.mr-4`, `.mr-5`.
+`.mr0` `.mrhalf` `.mr1` `.mr2` `.mr3` `.mr4` `.mr5`.
 
 ##### Bottom margin:
 
-`.mb-0`, `.mb-half`, `.mb-1`, `.mb-2`, `.mb-3`, `.mb-4`, `.mb-5`.
+`.mb0` `.mbhalf` `.mb1` `.mb2` `.mb3` `.mb4` `.mb5`.
 
 ##### Left margin:
 
-`.ml-0`, `.ml-half`, `.ml-1`, `.ml-2`, `.ml-3`, `.ml-4`, `.ml-5`.
+`.ml0` `.mlhalf` `.ml1` `.ml2` `.ml3` `.ml4` `.ml5`.
 
 ##### Horizontal margin:
 
-`.mh-0`, `.mh-half`, `.mh-1`, `.mh-2`, `.mh-3`, `.mh-4`, `.mh-5`.
+`.mh0` `.mhhalf` `.mh1` `.mh2` `.mh3` `.mh4` `.mh5`.
 
 ##### Vertical margin:
 
-`.mv-0`, `.mv-half`, `.mv-1`, `.mv-2`, `.mv-3`, `.mv-4`, `.mv-5`.
+`.mv0` `.mvhalf` `.mv1` `.mv2` `.mv3` `.mv4` `.mv5`.
 
 ##### All sides:
 
-`.m-0`, `.m-half`, `.m-1`, `.m-2`, `.m-3`, `.m-4`, `.m-5`.
+`.m0` `.mhalf` `.m1` `.m2` `.m3` `.m4` `.m5`.
 
 ### Padding classes:
 
@@ -87,24 +81,49 @@ same pattern as margin classes.
 
 ##### Top padding:
 
-`.mt-0`, `.mt-half`, `.mt-1`, `.mt-2`, `.mt-3`, `.mt-4`, `.mt-5`.
+`.mt0` `.mthalf` `.mt1` `.mt2` `.mt3` `.mt4` `.mt5`
+etc...
 
 ### Display and positioning
 
-Common positioning values are turned into classes. `.fixed`, `.relative`, `.absolute`, `.sticky`.
+Common positioning values are turned into classes. `.fixed` `.relative` `.absolute` `.sticky`.
 
-Common display values: `.block`, `.flex` `.grid`, `.inline-block`, `.inline-flex`, `.inline-grid`.
+Common display values: `.block` `.flex` `.grid` `.inline-block` `.inline-flex` `.inline-grid`.
 
-Top, bottom, left and right set as `0` have their classes respectively `.top`, `.bottom`, `.left`, `.right`.
+Top, bottom, left and right set as `0` have their classes respectively `.top` `.bottom` `.left` `.right`.
 
 #### Class .row associated with class .col-n (n defers from 1 to 11)
 
 If you want to take the whole width of the row with one column, use `.col-12`.
 
-By default, each column is responsive but if you intend to keep the layout, after each column class, use `.small`.
+UPDATE:
+
+3 sets of `.col-` classes have been added for specific viewport width ranges. To overwrite default `.col-` classes' behavior, a prefix is added to the class for each specific range.
+
+1. Portrait tablets and large phones, etc.
+```css
+@media only screen and (min-width: 600px) and (max-width: 768px) {}
+```
+
+Use `.s-col-1`, `.s-col-2` to `.s-col-12`.  
+
+2. Landscape tablets, etc.
+```css
+@media only screen and (min-width: 768px) and (max-width: 992px) {}
+```
+
+Use `.m-col-1`, `.m-col-2` to `.m-col-12`.
+
+3. Laptops, desktops, etc.
+```css
+@media only screen and (min-width: 992px) and (max-width: 1200px) {}
+```
+
+Use `.l-col-1`, `.l-col-2` to `.l-col-12`.
+
 
 ```html
-<div class="row-firm mt-1">
+<div class="row-firm">
     <div class="col-3 small test-div bg-red">col-3</div>
     <div class="col-5 small test-div bg-blue-gray">col-3</div>
     <div class="col-2 small test-div bg-green">col-3</div>
@@ -115,9 +134,25 @@ By default, each column is responsive but if you intend to keep the layout, afte
 
 #### Class .grid associated with class grid-columns-n (n defers from 2 to 8)
 
-Perfect combination for carousals. Provides a set of same-width-set columns with a `fr` gap.
+Perfect combination for carousals. Provides a set of same-width-set columns with `1fr` gap. The columns created will break in lines on smaller screens.
 
 ![.grid](imgs/grid.jpg)
+
+In addition to classes above, Rational number `p/q` based classes are available. 
+
+1. `p/3` fraction. `.one-third` `.two-third`
+
+2. `p/4` fraction. `.one-forth` `.three-fourth`
+
+3. `p/5` fraction. `.one-fifth` `.two-fifth` `.three-fifth` `.four-fifth`
+
+4. `p/6` fraction. `.one-sixth` `.five-sixth`
+
+5. `p/7` fraction. `.one-seventh` `.two-seventh` `.three-seventh` `.four-seventh` `.five-seventh` `.six-seventh`
+
+6. `p/8` fraction. `.one-eighth` `.three-eighth` `.five-eighth` `.seven-eighth`
+
+
 
 Page Design; A New Approach...
 ------------------------------
@@ -242,6 +277,144 @@ for `input`, `button`, `textarea` for every background respectively.
 ```
 
 `class="full-small"` sets the width of the input to `100%` on mobile devices.
+
+Inside grid and flex
+---------------------------------
+`col-` and percentage based classes like `.one-third` have been mentioned above as well as `grid-colmun-` classes. More to that, aligning classes are available for `.grid` and `.flex`.
+
+### flex-direction
+`.flex-direction-row`
+
+`.flex-direction-row-reverse`
+
+`.flex-direction-column`
+
+`.flex-direction-column-reverse`
+
+### justify-content
+`.justify-content-center`
+
+`.justify-content-flex-end`
+
+`.justify-content-flex-start`
+
+`.justify-content-space-between`
+
+`.justify-content-space-around`
+
+`.justify-content-space-evenly`
+
+### align-items
+`.align-items-flex-start`
+
+`.align-items-flex-end`
+
+`.align-items-center`
+
+`.align-items-stretch`
+
+`.align-items-baseline`
+
+### align-content
+`.align-content-flex-start`
+
+`.align-content-flex-end`
+
+`.align-content-center`
+
+`.align-content-stretch`
+
+`.align-content-space-between`
+
+`.align-content-space-around`
+
+### align-self
+`.align-self-center`
+
+`.align-self-stretch`
+
+`.align-self-flex-start`
+
+`.align-self-flex-end`
+
+`.align-self-baseline`
+
+Text positioning
+------------------
+### text-align
+`.text-align-justify`
+
+`.text-align-center`
+
+`.text-align-right`
+
+`.text-align-left`
+
+
+Borders
+------------------
+`.border` sets the style of your border to `solid`. Use this class alongside border width, radius and color classes given below.
+
+#### Width
+5 sets of border width classes are available. The unit is in `px` and the value differs from `1` to `5`.
+
+1. Top: `.bt1`, `.bt2`, `.bt3`, `.bt4`, `.bt5`
+2. Bottom: `.bb1`, `.bb2`, `.bb3`, `.bb4`, `.bb5`
+3. Left: `.bl1`, `.bl2`, `.bl3`, `.bl4`, `.bl5`
+4. Right: `.br1`, `.br2`, `.br3`, `.br4`, `.br5`
+5. All sides: `.bt1`, `.bt2`, `.bt3`, `.bt4`, `.bt5`
+
+#### Colors
+
+Top, right, bottom, left and all sides border colors have turned into classes. For all sides use: `.border-{COLORNAME}` and for sides; use:  
+
+`.border-top-{COLORNAME}`
+
+`.border-right-{COLORNAME}`
+
+`.border-left-{COLORNAME}` 
+
+`.border-bottom-{COLORNAME}`
+
+#### Radius
+`.sharp` sets the radius equal to `0`.
+`.smooth` sets the radius equal to `12px`.
+`.bordered` sets the radius equal to `30px`.
+`.rounded` sets the radius equal to `50%`.
+
+Also corners' radius can be set separately.
+
+`sharp-top-right`
+
+`sharp-top-left`
+
+`sharp-bottom-right`
+
+`sharp-bottom-left`
+
+`smooth-top-right`
+
+`smooth-top-left`
+
+`smooth-bottom-right`
+
+`smooth-bottom-left`
+
+`bordered-top-right`
+
+`bordered-top-left`
+
+`bordered-bottom-right`
+
+`bordered-bottom-left`
+
+`rounded-top-right`
+
+`rounded-top-left`
+
+`rounded-bottom-right`
+
+`rounded-bottom-left`
 
 #### Shout outs
 
