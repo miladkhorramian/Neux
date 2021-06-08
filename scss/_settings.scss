@@ -24,7 +24,11 @@ a {
   display: inline-block;
   text-decoration: none;
   color: inherit;
-  margin: .5rem auto auto;
+  margin: auto;
+}
+
+input {
+  width: 343px;
 }
 
 input, textarea {
@@ -32,11 +36,16 @@ input, textarea {
   border: none;
   border-radius: 50px;
   padding: 1rem 2rem;
-  margin-top: 0;
+  //margin: 1rem auto;
   display: block;
 }
 
-input:focus {
+input, textarea, button {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+input:focus, textarea:focus {
   outline: none;
   //-moz-outline-radius: 50px;
 }
@@ -47,55 +56,62 @@ label {
 }
 
 label + input, label + textarea, label + button {
-  margin-top: .3rem;
+  //margin-top: .3rem;
 }
 
 input + input, textarea + input, input + textarea, textarea + input, textarea + button, input + button, button + button {
-  margin-top: 1rem;
+  //margin-top: 1rem;
 }
 
+/*
 h1 {
   //font-size: 2.4rem;
-  margin-bottom: .5rem;
+  margin: auto 0 .7rem;
 }
 
 h2 {
   //font-size: 2.2rem;
   //line-height: 2.6;
-  margin-bottom: .5rem;
+  margin: auto 0 .6rem;
 }
 
 h3 {
   //font-size: 1.8rem;
-  margin-bottom: .5rem;
+  margin: auto 0 .5rem;
 }
 
 h4 {
   //font-size: 1.6rem;
-  margin-bottom: .5rem;
+  margin: auto 0 .4rem;
 }
 
 h5 {
   //font-size: 1.4rem;
-  margin-bottom: .5rem;
+  margin: auto 0 .4rem;
 }
 
 h6 {
   //font-size: 1.2rem;
-  margin-bottom: .5rem;
+  margin: auto 0 .4rem;
 }
+*/
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: Lato, sans-serif
+  font-family: -apple-system, Lato, sans-serif;
 }
 
 a, p, div, span, strong, abbr, ol, ul, li {
-  font-family: Montserrat, serif;
-  margin-bottom: .3rem;
+  font-family: Montserrat, sans-serif;
+  line-height: 1.4;
   //font-size: 1rem;
+  //margin-bottom: .3rem;
 }
+/*
+a, p, div, span, strong, abbr, ol, ul, li, h1, h2, h3, h4, h5, h6 {
+  font-family: sans-serif;
+}*/
 
-label, input, textarea {
+  label, input, textarea {
   font-size: 13px;
 }
 

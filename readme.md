@@ -140,17 +140,19 @@ Perfect combination for carousals. Provides a set of same-width-set columns with
 
 In addition to classes above, Rational number `p/q` based classes are available. 
 
-1. `p/3` fraction. `.one-third` `.two-third`
+1. `1/2` fraction. `.half`
+   
+2. `1/3` fraction. `.one-third` `.two-third`
 
-2. `p/4` fraction. `.one-forth` `.three-fourth`
+3. `1/4` fraction. `.one-forth` `.three-fourth`
 
-3. `p/5` fraction. `.one-fifth` `.two-fifth` `.three-fifth` `.four-fifth`
+4. `1/5` fraction. `.one-fifth` `.two-fifth` `.three-fifth` `.four-fifth`
 
-4. `p/6` fraction. `.one-sixth` `.five-sixth`
+5. `1/6` fraction. `.one-sixth` `.five-sixth`
 
-5. `p/7` fraction. `.one-seventh` `.two-seventh` `.three-seventh` `.four-seventh` `.five-seventh` `.six-seventh`
+6. `1/7` fraction. `.one-seventh` `.two-seventh` `.three-seventh` `.four-seventh` `.five-seventh` `.six-seventh`
 
-6. `p/8` fraction. `.one-eighth` `.three-eighth` `.five-eighth` `.seven-eighth`
+7. `1/8` fraction. `.one-eighth` `.three-eighth` `.five-eighth` `.seven-eighth`
 
 
 
@@ -209,6 +211,10 @@ has its own effects of concave and convex.
     </div>
 </div>
 ```
+
+##### image with class panel 
+
+`.panel` is re-written for html `img` tag. If set, paddings will be removed, the border and the box-shadow will be set to `inherit`.
 
 ### Cards
 
@@ -415,6 +421,27 @@ Also corners' radius can be set separately.
 `rounded-bottom-right`
 
 `rounded-bottom-left`
+
+The Carousel Effect
+---------------------
+The carousel or merry go around effect lets you to display the content in a slidable row. It creates 100 columns in a grid view and hides the elements horizontal scrollbar.
+ 
+`.carousel`: The default mode where each column is set to `320px` width.
+
+`.carousel-150`: Each column is set to `150px` width.
+
+`.carousel-200`: Each column is set to `200px` width.
+
+`.carousel-250`: Each column is set to `250px` width.
+
+`.carousel-300`: Each column is set to `300px` width.
+
+`.carousel-350`: Each column is set to `350px` width.
+
+`.carousel-400`: Each column is set to `400px` width.
+
+`.carousel-450`: Each column is set to `450px` width.
+
 
 #### Shout outs
 

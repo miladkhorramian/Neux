@@ -1851,17 +1851,9 @@
   //width: 100%;
   //max-width: 100%;
   border-radius: 30px;
-  padding: 2rem;
-  margin-top: 3rem;
-  margin-bottom: 3rem;
-
-  &:first-child {
-    margin-top: 0 !important;
-  }
-
-  &:last-child {
-    margin-bottom: 0 !important;
-  }
+  padding: 1rem 1.5rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
 
   &.bg-white {
     box-shadow: 10px 10px 40px #d9d9d9, -10px -10px 40px #ffffff;;
@@ -2139,6 +2131,26 @@
   }
 }
 
+// Media Queries for card and panel
+// Changing padding and border radius
+/*@media screen and (min-width: 600px) {
+  .panel, .card {
+    border-radius: 15px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .panel, .card {
+    border-radius: 20px;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .panel, .card {
+    border-radius: 30px;
+  }
+}*/
+
 // Text Resizers
 .s-text {
   font-size: 10px
@@ -2358,5 +2370,110 @@ img.panel {
   box-shadow: inherit;
 }
 
-@import "adjusters";
 
+.carousel {
+  /*&::before, &::after {
+    content: "";
+  }*/
+
+  @extend .grid;
+  grid-template-columns: repeat(100, calc(320px - 1rem));
+  //grid-template-columns: .01rem repeat(100, calc(320px - 1rem)) .01rem;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  overflow-y: scroll;
+
+  &::-webkit-scrollbar {
+    display: none
+  }
+}
+
+.carousel-150 {
+  @extend .carousel;
+  grid-template-columns: repeat(100, calc(150px - 1rem));
+}
+
+.carousel-200 {
+  @extend .carousel;
+  grid-template-columns: repeat(100, calc(200px - 1rem));
+}
+
+.carousel-250 {
+  @extend .carousel;
+  grid-template-columns: repeat(100, calc(250px - 1rem));
+}
+
+.carousel-300 {
+  @extend .carousel;
+  grid-template-columns: repeat(100, calc(300px - 1rem));
+}
+
+.carousel-350 {
+  @extend .carousel;
+  grid-template-columns: repeat(100, calc(350px - 1rem));
+}
+
+.carousel-400 {
+  @extend .carousel;
+  grid-template-columns: repeat(100, calc(400px - 1rem));
+}
+
+.carousel-450 {
+  @extend .carousel;
+  grid-template-columns: repeat(100, calc(450px - 1rem));
+}
+
+/*
+@media screen and (min-width: 600px) and (max-width: 768px) {
+  .s-carousel {
+    display: grid;
+    display: -moz-grid;
+    display: -ms-grid;
+    gap: 1rem;
+    overflow-y: scroll;
+    grid-template-columns: repeat(100, calc(250px - 1rem));
+    -ms-overflow-style: none;
+    !*scrollbar-width: none;*!
+
+    &::-webkit-scrollbar {
+      display: none
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .m-carousel {
+    display: grid;
+    display: -moz-grid;
+    display: -ms-grid;
+    gap: 1rem;
+    overflow-y: scroll;
+    grid-template-columns: repeat(100, calc(360px - 1rem));
+    -ms-overflow-style: none;
+    !*scrollbar-width: none;*!
+
+    &::-webkit-scrollbar {
+      display: none
+    }
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .l-carousel {
+    display: grid;
+    display: -moz-grid;
+    display: -ms-grid;
+    gap: 1rem;
+    overflow-y: scroll;
+    grid-template-columns: repeat(100, calc(450px - 1rem));
+    -ms-overflow-style: none;
+    !*scrollbar-width: none;*!
+
+    &::-webkit-scrollbar {
+      display: none
+    }
+  }
+}
+*/
+
+@import "adjusters";
