@@ -1,15 +1,55 @@
+@import "variables";
+
 @function setPlaceholderColor($backgroundColor) {
-  @if (lightness($backgroundColor) < 70) {
+  @if (lightness($backgroundColor) < 55) {
+    @return #ccc;
+  } /*@else if(lightness($backgroundColor) >= 30 && lightness($backgroundColor) < 50 ) {
+    @return #555;
+  } @else if(lightness($backgroundColor) >= 50 && lightness($backgroundColor) < 70 ) {
+    @return #aaa;
+  }*/ @else {
+    @return #333;
+  }
+}
+
+@function setPlaceholderColorSecondary($backgroundColor) {
+  @if (lightness($backgroundColor) < 50) {
     @return #ccc;
   } @else {
     @return #333;
   }
 }
 
+
+@function setScrollbarTrackColor($backgroundColor) {
+  @if (lightness($backgroundColor) > 70) {
+    @return #777;
+  } @else {
+    @return #aaa;
+  }
+}
+
+@function setScrollbarThumbColor($backgroundColor) {
+  @if (lightness($backgroundColor) > 70) {
+    @return #444;
+  } @else {
+    @return #ccc;
+  }
+}
+
+@function setScrollbarThumbColorHover($backgroundColor) {
+  @if (lightness($backgroundColor) > 70) {
+    @return #333;
+  } @else {
+    @return #fff;
+  }
+}
+
+/*
 @function bodyNeuEffectCondition($backgroundColor) {
   @if $backgroundColor == white {
     @return none;
   } @else {
     @return inherit;
   }
-}
+}*/

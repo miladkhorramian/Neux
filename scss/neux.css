@@ -1,12 +1,26 @@
+/*
+@function bodyNeuEffectCondition($backgroundColor) {
+  @if $backgroundColor == white {
+    @return none;
+  } @else {
+    @return inherit;
+  }
+}*/
+/*
+@function bodyNeuEffectCondition($backgroundColor) {
+  @if $backgroundColor == white {
+    @return none;
+  } @else {
+    @return inherit;
+  }
+}*/
 /*! normalize.css v3.0.2 | MIT License | git.io/normalize */
 /**
  * 1. Set default font family to sans-serif.
  * 2. Prevent iOS text size adjust after orientation change, without disabling
  *    user zoom.
  */
-@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 html {
   font-family: sans-serif;
@@ -206,7 +220,7 @@ code, kbd, pre, samp {
  * 2. Correct font properties not being inherited.
  * 3. Address margins set differently in Firefox 4+, Safari, and Chrome.
  */
-button, input, optgroup, select, textarea {
+button, .button, input, .input, optgroup, select, textarea, .textarea {
   color: inherit;
   /* 1 */
   font: inherit;
@@ -218,7 +232,7 @@ button, input, optgroup, select, textarea {
 /**
  * Address `overflow` set to `hidden` in IE 8/9/10/11.
  */
-button {
+button, .button {
   overflow: visible;
 }
 
@@ -228,7 +242,7 @@ button {
  * Correct `button` style inheritance in Firefox, IE 8/9/10/11, and Opera.
  * Correct `select` style inheritance in Firefox.
  */
-button, select {
+button, .button, select {
   text-transform: none;
 }
 
@@ -239,10 +253,13 @@ button, select {
  * 3. Improve usability and consistency of cursor style between image-type
  *    `input` and others.
  */
-button,
+button, .button,
 html input[type=button],
+html [type=button].input,
 input[type=reset],
-input[type=submit] {
+[type=reset].input,
+input[type=submit],
+[type=submit].input {
   -webkit-appearance: button;
   /* 2 */
   cursor: pointer;
@@ -252,14 +269,14 @@ input[type=submit] {
 /**
  * Re-set default cursor for disabled elements.
  */
-button[disabled], html input[disabled] {
+button[disabled], [disabled].button, html input[disabled], html [disabled].input {
   cursor: default;
 }
 
 /**
  * Remove inner padding and border in Firefox 4+.
  */
-button::-moz-focus-inner, input::-moz-focus-inner {
+button::-moz-focus-inner, .button::-moz-focus-inner, input::-moz-focus-inner, .input::-moz-focus-inner {
   border: 0;
   padding: 0;
 }
@@ -268,7 +285,7 @@ button::-moz-focus-inner, input::-moz-focus-inner {
  * Address Firefox 4+ setting `line-height` on `input` using `!important` in
  * the UA stylesheet.
  */
-input {
+input, .input {
   line-height: normal;
 }
 
@@ -279,7 +296,7 @@ input {
  * 1. Address box sizing set to `content-box` in IE 8/9/10.
  * 2. Remove excess padding in IE 8/9/10.
  */
-input[type=checkbox], input[type=radio] {
+input[type=checkbox], [type=checkbox].input, input[type=radio], [type=radio].input {
   box-sizing: border-box;
   /* 1 */
   padding: 0;
@@ -291,7 +308,7 @@ input[type=checkbox], input[type=radio] {
  * `font-size` values of the `input`, it causes the cursor style of the
  * decrement button to change from `default` to `text`.
  */
-input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer-spin-button {
+input[type=number]::-webkit-inner-spin-button, [type=number].input::-webkit-inner-spin-button, input[type=number]::-webkit-outer-spin-button, [type=number].input::-webkit-outer-spin-button {
   height: auto;
 }
 
@@ -300,7 +317,7 @@ input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer
  * 2. Address `box-sizing` set to `border-box` in Safari and Chrome
  *    (include `-moz` to future-proof).
  */
-input[type=search] {
+input[type=search], [type=search].input {
   -webkit-appearance: textfield;
   /* 1 */
   -moz-box-sizing: content-box;
@@ -314,7 +331,7 @@ input[type=search] {
  * Safari (but not Chrome) clips the cancel button when the search input has
  * padding (and `textfield` appearance).
  */
-input[type=search]::-webkit-search-cancel-button, input[type=search]::-webkit-search-decoration {
+input[type=search]::-webkit-search-cancel-button, [type=search].input::-webkit-search-cancel-button, input[type=search]::-webkit-search-decoration, [type=search].input::-webkit-search-decoration {
   -webkit-appearance: none;
 }
 
@@ -341,7 +358,7 @@ legend {
 /**
  * Remove default vertical scrollbar in IE 8/9/10/11.
  */
-textarea {
+textarea, .textarea {
   overflow: auto;
 }
 
@@ -372,7 +389,6 @@ th {
   box-sizing: border-box;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
-  margin: 0;
 }
 
 audio:not([controls]) {
@@ -391,11 +407,11 @@ a {
   margin: auto;
 }
 
-input {
-  width: 343px;
+input, .input {
+  width: 345px;
 }
 
-input, textarea {
+input, .input, textarea, .textarea {
   background: transparent;
   border: none;
   border-radius: 50px;
@@ -403,12 +419,12 @@ input, textarea {
   display: block;
 }
 
-input, textarea, button {
+input, .input, textarea, .textarea, button, .button {
   margin-top: 1rem;
   margin-bottom: 1rem;
 }
 
-input:focus, textarea:focus {
+input:focus, .input:focus, textarea:focus, .textarea:focus {
   outline: none;
 }
 
@@ -449,8 +465,11 @@ h6 {
   margin: auto 0 .4rem;
 }
 */
+/*a, p, div, span, strong, abbr, ol, ul, li, h1, h2, h3, h4, h5, h6 {
+  font-family: sans-serif;
+}*/
 h1, h2, h3, h4, h5, h6 {
-  font-family: -apple-system, Lato, sans-serif;
+  font-family: Roboto, sans-serif;
 }
 
 a, p, div, span, strong, abbr, ol, ul, li {
@@ -458,15 +477,10 @@ a, p, div, span, strong, abbr, ol, ul, li {
   line-height: 1.4;
 }
 
-/*
-a, p, div, span, strong, abbr, ol, ul, li, h1, h2, h3, h4, h5, h6 {
-  font-family: sans-serif;
-}*/
-label, input, textarea {
+/*label, input, textarea {
   font-size: 13px;
-}
-
-button {
+}*/
+button, .button {
   display: inline-block;
   border: none;
   padding: 1rem 2rem;
@@ -518,7 +532,7 @@ code {
     font-size: 1.8rem;
   }*/
 }
-textarea {
+textarea, .textarea {
   resize: none;
   width: 100%;
   height: 200px;
@@ -543,6 +557,10 @@ textarea {
   position: -webkit-sticky;
 }
 
+.static {
+  position: static;
+}
+
 .container {
   width: 100%;
   margin-left: auto;
@@ -551,11 +569,11 @@ textarea {
   max-width: initial;
 }
 
-.block, textarea {
+.block, textarea, .textarea {
   display: block;
 }
 
-.flex, nav, .nav, .row-firm {
+.flex, nav, .nav, .row-firm, .row {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -597,9 +615,14 @@ textarea {
     /*max-width: 720px;*/
   }
 }
+.row::before, nav::before, .nav::before, .row::after, nav::after, .nav::after, .row-firm::before, .row-firm::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
 .row, nav, .nav {
   width: 100%;
-  display: flex;
   flex-direction: column;
 }
 
@@ -608,19 +631,12 @@ textarea {
   flex-direction: row !important;
   height: auto;
 }
-.row-firm div {
+.row-firm > div, .row-firm > img {
   margin: 0.5rem auto;
-}
-
-.row::before, nav::before, .nav::before, .row::after, nav::after, .nav::after {
-  content: "";
-  display: block;
-  clear: both;
 }
 
 @media (min-width: 992px) {
   .container {
-    /*max-width: 960px;*/
     padding: 0 1.5rem;
   }
 
@@ -663,8 +679,8 @@ textarea {
 .one-sixth, .five-sixth,
 .one-seventh, .two-seventh, .three-seventh, .four-seventh, .five-seventh, .six-seventh,
 .one-eighth, .three-eighth, .five-eighth, .seven-eighth {
-  padding: 0 0.5rem;
-  margin: auto 0.5rem;
+  padding: 0.5rem;
+  margin: 0.5rem;
 }
 .s-col-1 img, .s-col-2 img, .s-col-3 img, .s-col-4 img, .s-col-5 img, .s-col-6 img, .s-col-7 img, .s-col-8 img, .s-col-9 img, .s-col-10 img, .s-col-11 img, .s-col-12 img,
 .m-col-1 img, .m-col-2 img, .m-col-3 img, .m-col-4 img, .m-col-5 img, .m-col-6 img, .m-col-7 img, .m-col-8 img, .m-col-9 img, .m-col-10 img, .m-col-11 img, .m-col-12 img,
@@ -681,12 +697,13 @@ textarea {
   height: auto;
 }
 
+/*
 .s-col-1, .s-col-2, .s-col-3, .s-col-4, .s-col-5, .s-col-6, .s-col-7, .s-col-8, .s-col-9, .s-col-10, .s-col-11, .s-col-12,
 .m-col-1, .m-col-2, .m-col-3, .m-col-4, .m-col-5, .m-col-6, .m-col-7, .m-col-8, .m-col-9, .m-col-10, .m-col-11, .m-col-12,
 .l-col-1, .l-col-2, .l-col-3, .l-col-4, .l-col-5, .l-col-6, .l-col-7, .l-col-8, .l-col-9, .l-col-10, .l-col-11, .l-col-12 {
   width: 100%;
 }
-
+*/
 /*@media only screen and (min-width:601px){
   .cc-col-m1{width:8.3333%} .cc-col-m2{width:16.6666%} .cc-col-m3{width:25%} .cc-col-m4{width:33.3333%} .cc-col-m5{width:41.6666%} .cc-col-m6{width:50%} .cc-col-m7{width:58.3333%} .cc-col-m8{width:66.6666%} .cc-col-m9{width:75%} .cc-col-m10{width:83.3333%} .cc-col-m11{width:91.6666%} .cc-col-m12{width:100%}
 }
@@ -705,34 +722,6 @@ textarea {
 }
 
 @media screen and (min-width: 768px) {
-  .col-1, .col-2, .col-3 {
-    width: 25%;
-  }
-
-  /*.col-4, .col-5, .col-6, .col-7, .col-8 {
-    width: 50%;
-  }*/
-  .col-4, .col-5 {
-    width: 35%;
-  }
-
-  .col-6 {
-    width: 50%;
-  }
-
-  .col-7, .col-8 {
-    width: 65%;
-  }
-
-  .col-9, .col-10, .col-11 {
-    width: 75%;
-  }
-
-  .col-12 {
-    width: 100%;
-  }
-}
-@media screen and (min-width: 992px) {
   .col-1 {
     width: 7.333333%;
   }
@@ -786,11 +775,11 @@ textarea {
 }
 
 .one-third {
-  width: 34%;
+  width: 33.333333%;
 }
 
 .two-third {
-  width: 66%;
+  width: 66.666666%;
 }
 
 .one-fourth {
@@ -818,7 +807,7 @@ textarea {
 }
 
 .one-sixth {
-  width: 16.666667%;
+  width: 16.666666%;
 }
 
 .five-sixth {
@@ -866,6 +855,55 @@ textarea {
 }
 
 /* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .s-col-1 {
+    width: 7.333333% !important;
+  }
+
+  .s-col-2 {
+    width: 15.666666% !important;
+  }
+
+  .s-col-3 {
+    width: 25% !important;
+  }
+
+  .s-col-4 {
+    width: 32.333333% !important;
+  }
+
+  .s-col-5 {
+    width: 40.666666% !important;
+  }
+
+  .s-col-6 {
+    width: 49% !important;
+  }
+
+  .s-col-7 {
+    width: 57.333333% !important;
+  }
+
+  .s-col-8 {
+    width: 65.666666% !important;
+  }
+
+  .s-col-9 {
+    width: 74% !important;
+  }
+
+  .s-col-10 {
+    width: 82.333333% !important;
+  }
+
+  .s-col-11 {
+    width: 90.666666% !important;
+  }
+
+  .s-col-12 {
+    width: 99% !important;
+  }
+}
 /* Portrait tablets and large phones, etc */
 @media only screen and (min-width: 600px) and (max-width: 768px) {
   .s-col-1 {
@@ -1017,6 +1055,55 @@ textarea {
   }
 }
 /* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  .l-col-1 {
+    width: 7.333333%;
+  }
+
+  .l-col-2 {
+    width: 15.666666%;
+  }
+
+  .l-col-3 {
+    width: 25%;
+  }
+
+  .l-col-4 {
+    width: 32.333333%;
+  }
+
+  .l-col-5 {
+    width: 40.666666%;
+  }
+
+  .l-col-6 {
+    width: 49%;
+  }
+
+  .l-col-7 {
+    width: 57.333333%;
+  }
+
+  .l-col-8 {
+    width: 65.666666%;
+  }
+
+  .l-col-9 {
+    width: 74%;
+  }
+
+  .l-col-10 {
+    width: 82.333333%;
+  }
+
+  .l-col-11 {
+    width: 90.666666%;
+  }
+
+  .l-col-12 {
+    width: 99%;
+  }
+}
 /*.one-third, .two-third,
 .one-fourth, .three-fourth,
 .one-fifth, .two-fifth, .three-fifth, .four-fifth,
@@ -1209,13 +1296,17 @@ textarea {
   border-right-width: 5px;
 }
 
+/*
+@function bodyNeuEffectCondition($backgroundColor) {
+  @if $backgroundColor == white {
+    @return none;
+  } @else {
+    @return inherit;
+  }
+}*/
 /* COLORS */
 .text-white {
   color: #ffffff;
-}
-
-.text-light {
-  color: #efefff;
 }
 
 .text-neu-fresh {
@@ -1476,131 +1567,131 @@ textarea {
 }
 
 .shadow-white {
-  box-shadow: 10px 10px 40px #d9d9d9, -10px -10px 40px #ffffff;
+  box-shadow: 10px 10px 40px #d9d9d9, -10px -10px 40px #ffffff !important;
 }
 
 .shadow-neu-fresh {
-  box-shadow: 10px 10px 40px #568bd9, -10px -10px 40px #74bbff;
+  box-shadow: 10px 10px 40px #568bd9, -10px -10px 40px #74bbff !important;
 }
 
 .shadow-neu-note {
-  box-shadow: 10px 10px 40px #ba463d, -10px -10px 40px #fc5e53;
+  box-shadow: 10px 10px 40px #ba463d, -10px -10px 40px #fc5e53 !important;
 }
 
 .shadow-neu-info {
-  box-shadow: 10px 10px 40px #2f61d9, -10px -10px 40px #3f83ff;
+  box-shadow: 10px 10px 40px #2f61d9, -10px -10px 40px #3f83ff !important;
 }
 
 .shadow-neu-warning {
-  box-shadow: 10px 10px 40px #d9a029, -10px -10px 40px #ffd837;
+  box-shadow: 10px 10px 40px #d9a029, -10px -10px 40px #ffd837 !important;
 }
 
 .shadow-neu-success {
-  box-shadow: 10px 10px 40px #17a274, -10px -10px 40px #1fdc9e;
+  box-shadow: 10px 10px 40px #17a274, -10px -10px 40px #1fdc9e !important;
 }
 
 .shadow-neu-error {
-  box-shadow: 10px 10px 40px #bf3314, -10px -10px 40px #ff451a;
+  box-shadow: 10px 10px 40px #bf3314, -10px -10px 40px #ff451a !important;
 }
 
 .shadow-neu-dark-gray {
-  box-shadow: 10px 10px 40px #535661, -10px -10px 40px #717483;
+  box-shadow: 10px 10px 40px #535661, -10px -10px 40px #717483 !important;
 }
 
 .shadow-neu-medium-gray {
-  box-shadow: 10px 10px 40px #808189, -10px -10px 40px #adafb9;
+  box-shadow: 10px 10px 40px #808189, -10px -10px 40px #adafb9 !important;
 }
 
 .shadow-neu-light-gray {
-  box-shadow: 10px 10px 40px #c3c3c4, -10px -10px 40px #ffffff;
+  box-shadow: 10px 10px 40px #c3c3c4, -10px -10px 40px #ffffff !important;
 }
 
 .shadow-neu-dark {
-  box-shadow: 10px 10px 40px #262a38, -10px -10px 40px #34384c;
+  box-shadow: 10px 10px 40px #262a38, -10px -10px 40px #34384c !important;
 }
 
 .shadow-neu-light {
-  box-shadow: 10px 10px 40px #cbcbd9, -10px -10px 40px #ffffff;
+  box-shadow: 10px 10px 40px #cbcbd9, -10px -10px 40px #ffffff !important;
 }
 
 .shadow-neu-gray {
-  box-shadow: 10px 10px 40px #adadb1, -10px -10px 40px #e9ebef;
+  box-shadow: 10px 10px 40px #adadb1, -10px -10px 40px #e9ebef !important;
 }
 
 .shadow-red {
-  box-shadow: 10px 10px 40px #cf392e, -10px -10px 40px #ff4d3e;
+  box-shadow: 10px 10px 40px #cf392e, -10px -10px 40px #ff4d3e !important;
 }
 
 .shadow-pink {
-  box-shadow: 10px 10px 40px #c61a54, -10px -10px 40px #ff2372;
+  box-shadow: 10px 10px 40px #c61a54, -10px -10px 40px #ff2372 !important;
 }
 
 .shadow-purple {
-  box-shadow: 10px 10px 40px #852196, -10px -10px 40px #b32dca;
+  box-shadow: 10px 10px 40px #852196, -10px -10px 40px #b32dca !important;
 }
 
 .shadow-deep-purple {
-  box-shadow: 10px 10px 40px #58319c, -10px -10px 40px #7643d2;
+  box-shadow: 10px 10px 40px #58319c, -10px -10px 40px #7643d2 !important;
 }
 
 .shadow-indigo {
-  box-shadow: 10px 10px 40px #36459a, -10px -10px 40px #485dd0;
+  box-shadow: 10px 10px 40px #36459a, -10px -10px 40px #485dd0 !important;
 }
 
 .shadow-blue {
-  box-shadow: 10px 10px 40px #1c80cf, -10px -10px 40px #26adff;
+  box-shadow: 10px 10px 40px #1c80cf, -10px -10px 40px #26adff !important;
 }
 
 .shadow-light-blue {
-  box-shadow: 10px 10px 40px #0390cf, -10px -10px 40px #03c2ff;
+  box-shadow: 10px 10px 40px #0390cf, -10px -10px 40px #03c2ff !important;
 }
 
 .shadow-cyan {
-  box-shadow: 10px 10px 40px #00a0b4, -10px -10px 40px #00d8f4;
+  box-shadow: 10px 10px 40px #00a0b4, -10px -10px 40px #00d8f4 !important;
 }
 
 .shadow-teal {
-  box-shadow: 10px 10px 40px #008074, -10px -10px 40px #00ad9c;
+  box-shadow: 10px 10px 40px #008074, -10px -10px 40px #00ad9c !important;
 }
 
 .shadow-green {
-  box-shadow: 10px 10px 40px #419544, -10px -10px 40px #57c95c;
+  box-shadow: 10px 10px 40px #419544, -10px -10px 40px #57c95c !important;
 }
 
 .shadow-light-green {
-  box-shadow: 10px 10px 40px #76a63f, -10px -10px 40px #a0e055;
+  box-shadow: 10px 10px 40px #76a63f, -10px -10px 40px #a0e055 !important;
 }
 
 .shadow-lime {
-  box-shadow: 10px 10px 40px #aebb30, -10px -10px 40px #ecfd42;
+  box-shadow: 10px 10px 40px #aebb30, -10px -10px 40px #ecfd42 !important;
 }
 
 .shadow-yellow {
-  box-shadow: 10px 10px 40px #d9c832, -10px -10px 40px #ffff44;
+  box-shadow: 10px 10px 40px #d9c832, -10px -10px 40px #ffff44 !important;
 }
 
 .shadow-amber {
-  box-shadow: 10px 10px 40px #d9a406, -10px -10px 40px #ffde08;
+  box-shadow: 10px 10px 40px #d9a406, -10px -10px 40px #ffde08 !important;
 }
 
 .shadow-orange {
-  box-shadow: 10px 10px 40px #d98100, -10px -10px 40px #ffaf00;
+  box-shadow: 10px 10px 40px #d98100, -10px -10px 40px #ffaf00 !important;
 }
 
 .shadow-deep-orange {
-  box-shadow: 10px 10px 40px #d94a1d, -10px -10px 40px #ff6427;
+  box-shadow: 10px 10px 40px #d94a1d, -10px -10px 40px #ff6427 !important;
 }
 
 .shadow-brown {
-  box-shadow: 10px 10px 40px #67483d, -10px -10px 40px #8b6253;
+  box-shadow: 10px 10px 40px #67483d, -10px -10px 40px #8b6253 !important;
 }
 
 .shadow-gray {
-  box-shadow: 10px 10px 40px #868686, -10px -10px 40px #b6b6b6;
+  box-shadow: 10px 10px 40px #868686, -10px -10px 40px #b6b6b6 !important;
 }
 
 .shadow-blue-gray {
-  box-shadow: 10px 10px 40px #526a76, -10px -10px 40px #6e90a0;
+  box-shadow: 10px 10px 40px #526a76, -10px -10px 40px #6e90a0 !important;
 }
 
 .border-white {
@@ -2603,7 +2694,7 @@ textarea {
   background: linear-gradient(145deg, #56717d, #678695);
 }
 
-.bg-white button:disabled, .bg-white .button:disabled, .bg-white input[type=submit]:disabled, .bg-white input[type=button]:disabled, .bg-neu-fresh button:disabled, .bg-neu-fresh .button:disabled, .bg-neu-fresh input[type=submit]:disabled, .bg-neu-fresh input[type=button]:disabled, .bg-neu-note button:disabled, .bg-neu-note .button:disabled, .bg-neu-note input[type=submit]:disabled, .bg-neu-note input[type=button]:disabled, .bg-neu-info button:disabled, .bg-neu-info .button:disabled, .bg-neu-info input[type=submit]:disabled, .bg-neu-info input[type=button]:disabled, .bg-neu-warning button:disabled, .bg-neu-warning .button:disabled, .bg-neu-warning input[type=submit]:disabled, .bg-neu-warning input[type=button]:disabled, .bg-neu-success button:disabled, .bg-neu-success .button:disabled, .bg-neu-success input[type=submit]:disabled, .bg-neu-success input[type=button]:disabled, .bg-neu-error button:disabled, .bg-neu-error .button:disabled, .bg-neu-error input[type=submit]:disabled, .bg-neu-error input[type=button]:disabled, .bg-neu-dark-gray button:disabled, .bg-neu-dark-gray .button:disabled, .bg-neu-dark-gray input[type=submit]:disabled, .bg-neu-dark-gray input[type=button]:disabled, .bg-neu-medium-gray button:disabled, .bg-neu-medium-gray .button:disabled, .bg-neu-medium-gray input[type=submit]:disabled, .bg-neu-medium-gray input[type=button]:disabled, .bg-neu-light-gray button:disabled, .bg-neu-light-gray .button:disabled, .bg-neu-light-gray input[type=submit]:disabled, .bg-neu-light-gray input[type=button]:disabled, .bg-neu-gray button:disabled, .bg-neu-gray .button:disabled, .bg-neu-gray input[type=submit]:disabled, .bg-neu-gray input[type=button]:disabled, .bg-neu-dark button:disabled, .bg-neu-dark .button:disabled, .bg-neu-dark input[type=submit]:disabled, .bg-neu-dark input[type=button]:disabled, .bg-neu-light button:disabled, .bg-neu-light .button:disabled, .bg-neu-light input[type=submit]:disabled, .bg-neu-light input[type=button]:disabled, .bg-gray button:disabled, .bg-gray .button:disabled, .bg-gray input[type=submit]:disabled, .bg-gray input[type=button]:disabled, .bg-red button:disabled, .bg-red .button:disabled, .bg-red input[type=submit]:disabled, .bg-red input[type=button]:disabled, .bg-pink button:disabled, .bg-pink .button:disabled, .bg-pink input[type=submit]:disabled, .bg-pink input[type=button]:disabled, .bg-purple button:disabled, .bg-purple .button:disabled, .bg-purple input[type=submit]:disabled, .bg-purple input[type=button]:disabled, .bg-deep-purple button:disabled, .bg-deep-purple .button:disabled, .bg-deep-purple input[type=submit]:disabled, .bg-deep-purple input[type=button]:disabled, .bg-indigo button:disabled, .bg-indigo .button:disabled, .bg-indigo input[type=submit]:disabled, .bg-indigo input[type=button]:disabled, .bg-blue button:disabled, .bg-blue .button:disabled, .bg-blue input[type=submit]:disabled, .bg-blue input[type=button]:disabled, .bg-light-blue button:disabled, .bg-light-blue .button:disabled, .bg-light-blue input[type=submit]:disabled, .bg-light-blue input[type=button]:disabled, .bg-cyan button:disabled, .bg-cyan .button:disabled, .bg-cyan input[type=submit]:disabled, .bg-cyan input[type=button]:disabled, .bg-teal button:disabled, .bg-teal .button:disabled, .bg-teal input[type=submit]:disabled, .bg-teal input[type=button]:disabled, .bg-green button:disabled, .bg-green .button:disabled, .bg-green input[type=submit]:disabled, .bg-green input[type=button]:disabled, .bg-light-green button:disabled, .bg-light-green .button:disabled, .bg-light-green input[type=submit]:disabled, .bg-light-green input[type=button]:disabled, .bg-lime button:disabled, .bg-lime .button:disabled, .bg-lime input[type=submit]:disabled, .bg-lime input[type=button]:disabled, .bg-yellow button:disabled, .bg-yellow .button:disabled, .bg-yellow input[type=submit]:disabled, .bg-yellow input[type=button]:disabled, .bg-amber button:disabled, .bg-amber .button:disabled, .bg-amber input[type=submit]:disabled, .bg-amber input[type=button]:disabled, .bg-orange button:disabled, .bg-orange .button:disabled, .bg-orange input[type=submit]:disabled, .bg-orange input[type=button]:disabled, .bg-deep-orange button:disabled, .bg-deep-orange .button:disabled, .bg-deep-orange input[type=submit]:disabled, .bg-deep-orange input[type=button]:disabled, .bg-brown button:disabled, .bg-brown .button:disabled, .bg-brown input[type=submit]:disabled, .bg-brown input[type=button]:disabled, .bg-blue-gray button:disabled, .bg-blue-gray .button:disabled, .bg-blue-gray input[type=submit]:disabled, .bg-blue-gray input[type=button]:disabled {
+.bg-white button:disabled, .bg-white .button:disabled, .bg-white .button:disabled, .bg-white input[type=submit]:disabled, .bg-white [type=submit].input:disabled, .bg-white input[type=button]:disabled, .bg-white [type=button].input:disabled, .bg-neu-fresh button:disabled, .bg-neu-fresh .button:disabled, .bg-neu-fresh .button:disabled, .bg-neu-fresh input[type=submit]:disabled, .bg-neu-fresh [type=submit].input:disabled, .bg-neu-fresh input[type=button]:disabled, .bg-neu-fresh [type=button].input:disabled, .bg-neu-note button:disabled, .bg-neu-note .button:disabled, .bg-neu-note .button:disabled, .bg-neu-note input[type=submit]:disabled, .bg-neu-note [type=submit].input:disabled, .bg-neu-note input[type=button]:disabled, .bg-neu-note [type=button].input:disabled, .bg-neu-info button:disabled, .bg-neu-info .button:disabled, .bg-neu-info .button:disabled, .bg-neu-info input[type=submit]:disabled, .bg-neu-info [type=submit].input:disabled, .bg-neu-info input[type=button]:disabled, .bg-neu-info [type=button].input:disabled, .bg-neu-warning button:disabled, .bg-neu-warning .button:disabled, .bg-neu-warning .button:disabled, .bg-neu-warning input[type=submit]:disabled, .bg-neu-warning [type=submit].input:disabled, .bg-neu-warning input[type=button]:disabled, .bg-neu-warning [type=button].input:disabled, .bg-neu-success button:disabled, .bg-neu-success .button:disabled, .bg-neu-success .button:disabled, .bg-neu-success input[type=submit]:disabled, .bg-neu-success [type=submit].input:disabled, .bg-neu-success input[type=button]:disabled, .bg-neu-success [type=button].input:disabled, .bg-neu-error button:disabled, .bg-neu-error .button:disabled, .bg-neu-error .button:disabled, .bg-neu-error input[type=submit]:disabled, .bg-neu-error [type=submit].input:disabled, .bg-neu-error input[type=button]:disabled, .bg-neu-error [type=button].input:disabled, .bg-neu-dark-gray button:disabled, .bg-neu-dark-gray .button:disabled, .bg-neu-dark-gray .button:disabled, .bg-neu-dark-gray input[type=submit]:disabled, .bg-neu-dark-gray [type=submit].input:disabled, .bg-neu-dark-gray input[type=button]:disabled, .bg-neu-dark-gray [type=button].input:disabled, .bg-neu-medium-gray button:disabled, .bg-neu-medium-gray .button:disabled, .bg-neu-medium-gray .button:disabled, .bg-neu-medium-gray input[type=submit]:disabled, .bg-neu-medium-gray [type=submit].input:disabled, .bg-neu-medium-gray input[type=button]:disabled, .bg-neu-medium-gray [type=button].input:disabled, .bg-neu-light-gray button:disabled, .bg-neu-light-gray .button:disabled, .bg-neu-light-gray .button:disabled, .bg-neu-light-gray input[type=submit]:disabled, .bg-neu-light-gray [type=submit].input:disabled, .bg-neu-light-gray input[type=button]:disabled, .bg-neu-light-gray [type=button].input:disabled, .bg-neu-gray button:disabled, .bg-neu-gray .button:disabled, .bg-neu-gray .button:disabled, .bg-neu-gray input[type=submit]:disabled, .bg-neu-gray [type=submit].input:disabled, .bg-neu-gray input[type=button]:disabled, .bg-neu-gray [type=button].input:disabled, .bg-neu-dark button:disabled, .bg-neu-dark .button:disabled, .bg-neu-dark .button:disabled, .bg-neu-dark input[type=submit]:disabled, .bg-neu-dark [type=submit].input:disabled, .bg-neu-dark input[type=button]:disabled, .bg-neu-dark [type=button].input:disabled, .bg-neu-light button:disabled, .bg-neu-light .button:disabled, .bg-neu-light .button:disabled, .bg-neu-light input[type=submit]:disabled, .bg-neu-light [type=submit].input:disabled, .bg-neu-light input[type=button]:disabled, .bg-neu-light [type=button].input:disabled, .bg-gray button:disabled, .bg-gray .button:disabled, .bg-gray .button:disabled, .bg-gray input[type=submit]:disabled, .bg-gray [type=submit].input:disabled, .bg-gray input[type=button]:disabled, .bg-gray [type=button].input:disabled, .bg-red button:disabled, .bg-red .button:disabled, .bg-red .button:disabled, .bg-red input[type=submit]:disabled, .bg-red [type=submit].input:disabled, .bg-red input[type=button]:disabled, .bg-red [type=button].input:disabled, .bg-pink button:disabled, .bg-pink .button:disabled, .bg-pink .button:disabled, .bg-pink input[type=submit]:disabled, .bg-pink [type=submit].input:disabled, .bg-pink input[type=button]:disabled, .bg-pink [type=button].input:disabled, .bg-purple button:disabled, .bg-purple .button:disabled, .bg-purple .button:disabled, .bg-purple input[type=submit]:disabled, .bg-purple [type=submit].input:disabled, .bg-purple input[type=button]:disabled, .bg-purple [type=button].input:disabled, .bg-deep-purple button:disabled, .bg-deep-purple .button:disabled, .bg-deep-purple .button:disabled, .bg-deep-purple input[type=submit]:disabled, .bg-deep-purple [type=submit].input:disabled, .bg-deep-purple input[type=button]:disabled, .bg-deep-purple [type=button].input:disabled, .bg-indigo button:disabled, .bg-indigo .button:disabled, .bg-indigo .button:disabled, .bg-indigo input[type=submit]:disabled, .bg-indigo [type=submit].input:disabled, .bg-indigo input[type=button]:disabled, .bg-indigo [type=button].input:disabled, .bg-blue button:disabled, .bg-blue .button:disabled, .bg-blue .button:disabled, .bg-blue input[type=submit]:disabled, .bg-blue [type=submit].input:disabled, .bg-blue input[type=button]:disabled, .bg-blue [type=button].input:disabled, .bg-light-blue button:disabled, .bg-light-blue .button:disabled, .bg-light-blue .button:disabled, .bg-light-blue input[type=submit]:disabled, .bg-light-blue [type=submit].input:disabled, .bg-light-blue input[type=button]:disabled, .bg-light-blue [type=button].input:disabled, .bg-cyan button:disabled, .bg-cyan .button:disabled, .bg-cyan .button:disabled, .bg-cyan input[type=submit]:disabled, .bg-cyan [type=submit].input:disabled, .bg-cyan input[type=button]:disabled, .bg-cyan [type=button].input:disabled, .bg-teal button:disabled, .bg-teal .button:disabled, .bg-teal .button:disabled, .bg-teal input[type=submit]:disabled, .bg-teal [type=submit].input:disabled, .bg-teal input[type=button]:disabled, .bg-teal [type=button].input:disabled, .bg-green button:disabled, .bg-green .button:disabled, .bg-green .button:disabled, .bg-green input[type=submit]:disabled, .bg-green [type=submit].input:disabled, .bg-green input[type=button]:disabled, .bg-green [type=button].input:disabled, .bg-light-green button:disabled, .bg-light-green .button:disabled, .bg-light-green .button:disabled, .bg-light-green input[type=submit]:disabled, .bg-light-green [type=submit].input:disabled, .bg-light-green input[type=button]:disabled, .bg-light-green [type=button].input:disabled, .bg-lime button:disabled, .bg-lime .button:disabled, .bg-lime .button:disabled, .bg-lime input[type=submit]:disabled, .bg-lime [type=submit].input:disabled, .bg-lime input[type=button]:disabled, .bg-lime [type=button].input:disabled, .bg-yellow button:disabled, .bg-yellow .button:disabled, .bg-yellow .button:disabled, .bg-yellow input[type=submit]:disabled, .bg-yellow [type=submit].input:disabled, .bg-yellow input[type=button]:disabled, .bg-yellow [type=button].input:disabled, .bg-amber button:disabled, .bg-amber .button:disabled, .bg-amber .button:disabled, .bg-amber input[type=submit]:disabled, .bg-amber [type=submit].input:disabled, .bg-amber input[type=button]:disabled, .bg-amber [type=button].input:disabled, .bg-orange button:disabled, .bg-orange .button:disabled, .bg-orange .button:disabled, .bg-orange input[type=submit]:disabled, .bg-orange [type=submit].input:disabled, .bg-orange input[type=button]:disabled, .bg-orange [type=button].input:disabled, .bg-deep-orange button:disabled, .bg-deep-orange .button:disabled, .bg-deep-orange .button:disabled, .bg-deep-orange input[type=submit]:disabled, .bg-deep-orange [type=submit].input:disabled, .bg-deep-orange input[type=button]:disabled, .bg-deep-orange [type=button].input:disabled, .bg-brown button:disabled, .bg-brown .button:disabled, .bg-brown .button:disabled, .bg-brown input[type=submit]:disabled, .bg-brown [type=submit].input:disabled, .bg-brown input[type=button]:disabled, .bg-brown [type=button].input:disabled, .bg-blue-gray button:disabled, .bg-blue-gray .button:disabled, .bg-blue-gray .button:disabled, .bg-blue-gray input[type=submit]:disabled, .bg-blue-gray [type=submit].input:disabled, .bg-blue-gray input[type=button]:disabled, .bg-blue-gray [type=button].input:disabled {
   background: rgba(229, 229, 231, 0.5);
   box-shadow: 20px 20px 40px #c3c3c4, -20px -20px 40px #ffffff;
 }
@@ -2611,1034 +2702,1450 @@ textarea {
 .bg-white ::placeholder {
   color: #333;
 }
-.bg-white input:disabled::placeholder, .bg-white textarea:disabled::placeholder, .bg-white textarea:disabled::placeholder {
+.bg-white .carousel, .bg-white .carousel-450, .bg-white .carousel-400, .bg-white .carousel-350, .bg-white .carousel-300, .bg-white .carousel-250, .bg-white .carousel-200, .bg-white .carousel-150 {
+  scrollbar-color: #444 #777;
+  scrollbar-width: thin;
+}
+.bg-white .carousel::-webkit-scrollbar-thumb, .bg-white .carousel-450::-webkit-scrollbar-thumb, .bg-white .carousel-400::-webkit-scrollbar-thumb, .bg-white .carousel-350::-webkit-scrollbar-thumb, .bg-white .carousel-300::-webkit-scrollbar-thumb, .bg-white .carousel-250::-webkit-scrollbar-thumb, .bg-white .carousel-200::-webkit-scrollbar-thumb, .bg-white .carousel-150::-webkit-scrollbar-thumb {
+  background: #444;
+}
+.bg-white .carousel::-webkit-scrollbar-track, .bg-white .carousel-450::-webkit-scrollbar-track, .bg-white .carousel-400::-webkit-scrollbar-track, .bg-white .carousel-350::-webkit-scrollbar-track, .bg-white .carousel-300::-webkit-scrollbar-track, .bg-white .carousel-250::-webkit-scrollbar-track, .bg-white .carousel-200::-webkit-scrollbar-track, .bg-white .carousel-150::-webkit-scrollbar-track {
+  background: #777;
+}
+.bg-white .carousel::-webkit-scrollbar-thumb:hover, .bg-white .carousel-450::-webkit-scrollbar-thumb:hover, .bg-white .carousel-400::-webkit-scrollbar-thumb:hover, .bg-white .carousel-350::-webkit-scrollbar-thumb:hover, .bg-white .carousel-300::-webkit-scrollbar-thumb:hover, .bg-white .carousel-250::-webkit-scrollbar-thumb:hover, .bg-white .carousel-200::-webkit-scrollbar-thumb:hover, .bg-white .carousel-150::-webkit-scrollbar-thumb:hover {
+  background: #333;
+}
+.bg-white input:disabled::placeholder, .bg-white .input:disabled::placeholder, .bg-white textarea:disabled::placeholder, .bg-white .textarea:disabled::placeholder, .bg-white textarea:disabled::placeholder {
   text-decoration: line-through;
   color: #333;
 }
 .bg-white .panel, .bg-white .shadow-white, .bg-white .card {
   box-shadow: 10px 10px 40px #d9d9d9, -10px -10px 40px #ffffff;
 }
-.bg-white input, .bg-white textarea {
+.bg-white input, .bg-white .input, .bg-white textarea, .bg-white .textarea {
   box-shadow: inset 10px 10px 40px #d9d9d9, inset -10px -10px 40px #ffffff;
 }
-.bg-white input:disabled, .bg-white textarea:disabled {
+.bg-white input:disabled, .bg-white .input:disabled, .bg-white textarea:disabled, .bg-white .textarea:disabled {
   background-color: rgba(229, 229, 231, 0.5);
 }
-.bg-white button, .bg-white .button, .bg-white input[type=button], .bg-white input[type=submit] {
+.bg-white button, .bg-white .button, .bg-white input[type=button], .bg-white [type=button].input, .bg-white input[type=submit], .bg-white [type=submit].input {
   background: #ffffff;
   box-shadow: 10px 10px 40px #d9d9d9, -10px -10px 40px #ffffff;
 }
-.bg-white button:focus, .bg-white .button:focus, .bg-white input[type=button]:focus, .bg-white input[type=submit]:focus {
+.bg-white button:focus, .bg-white .button:focus, .bg-white input[type=button]:focus, .bg-white [type=button].input:focus, .bg-white input[type=submit]:focus, .bg-white [type=submit].input:focus {
   background: #ffffff;
   box-shadow: inset 10px 10px 40px #d9d9d9, inset -10px -10px 40px #ffffff;
 }
-.bg-white button.convex, .bg-white .button.convex, .bg-white input[type=button].convex, .bg-white input[type=submit].convex {
+.bg-white button.convex, .bg-white .button.convex, .bg-white input[type=button].convex, .bg-white [type=button].convex.input, .bg-white input[type=submit].convex, .bg-white [type=submit].convex.input {
   background: linear-gradient(145deg, #ffffff, #e6e6e6);
   box-shadow: 10px 10px 40px #d9d9d9, -10px -10px 40px #ffffff;
 }
-.bg-white button.convex:focus, .bg-white .button.convex:focus, .bg-white input[type=button].convex:focus, .bg-white input[type=submit].convex:focus {
+.bg-white button.convex:focus, .bg-white .button.convex:focus, .bg-white input[type=button].convex:focus, .bg-white [type=button].convex.input:focus, .bg-white input[type=submit].convex:focus, .bg-white [type=submit].convex.input:focus {
   background: linear-gradient(145deg, #e6e6e6, #ffffff);
 }
 
 .bg-neu-dark ::placeholder {
   color: #ccc;
 }
-.bg-neu-dark input:disabled::placeholder, .bg-neu-dark textarea:disabled::placeholder {
+.bg-neu-dark .carousel, .bg-neu-dark .carousel-450, .bg-neu-dark .carousel-400, .bg-neu-dark .carousel-350, .bg-neu-dark .carousel-300, .bg-neu-dark .carousel-250, .bg-neu-dark .carousel-200, .bg-neu-dark .carousel-150 {
+  scrollbar-color: #ccc #aaa;
+  scrollbar-width: thin;
+}
+.bg-neu-dark .carousel::-webkit-scrollbar-thumb, .bg-neu-dark .carousel-450::-webkit-scrollbar-thumb, .bg-neu-dark .carousel-400::-webkit-scrollbar-thumb, .bg-neu-dark .carousel-350::-webkit-scrollbar-thumb, .bg-neu-dark .carousel-300::-webkit-scrollbar-thumb, .bg-neu-dark .carousel-250::-webkit-scrollbar-thumb, .bg-neu-dark .carousel-200::-webkit-scrollbar-thumb, .bg-neu-dark .carousel-150::-webkit-scrollbar-thumb {
+  background: #ccc;
+}
+.bg-neu-dark .carousel::-webkit-scrollbar-track, .bg-neu-dark .carousel-450::-webkit-scrollbar-track, .bg-neu-dark .carousel-400::-webkit-scrollbar-track, .bg-neu-dark .carousel-350::-webkit-scrollbar-track, .bg-neu-dark .carousel-300::-webkit-scrollbar-track, .bg-neu-dark .carousel-250::-webkit-scrollbar-track, .bg-neu-dark .carousel-200::-webkit-scrollbar-track, .bg-neu-dark .carousel-150::-webkit-scrollbar-track {
+  background: #aaa;
+}
+.bg-neu-dark .carousel::-webkit-scrollbar-thumb:hover, .bg-neu-dark .carousel-450::-webkit-scrollbar-thumb:hover, .bg-neu-dark .carousel-400::-webkit-scrollbar-thumb:hover, .bg-neu-dark .carousel-350::-webkit-scrollbar-thumb:hover, .bg-neu-dark .carousel-300::-webkit-scrollbar-thumb:hover, .bg-neu-dark .carousel-250::-webkit-scrollbar-thumb:hover, .bg-neu-dark .carousel-200::-webkit-scrollbar-thumb:hover, .bg-neu-dark .carousel-150::-webkit-scrollbar-thumb:hover {
+  background: #fff;
+}
+.bg-neu-dark input:disabled::placeholder, .bg-neu-dark .input:disabled::placeholder, .bg-neu-dark textarea:disabled::placeholder, .bg-neu-dark .textarea:disabled::placeholder {
   text-decoration: line-through;
   color: #333;
 }
 .bg-neu-dark .panel, .bg-neu-dark .shadow-neu-dark, .bg-neu-dark .card {
   box-shadow: 10px 10px 40px #262a38, -10px -10px 40px #34384c;
 }
-.bg-neu-dark input, .bg-neu-dark textarea {
+.bg-neu-dark input, .bg-neu-dark .input, .bg-neu-dark textarea, .bg-neu-dark .textarea {
   box-shadow: inset 10px 10px 40px #262a38, inset -10px -10px 40px #34384c;
 }
-.bg-neu-dark input:disabled, .bg-neu-dark textarea:disabled {
+.bg-neu-dark input:disabled, .bg-neu-dark .input:disabled, .bg-neu-dark textarea:disabled, .bg-neu-dark .textarea:disabled {
   background-color: rgba(229, 229, 231, 0.5);
 }
-.bg-neu-dark button, .bg-neu-dark .button, .bg-neu-dark input[type=button], .bg-neu-dark input[type=submit] {
+.bg-neu-dark button, .bg-neu-dark .button, .bg-neu-dark input[type=button], .bg-neu-dark [type=button].input, .bg-neu-dark input[type=submit], .bg-neu-dark [type=submit].input {
   background: #2d3142;
   box-shadow: 10px 10px 40px #262a38, -10px -10px 40px #34384c;
 }
-.bg-neu-dark button:focus, .bg-neu-dark .button:focus, .bg-neu-dark input[type=button]:focus, .bg-neu-dark input[type=submit]:focus {
+.bg-neu-dark button:focus, .bg-neu-dark .button:focus, .bg-neu-dark input[type=button]:focus, .bg-neu-dark [type=button].input:focus, .bg-neu-dark input[type=submit]:focus, .bg-neu-dark [type=submit].input:focus {
   background: #2d3142;
   box-shadow: inset 10px 10px 40px #262a38, inset -10px -10px 40px #34384c;
 }
-.bg-neu-dark button.convex, .bg-neu-dark .button.convex, .bg-neu-dark input[type=button].convex, .bg-neu-dark input[type=submit].convex {
+.bg-neu-dark button.convex, .bg-neu-dark .button.convex, .bg-neu-dark input[type=button].convex, .bg-neu-dark [type=button].convex.input, .bg-neu-dark input[type=submit].convex, .bg-neu-dark [type=submit].convex.input {
   background: linear-gradient(145deg, #303447, #292c3b);
   box-shadow: 20px 20px 40px #262a38, -20px -20px 40px #34384c;
 }
-.bg-neu-dark button.convex:focus, .bg-neu-dark .button.convex:focus, .bg-neu-dark input[type=button].convex:focus, .bg-neu-dark input[type=submit].convex:focus {
+.bg-neu-dark button.convex:focus, .bg-neu-dark .button.convex:focus, .bg-neu-dark input[type=button].convex:focus, .bg-neu-dark [type=button].convex.input:focus, .bg-neu-dark input[type=submit].convex:focus, .bg-neu-dark [type=submit].convex.input:focus {
   background: linear-gradient(145deg, #292c3b, #303447);
 }
 
 .bg-neu-dark-gray ::placeholder {
   color: #ccc;
 }
-.bg-neu-dark-gray input:disabled::placeholder, .bg-neu-dark-gray textarea:disabled::placeholder {
+.bg-neu-dark-gray .carousel, .bg-neu-dark-gray .carousel-450, .bg-neu-dark-gray .carousel-400, .bg-neu-dark-gray .carousel-350, .bg-neu-dark-gray .carousel-300, .bg-neu-dark-gray .carousel-250, .bg-neu-dark-gray .carousel-200, .bg-neu-dark-gray .carousel-150 {
+  scrollbar-color: #ccc #aaa;
+  scrollbar-width: thin;
+}
+.bg-neu-dark-gray .carousel::-webkit-scrollbar-thumb, .bg-neu-dark-gray .carousel-450::-webkit-scrollbar-thumb, .bg-neu-dark-gray .carousel-400::-webkit-scrollbar-thumb, .bg-neu-dark-gray .carousel-350::-webkit-scrollbar-thumb, .bg-neu-dark-gray .carousel-300::-webkit-scrollbar-thumb, .bg-neu-dark-gray .carousel-250::-webkit-scrollbar-thumb, .bg-neu-dark-gray .carousel-200::-webkit-scrollbar-thumb, .bg-neu-dark-gray .carousel-150::-webkit-scrollbar-thumb {
+  background: #ccc;
+}
+.bg-neu-dark-gray .carousel::-webkit-scrollbar-track, .bg-neu-dark-gray .carousel-450::-webkit-scrollbar-track, .bg-neu-dark-gray .carousel-400::-webkit-scrollbar-track, .bg-neu-dark-gray .carousel-350::-webkit-scrollbar-track, .bg-neu-dark-gray .carousel-300::-webkit-scrollbar-track, .bg-neu-dark-gray .carousel-250::-webkit-scrollbar-track, .bg-neu-dark-gray .carousel-200::-webkit-scrollbar-track, .bg-neu-dark-gray .carousel-150::-webkit-scrollbar-track {
+  background: #aaa;
+}
+.bg-neu-dark-gray .carousel::-webkit-scrollbar-thumb:hover, .bg-neu-dark-gray .carousel-450::-webkit-scrollbar-thumb:hover, .bg-neu-dark-gray .carousel-400::-webkit-scrollbar-thumb:hover, .bg-neu-dark-gray .carousel-350::-webkit-scrollbar-thumb:hover, .bg-neu-dark-gray .carousel-300::-webkit-scrollbar-thumb:hover, .bg-neu-dark-gray .carousel-250::-webkit-scrollbar-thumb:hover, .bg-neu-dark-gray .carousel-200::-webkit-scrollbar-thumb:hover, .bg-neu-dark-gray .carousel-150::-webkit-scrollbar-thumb:hover {
+  background: #fff;
+}
+.bg-neu-dark-gray input:disabled::placeholder, .bg-neu-dark-gray .input:disabled::placeholder, .bg-neu-dark-gray textarea:disabled::placeholder, .bg-neu-dark-gray .textarea:disabled::placeholder {
   text-decoration: line-through;
   color: #333;
 }
 .bg-neu-dark-gray .panel, .bg-neu-dark-gray .shadow-neu-dark-gray, .bg-neu-dark-gray .card-gray {
   box-shadow: 10px 10px 40px #535661, -10px -10px 40px #717483;
 }
-.bg-neu-dark-gray input, .bg-neu-dark-gray textarea {
+.bg-neu-dark-gray input, .bg-neu-dark-gray .input, .bg-neu-dark-gray textarea, .bg-neu-dark-gray .textarea {
   box-shadow: inset 10px 10px 40px #535661, inset -10px -10px 40px #717483;
 }
-.bg-neu-dark-gray input:disabled, .bg-neu-dark-gray textarea:disabled {
+.bg-neu-dark-gray input:disabled, .bg-neu-dark-gray .input:disabled, .bg-neu-dark-gray textarea:disabled, .bg-neu-dark-gray .textarea:disabled {
   background-color: rgba(229, 229, 231, 0.5);
 }
-.bg-neu-dark-gray button, .bg-neu-dark-gray .button, .bg-neu-dark-gray input[type=button], .bg-neu-dark-gray input[type=submit] {
+.bg-neu-dark-gray button, .bg-neu-dark-gray .button, .bg-neu-dark-gray input[type=button], .bg-neu-dark-gray [type=button].input, .bg-neu-dark-gray input[type=submit], .bg-neu-dark-gray [type=submit].input {
   background: #626572;
   box-shadow: 10px 10px 40px #535661, -10px -10px 40px #717483;
 }
-.bg-neu-dark-gray button:focus, .bg-neu-dark-gray .button:focus, .bg-neu-dark-gray input[type=button]:focus, .bg-neu-dark-gray input[type=submit]:focus {
+.bg-neu-dark-gray button:focus, .bg-neu-dark-gray .button:focus, .bg-neu-dark-gray input[type=button]:focus, .bg-neu-dark-gray [type=button].input:focus, .bg-neu-dark-gray input[type=submit]:focus, .bg-neu-dark-gray [type=submit].input:focus {
   background: #626572;
   box-shadow: inset 10px 10px 40px #535661, inset -10px -10px 40px #717483;
 }
-.bg-neu-dark-gray button.convex, .bg-neu-dark-gray .button.convex, .bg-neu-dark-gray input[type=button].convex, .bg-neu-dark-gray input[type=submit].convex {
+.bg-neu-dark-gray button.convex, .bg-neu-dark-gray .button.convex, .bg-neu-dark-gray input[type=button].convex, .bg-neu-dark-gray [type=button].convex.input, .bg-neu-dark-gray input[type=submit].convex, .bg-neu-dark-gray [type=submit].convex.input {
   background: linear-gradient(145deg, #696c7a, #585b67);
   box-shadow: 20px 20px 40px #535661, -20px -20px 40px #717483;
 }
-.bg-neu-dark-gray button.convex:focus, .bg-neu-dark-gray .button.convex:focus, .bg-neu-dark-gray input[type=button].convex:focus, .bg-neu-dark-gray input[type=submit].convex:focus {
+.bg-neu-dark-gray button.convex:focus, .bg-neu-dark-gray .button.convex:focus, .bg-neu-dark-gray input[type=button].convex:focus, .bg-neu-dark-gray [type=button].convex.input:focus, .bg-neu-dark-gray input[type=submit].convex:focus, .bg-neu-dark-gray [type=submit].convex.input:focus {
   background: linear-gradient(145deg, #585b67, #696c7a);
 }
 
 .bg-neu-gray ::placeholder {
   color: #333;
 }
-.bg-neu-gray input:disabled::placeholder, .bg-neu-gray textarea:disabled::placeholder {
+.bg-neu-gray .carousel, .bg-neu-gray .carousel-450, .bg-neu-gray .carousel-400, .bg-neu-gray .carousel-350, .bg-neu-gray .carousel-300, .bg-neu-gray .carousel-250, .bg-neu-gray .carousel-200, .bg-neu-gray .carousel-150 {
+  scrollbar-color: #444 #777;
+  scrollbar-width: thin;
+}
+.bg-neu-gray .carousel::-webkit-scrollbar-thumb, .bg-neu-gray .carousel-450::-webkit-scrollbar-thumb, .bg-neu-gray .carousel-400::-webkit-scrollbar-thumb, .bg-neu-gray .carousel-350::-webkit-scrollbar-thumb, .bg-neu-gray .carousel-300::-webkit-scrollbar-thumb, .bg-neu-gray .carousel-250::-webkit-scrollbar-thumb, .bg-neu-gray .carousel-200::-webkit-scrollbar-thumb, .bg-neu-gray .carousel-150::-webkit-scrollbar-thumb {
+  background: #444;
+}
+.bg-neu-gray .carousel::-webkit-scrollbar-track, .bg-neu-gray .carousel-450::-webkit-scrollbar-track, .bg-neu-gray .carousel-400::-webkit-scrollbar-track, .bg-neu-gray .carousel-350::-webkit-scrollbar-track, .bg-neu-gray .carousel-300::-webkit-scrollbar-track, .bg-neu-gray .carousel-250::-webkit-scrollbar-track, .bg-neu-gray .carousel-200::-webkit-scrollbar-track, .bg-neu-gray .carousel-150::-webkit-scrollbar-track {
+  background: #777;
+}
+.bg-neu-gray .carousel::-webkit-scrollbar-thumb:hover, .bg-neu-gray .carousel-450::-webkit-scrollbar-thumb:hover, .bg-neu-gray .carousel-400::-webkit-scrollbar-thumb:hover, .bg-neu-gray .carousel-350::-webkit-scrollbar-thumb:hover, .bg-neu-gray .carousel-300::-webkit-scrollbar-thumb:hover, .bg-neu-gray .carousel-250::-webkit-scrollbar-thumb:hover, .bg-neu-gray .carousel-200::-webkit-scrollbar-thumb:hover, .bg-neu-gray .carousel-150::-webkit-scrollbar-thumb:hover {
+  background: #333;
+}
+.bg-neu-gray input:disabled::placeholder, .bg-neu-gray .input:disabled::placeholder, .bg-neu-gray textarea:disabled::placeholder, .bg-neu-gray .textarea:disabled::placeholder {
   text-decoration: line-through;
   color: #333;
 }
 .bg-neu-gray .panel, .bg-neu-gray .shadow-neu-gray, .bg-neu-gray .card {
   box-shadow: 10px 10px 40px #adadb1, -10px -10px 40px #e9ebef;
 }
-.bg-neu-gray input, .bg-neu-gray textarea {
+.bg-neu-gray input, .bg-neu-gray .input, .bg-neu-gray textarea, .bg-neu-gray .textarea {
   box-shadow: inset 10px 10px 40px #adadb1, inset -10px -10px 40px #e9ebef;
 }
-.bg-neu-gray input:disabled, .bg-neu-gray textarea:disabled {
+.bg-neu-gray input:disabled, .bg-neu-gray .input:disabled, .bg-neu-gray textarea:disabled, .bg-neu-gray .textarea:disabled {
   background-color: rgba(229, 229, 231, 0.5);
 }
-.bg-neu-gray button, .bg-neu-gray .button, .bg-neu-gray input[type=button], .bg-neu-gray input[type=submit] {
+.bg-neu-gray button, .bg-neu-gray .button, .bg-neu-gray input[type=button], .bg-neu-gray [type=button].input, .bg-neu-gray input[type=submit], .bg-neu-gray [type=submit].input {
   background: #cbccd0;
   box-shadow: 10px 10px 40px #adadb1, -10px -10px 40px #e9ebef;
 }
-.bg-neu-gray button:focus, .bg-neu-gray .button:focus, .bg-neu-gray input[type=button]:focus, .bg-neu-gray input[type=submit]:focus {
+.bg-neu-gray button:focus, .bg-neu-gray .button:focus, .bg-neu-gray input[type=button]:focus, .bg-neu-gray [type=button].input:focus, .bg-neu-gray input[type=submit]:focus, .bg-neu-gray [type=submit].input:focus {
   background: #cbccd0;
   box-shadow: inset 10px 10px 40px #adadb1, inset -10px -10px 40px #e9ebef;
 }
-.bg-neu-gray button.convex, .bg-neu-gray .button.convex, .bg-neu-gray input[type=button].convex, .bg-neu-gray input[type=submit].convex {
+.bg-neu-gray button.convex, .bg-neu-gray .button.convex, .bg-neu-gray input[type=button].convex, .bg-neu-gray [type=button].convex.input, .bg-neu-gray input[type=submit].convex, .bg-neu-gray [type=submit].convex.input {
   background: linear-gradient(145deg, #d9dadf, #b7b8bb);
   box-shadow: 20px 20px 40px #adadb1, -20px -20px 40px #e9ebef;
 }
-.bg-neu-gray button.convex:focus, .bg-neu-gray .button.convex:focus, .bg-neu-gray input[type=button].convex:focus, .bg-neu-gray input[type=submit].convex:focus {
+.bg-neu-gray button.convex:focus, .bg-neu-gray .button.convex:focus, .bg-neu-gray input[type=button].convex:focus, .bg-neu-gray [type=button].convex.input:focus, .bg-neu-gray input[type=submit].convex:focus, .bg-neu-gray [type=submit].convex.input:focus {
   background: linear-gradient(145deg, #b7b8bb, #d9dadf);
 }
 
 .bg-neu-medium-gray ::placeholder {
-  color: #ccc;
+  color: #333;
 }
-.bg-neu-medium-gray input:disabled::placeholder, .bg-neu-medium-gray textarea:disabled::placeholder {
+.bg-neu-medium-gray .carousel, .bg-neu-medium-gray .carousel-450, .bg-neu-medium-gray .carousel-400, .bg-neu-medium-gray .carousel-350, .bg-neu-medium-gray .carousel-300, .bg-neu-medium-gray .carousel-250, .bg-neu-medium-gray .carousel-200, .bg-neu-medium-gray .carousel-150 {
+  scrollbar-color: #ccc #aaa;
+  scrollbar-width: thin;
+}
+.bg-neu-medium-gray .carousel::-webkit-scrollbar-thumb, .bg-neu-medium-gray .carousel-450::-webkit-scrollbar-thumb, .bg-neu-medium-gray .carousel-400::-webkit-scrollbar-thumb, .bg-neu-medium-gray .carousel-350::-webkit-scrollbar-thumb, .bg-neu-medium-gray .carousel-300::-webkit-scrollbar-thumb, .bg-neu-medium-gray .carousel-250::-webkit-scrollbar-thumb, .bg-neu-medium-gray .carousel-200::-webkit-scrollbar-thumb, .bg-neu-medium-gray .carousel-150::-webkit-scrollbar-thumb {
+  background: #ccc;
+}
+.bg-neu-medium-gray .carousel::-webkit-scrollbar-track, .bg-neu-medium-gray .carousel-450::-webkit-scrollbar-track, .bg-neu-medium-gray .carousel-400::-webkit-scrollbar-track, .bg-neu-medium-gray .carousel-350::-webkit-scrollbar-track, .bg-neu-medium-gray .carousel-300::-webkit-scrollbar-track, .bg-neu-medium-gray .carousel-250::-webkit-scrollbar-track, .bg-neu-medium-gray .carousel-200::-webkit-scrollbar-track, .bg-neu-medium-gray .carousel-150::-webkit-scrollbar-track {
+  background: #aaa;
+}
+.bg-neu-medium-gray .carousel::-webkit-scrollbar-thumb:hover, .bg-neu-medium-gray .carousel-450::-webkit-scrollbar-thumb:hover, .bg-neu-medium-gray .carousel-400::-webkit-scrollbar-thumb:hover, .bg-neu-medium-gray .carousel-350::-webkit-scrollbar-thumb:hover, .bg-neu-medium-gray .carousel-300::-webkit-scrollbar-thumb:hover, .bg-neu-medium-gray .carousel-250::-webkit-scrollbar-thumb:hover, .bg-neu-medium-gray .carousel-200::-webkit-scrollbar-thumb:hover, .bg-neu-medium-gray .carousel-150::-webkit-scrollbar-thumb:hover {
+  background: #fff;
+}
+.bg-neu-medium-gray input:disabled::placeholder, .bg-neu-medium-gray .input:disabled::placeholder, .bg-neu-medium-gray textarea:disabled::placeholder, .bg-neu-medium-gray .textarea:disabled::placeholder {
   text-decoration: line-through;
   color: #333;
 }
 .bg-neu-medium-gray .panel, .bg-neu-medium-gray .shadow-neu-medium-gray, .bg-neu-medium-gray .card-gray {
   box-shadow: 10px 10px 40px #808189, -10px -10px 40px #adafb9;
 }
-.bg-neu-medium-gray input, .bg-neu-medium-gray textarea {
+.bg-neu-medium-gray input, .bg-neu-medium-gray .input, .bg-neu-medium-gray textarea, .bg-neu-medium-gray .textarea {
   box-shadow: inset 10px 10px 40px #808189, inset -10px -10px 40px #adafb9;
 }
-.bg-neu-medium-gray input:disabled, .bg-neu-medium-gray textarea:disabled {
+.bg-neu-medium-gray input:disabled, .bg-neu-medium-gray .input:disabled, .bg-neu-medium-gray textarea:disabled, .bg-neu-medium-gray .textarea:disabled {
   background-color: rgba(229, 229, 231, 0.5);
 }
-.bg-neu-medium-gray button, .bg-neu-medium-gray .button, .bg-neu-medium-gray input[type=button], .bg-neu-medium-gray input[type=submit] {
+.bg-neu-medium-gray button, .bg-neu-medium-gray .button, .bg-neu-medium-gray input[type=button], .bg-neu-medium-gray [type=button].input, .bg-neu-medium-gray input[type=submit], .bg-neu-medium-gray [type=submit].input {
   background: #9698a1;
   box-shadow: 10px 10px 40px #808189, -10px -10px 40px #adafb9;
 }
-.bg-neu-medium-gray button:focus, .bg-neu-medium-gray .button:focus, .bg-neu-medium-gray input[type=button]:focus, .bg-neu-medium-gray input[type=submit]:focus {
+.bg-neu-medium-gray button:focus, .bg-neu-medium-gray .button:focus, .bg-neu-medium-gray input[type=button]:focus, .bg-neu-medium-gray [type=button].input:focus, .bg-neu-medium-gray input[type=submit]:focus, .bg-neu-medium-gray [type=submit].input:focus {
   background: #9698a1;
   box-shadow: inset 10px 10px 40px #808189, inset -10px -10px 40px #adafb9;
 }
-.bg-neu-medium-gray button.convex, .bg-neu-medium-gray .button.convex, .bg-neu-medium-gray input[type=button].convex, .bg-neu-medium-gray input[type=submit].convex {
+.bg-neu-medium-gray button.convex, .bg-neu-medium-gray .button.convex, .bg-neu-medium-gray input[type=button].convex, .bg-neu-medium-gray [type=button].convex.input, .bg-neu-medium-gray input[type=submit].convex, .bg-neu-medium-gray [type=submit].convex.input {
   background: linear-gradient(145deg, #a1a3ac, #878991);
   box-shadow: 20px 20px 40px #808189, -20px -20px 40px #adafb9;
 }
-.bg-neu-medium-gray button.convex:focus, .bg-neu-medium-gray .button.convex:focus, .bg-neu-medium-gray input[type=button].convex:focus, .bg-neu-medium-gray input[type=submit].convex:focus {
+.bg-neu-medium-gray button.convex:focus, .bg-neu-medium-gray .button.convex:focus, .bg-neu-medium-gray input[type=button].convex:focus, .bg-neu-medium-gray [type=button].convex.input:focus, .bg-neu-medium-gray input[type=submit].convex:focus, .bg-neu-medium-gray [type=submit].convex.input:focus {
   background: linear-gradient(145deg, #878991, #a1a3ac);
 }
 
 .bg-neu-light-gray ::placeholder {
   color: #333;
 }
-.bg-neu-light-gray input:disabled::placeholder, .bg-neu-light-gray textarea:disabled::placeholder {
+.bg-neu-light-gray .carousel, .bg-neu-light-gray .carousel-450, .bg-neu-light-gray .carousel-400, .bg-neu-light-gray .carousel-350, .bg-neu-light-gray .carousel-300, .bg-neu-light-gray .carousel-250, .bg-neu-light-gray .carousel-200, .bg-neu-light-gray .carousel-150 {
+  scrollbar-color: #444 #777;
+  scrollbar-width: thin;
+}
+.bg-neu-light-gray .carousel::-webkit-scrollbar-thumb, .bg-neu-light-gray .carousel-450::-webkit-scrollbar-thumb, .bg-neu-light-gray .carousel-400::-webkit-scrollbar-thumb, .bg-neu-light-gray .carousel-350::-webkit-scrollbar-thumb, .bg-neu-light-gray .carousel-300::-webkit-scrollbar-thumb, .bg-neu-light-gray .carousel-250::-webkit-scrollbar-thumb, .bg-neu-light-gray .carousel-200::-webkit-scrollbar-thumb, .bg-neu-light-gray .carousel-150::-webkit-scrollbar-thumb {
+  background: #444;
+}
+.bg-neu-light-gray .carousel::-webkit-scrollbar-track, .bg-neu-light-gray .carousel-450::-webkit-scrollbar-track, .bg-neu-light-gray .carousel-400::-webkit-scrollbar-track, .bg-neu-light-gray .carousel-350::-webkit-scrollbar-track, .bg-neu-light-gray .carousel-300::-webkit-scrollbar-track, .bg-neu-light-gray .carousel-250::-webkit-scrollbar-track, .bg-neu-light-gray .carousel-200::-webkit-scrollbar-track, .bg-neu-light-gray .carousel-150::-webkit-scrollbar-track {
+  background: #777;
+}
+.bg-neu-light-gray .carousel::-webkit-scrollbar-thumb:hover, .bg-neu-light-gray .carousel-450::-webkit-scrollbar-thumb:hover, .bg-neu-light-gray .carousel-400::-webkit-scrollbar-thumb:hover, .bg-neu-light-gray .carousel-350::-webkit-scrollbar-thumb:hover, .bg-neu-light-gray .carousel-300::-webkit-scrollbar-thumb:hover, .bg-neu-light-gray .carousel-250::-webkit-scrollbar-thumb:hover, .bg-neu-light-gray .carousel-200::-webkit-scrollbar-thumb:hover, .bg-neu-light-gray .carousel-150::-webkit-scrollbar-thumb:hover {
+  background: #333;
+}
+.bg-neu-light-gray input:disabled::placeholder, .bg-neu-light-gray .input:disabled::placeholder, .bg-neu-light-gray textarea:disabled::placeholder, .bg-neu-light-gray .textarea:disabled::placeholder {
   text-decoration: line-through;
   color: #333;
 }
 .bg-neu-light-gray .panel, .bg-neu-light-gray .shadow-neu-light-gray, .bg-neu-light-gray .card-gray {
   box-shadow: 10px 10px 40px #c3c3c4, -10px -10px 40px #ffffff;
 }
-.bg-neu-light-gray input, .bg-neu-light-gray textarea {
+.bg-neu-light-gray input, .bg-neu-light-gray .input, .bg-neu-light-gray textarea, .bg-neu-light-gray .textarea {
   box-shadow: inset 10px 10px 40px #c3c3c4, inset -10px -10px 40px #ffffff;
 }
-.bg-neu-light-gray input:disabled, .bg-neu-light-gray textarea:disabled {
+.bg-neu-light-gray input:disabled, .bg-neu-light-gray .input:disabled, .bg-neu-light-gray textarea:disabled, .bg-neu-light-gray .textarea:disabled {
   background-color: rgba(229, 229, 231, 0.5);
 }
-.bg-neu-light-gray button, .bg-neu-light-gray .button, .bg-neu-light-gray input[type=button], .bg-neu-light-gray input[type=submit] {
+.bg-neu-light-gray button, .bg-neu-light-gray .button, .bg-neu-light-gray input[type=button], .bg-neu-light-gray [type=button].input, .bg-neu-light-gray input[type=submit], .bg-neu-light-gray [type=submit].input {
   background: #e5e5e5;
   box-shadow: 10px 10px 40px #c3c3c4, -10px -10px 40px #ffffff;
 }
-.bg-neu-light-gray button:focus, .bg-neu-light-gray .button:focus, .bg-neu-light-gray input[type=button]:focus, .bg-neu-light-gray input[type=submit]:focus {
+.bg-neu-light-gray button:focus, .bg-neu-light-gray .button:focus, .bg-neu-light-gray input[type=button]:focus, .bg-neu-light-gray [type=button].input:focus, .bg-neu-light-gray input[type=submit]:focus, .bg-neu-light-gray [type=submit].input:focus {
   background: #e5e5e5;
   box-shadow: inset 10px 10px 40px #c3c3c4, inset -10px -10px 40px #ffffff;
 }
-.bg-neu-light-gray button.convex, .bg-neu-light-gray .button.convex, .bg-neu-light-gray input[type=button].convex, .bg-neu-light-gray input[type=submit].convex {
+.bg-neu-light-gray button.convex, .bg-neu-light-gray .button.convex, .bg-neu-light-gray input[type=button].convex, .bg-neu-light-gray [type=button].convex.input, .bg-neu-light-gray input[type=submit].convex, .bg-neu-light-gray [type=submit].convex.input {
   background: linear-gradient(145deg, #f5f5f5, #cecece);
   box-shadow: 20px 20px 40px #c3c3c3, -20px -20px 40px #ffffff;
 }
-.bg-neu-light-gray button.convex:focus, .bg-neu-light-gray .button.convex:focus, .bg-neu-light-gray input[type=button].convex:focus, .bg-neu-light-gray input[type=submit].convex:focus {
+.bg-neu-light-gray button.convex:focus, .bg-neu-light-gray .button.convex:focus, .bg-neu-light-gray input[type=button].convex:focus, .bg-neu-light-gray [type=button].convex.input:focus, .bg-neu-light-gray input[type=submit].convex:focus, .bg-neu-light-gray [type=submit].convex.input:focus {
   background: linear-gradient(145deg, #cecece, #f5f5f5);
 }
 
 .bg-neu-error ::placeholder {
   color: #ccc;
 }
-.bg-neu-error input:disabled::placeholder, .bg-neu-error textarea:disabled::placeholder {
+.bg-neu-error .carousel, .bg-neu-error .carousel-450, .bg-neu-error .carousel-400, .bg-neu-error .carousel-350, .bg-neu-error .carousel-300, .bg-neu-error .carousel-250, .bg-neu-error .carousel-200, .bg-neu-error .carousel-150 {
+  scrollbar-color: #ccc #aaa;
+  scrollbar-width: thin;
+}
+.bg-neu-error .carousel::-webkit-scrollbar-thumb, .bg-neu-error .carousel-450::-webkit-scrollbar-thumb, .bg-neu-error .carousel-400::-webkit-scrollbar-thumb, .bg-neu-error .carousel-350::-webkit-scrollbar-thumb, .bg-neu-error .carousel-300::-webkit-scrollbar-thumb, .bg-neu-error .carousel-250::-webkit-scrollbar-thumb, .bg-neu-error .carousel-200::-webkit-scrollbar-thumb, .bg-neu-error .carousel-150::-webkit-scrollbar-thumb {
+  background: #ccc;
+}
+.bg-neu-error .carousel::-webkit-scrollbar-track, .bg-neu-error .carousel-450::-webkit-scrollbar-track, .bg-neu-error .carousel-400::-webkit-scrollbar-track, .bg-neu-error .carousel-350::-webkit-scrollbar-track, .bg-neu-error .carousel-300::-webkit-scrollbar-track, .bg-neu-error .carousel-250::-webkit-scrollbar-track, .bg-neu-error .carousel-200::-webkit-scrollbar-track, .bg-neu-error .carousel-150::-webkit-scrollbar-track {
+  background: #aaa;
+}
+.bg-neu-error .carousel::-webkit-scrollbar-thumb:hover, .bg-neu-error .carousel-450::-webkit-scrollbar-thumb:hover, .bg-neu-error .carousel-400::-webkit-scrollbar-thumb:hover, .bg-neu-error .carousel-350::-webkit-scrollbar-thumb:hover, .bg-neu-error .carousel-300::-webkit-scrollbar-thumb:hover, .bg-neu-error .carousel-250::-webkit-scrollbar-thumb:hover, .bg-neu-error .carousel-200::-webkit-scrollbar-thumb:hover, .bg-neu-error .carousel-150::-webkit-scrollbar-thumb:hover {
+  background: #fff;
+}
+.bg-neu-error input:disabled::placeholder, .bg-neu-error .input:disabled::placeholder, .bg-neu-error textarea:disabled::placeholder, .bg-neu-error .textarea:disabled::placeholder {
   text-decoration: line-through;
   color: #333;
 }
 .bg-neu-error .panel, .bg-neu-error .shadow-neu-error, .bg-neu-error .card {
   box-shadow: 10px 10px 40px #bf3314, -10px -10px 40px #ff451a;
 }
-.bg-neu-error input, .bg-neu-error textarea {
+.bg-neu-error input, .bg-neu-error .input, .bg-neu-error textarea, .bg-neu-error .textarea {
   box-shadow: inset 10px 10px 40px #bf3314, inset -10px -10px 40px #ff451a;
 }
-.bg-neu-error input:disabled, .bg-neu-error textarea:disabled {
+.bg-neu-error input:disabled, .bg-neu-error .input:disabled, .bg-neu-error textarea:disabled, .bg-neu-error .textarea:disabled {
   background-color: rgba(229, 229, 231, 0.5);
 }
-.bg-neu-error button, .bg-neu-error .button, .bg-neu-error input[type=button], .bg-neu-error input[type=submit] {
+.bg-neu-error button, .bg-neu-error .button, .bg-neu-error input[type=button], .bg-neu-error [type=button].input, .bg-neu-error input[type=submit], .bg-neu-error [type=submit].input {
   background: #e13c17;
   box-shadow: 10px 10px 40px #bf3314, -10px -10px 40px #ff451a;
 }
-.bg-neu-error button:focus, .bg-neu-error .button:focus, .bg-neu-error input[type=button]:focus, .bg-neu-error input[type=submit]:focus {
+.bg-neu-error button:focus, .bg-neu-error .button:focus, .bg-neu-error input[type=button]:focus, .bg-neu-error [type=button].input:focus, .bg-neu-error input[type=submit]:focus, .bg-neu-error [type=submit].input:focus {
   background: #e13c17;
   box-shadow: inset 10px 10px 40px #bf3314, inset -10px -10px 40px #ff451a;
 }
-.bg-neu-error button.convex, .bg-neu-error .button.convex, .bg-neu-error input[type=button].convex, .bg-neu-error input[type=submit].convex {
+.bg-neu-error button.convex, .bg-neu-error .button.convex, .bg-neu-error input[type=button].convex, .bg-neu-error [type=button].convex.input, .bg-neu-error input[type=submit].convex, .bg-neu-error [type=submit].convex.input {
   background: linear-gradient(145deg, #f14019, #cb3615);
   box-shadow: 20px 20px 40px #bf3314, -20px -20px 40px #ff451a;
 }
-.bg-neu-error button.convex:focus, .bg-neu-error .button.convex:focus, .bg-neu-error input[type=button].convex:focus, .bg-neu-error input[type=submit].convex:focus {
+.bg-neu-error button.convex:focus, .bg-neu-error .button.convex:focus, .bg-neu-error input[type=button].convex:focus, .bg-neu-error [type=button].convex.input:focus, .bg-neu-error input[type=submit].convex:focus, .bg-neu-error [type=submit].convex.input:focus {
   background: linear-gradient(145deg, #cb3615, #f14019);
 }
 
 .bg-neu-success ::placeholder {
   color: #ccc;
 }
-.bg-neu-success input:disabled::placeholder, .bg-neu-success textarea:disabled::placeholder {
+.bg-neu-success .carousel, .bg-neu-success .carousel-450, .bg-neu-success .carousel-400, .bg-neu-success .carousel-350, .bg-neu-success .carousel-300, .bg-neu-success .carousel-250, .bg-neu-success .carousel-200, .bg-neu-success .carousel-150 {
+  scrollbar-color: #ccc #aaa;
+  scrollbar-width: thin;
+}
+.bg-neu-success .carousel::-webkit-scrollbar-thumb, .bg-neu-success .carousel-450::-webkit-scrollbar-thumb, .bg-neu-success .carousel-400::-webkit-scrollbar-thumb, .bg-neu-success .carousel-350::-webkit-scrollbar-thumb, .bg-neu-success .carousel-300::-webkit-scrollbar-thumb, .bg-neu-success .carousel-250::-webkit-scrollbar-thumb, .bg-neu-success .carousel-200::-webkit-scrollbar-thumb, .bg-neu-success .carousel-150::-webkit-scrollbar-thumb {
+  background: #ccc;
+}
+.bg-neu-success .carousel::-webkit-scrollbar-track, .bg-neu-success .carousel-450::-webkit-scrollbar-track, .bg-neu-success .carousel-400::-webkit-scrollbar-track, .bg-neu-success .carousel-350::-webkit-scrollbar-track, .bg-neu-success .carousel-300::-webkit-scrollbar-track, .bg-neu-success .carousel-250::-webkit-scrollbar-track, .bg-neu-success .carousel-200::-webkit-scrollbar-track, .bg-neu-success .carousel-150::-webkit-scrollbar-track {
+  background: #aaa;
+}
+.bg-neu-success .carousel::-webkit-scrollbar-thumb:hover, .bg-neu-success .carousel-450::-webkit-scrollbar-thumb:hover, .bg-neu-success .carousel-400::-webkit-scrollbar-thumb:hover, .bg-neu-success .carousel-350::-webkit-scrollbar-thumb:hover, .bg-neu-success .carousel-300::-webkit-scrollbar-thumb:hover, .bg-neu-success .carousel-250::-webkit-scrollbar-thumb:hover, .bg-neu-success .carousel-200::-webkit-scrollbar-thumb:hover, .bg-neu-success .carousel-150::-webkit-scrollbar-thumb:hover {
+  background: #fff;
+}
+.bg-neu-success input:disabled::placeholder, .bg-neu-success .input:disabled::placeholder, .bg-neu-success textarea:disabled::placeholder, .bg-neu-success .textarea:disabled::placeholder {
   text-decoration: line-through;
   color: #333;
 }
 .bg-neu-success .panel, .bg-neu-success .shadow-neu-success, .bg-neu-success .card {
   box-shadow: 10px 10px 40px #17a274, -10px -10px 40px #1fdc9e;
 }
-.bg-neu-success input, .bg-neu-success textarea {
+.bg-neu-success input, .bg-neu-success .input, .bg-neu-success textarea, .bg-neu-success .textarea {
   box-shadow: inset 10px 10px 40px #17a274, inset -10px -10px 40px #1fdc9e;
 }
-.bg-neu-success input:disabled, .bg-neu-success textarea:disabled {
+.bg-neu-success input:disabled, .bg-neu-success .input:disabled, .bg-neu-success textarea:disabled, .bg-neu-success .textarea:disabled {
   background-color: rgba(229, 229, 231, 0.5);
 }
-.bg-neu-success button, .bg-neu-success .button, .bg-neu-success input[type=button], .bg-neu-success input[type=submit] {
+.bg-neu-success button, .bg-neu-success .button, .bg-neu-success input[type=button], .bg-neu-success [type=button].input, .bg-neu-success input[type=submit], .bg-neu-success [type=submit].input {
   background: #1bbf89;
   box-shadow: 10px 10px 40px #17a274, -10px -10px 40px #1fdc9e;
 }
-.bg-neu-success button:focus, .bg-neu-success .button:focus, .bg-neu-success input[type=button]:focus, .bg-neu-success input[type=submit]:focus {
+.bg-neu-success button:focus, .bg-neu-success .button:focus, .bg-neu-success input[type=button]:focus, .bg-neu-success [type=button].input:focus, .bg-neu-success input[type=submit]:focus, .bg-neu-success [type=submit].input:focus {
   background: #1bbf89;
   box-shadow: inset 10px 10px 40px #17a274, inset -10px -10px 40px #1fdc9e;
 }
-.bg-neu-success button.convex, .bg-neu-success .button.convex, .bg-neu-success input[type=button].convex, .bg-neu-success input[type=submit].convex {
+.bg-neu-success button.convex, .bg-neu-success .button.convex, .bg-neu-success input[type=button].convex, .bg-neu-success [type=button].convex.input, .bg-neu-success input[type=submit].convex, .bg-neu-success [type=submit].convex.input {
   background: linear-gradient(145deg, #1dcc93, #18ac7b);
   box-shadow: 20px 20px 40px #17a274, -20px -20px 40px #1fdc9e;
 }
-.bg-neu-success button.convex:focus, .bg-neu-success .button.convex:focus, .bg-neu-success input[type=button].convex:focus, .bg-neu-success input[type=submit].convex:focus {
+.bg-neu-success button.convex:focus, .bg-neu-success .button.convex:focus, .bg-neu-success input[type=button].convex:focus, .bg-neu-success [type=button].convex.input:focus, .bg-neu-success input[type=submit].convex:focus, .bg-neu-success [type=submit].convex.input:focus {
   background: linear-gradient(145deg, #18ac7b, #1dcc93);
 }
 
 .bg-neu-warning ::placeholder {
-  color: #ccc;
+  color: #333;
 }
-.bg-neu-warning input:disabled::placeholder, .bg-neu-warning textarea:disabled::placeholder {
+.bg-neu-warning .carousel, .bg-neu-warning .carousel-450, .bg-neu-warning .carousel-400, .bg-neu-warning .carousel-350, .bg-neu-warning .carousel-300, .bg-neu-warning .carousel-250, .bg-neu-warning .carousel-200, .bg-neu-warning .carousel-150 {
+  scrollbar-color: #ccc #aaa;
+  scrollbar-width: thin;
+}
+.bg-neu-warning .carousel::-webkit-scrollbar-thumb, .bg-neu-warning .carousel-450::-webkit-scrollbar-thumb, .bg-neu-warning .carousel-400::-webkit-scrollbar-thumb, .bg-neu-warning .carousel-350::-webkit-scrollbar-thumb, .bg-neu-warning .carousel-300::-webkit-scrollbar-thumb, .bg-neu-warning .carousel-250::-webkit-scrollbar-thumb, .bg-neu-warning .carousel-200::-webkit-scrollbar-thumb, .bg-neu-warning .carousel-150::-webkit-scrollbar-thumb {
+  background: #ccc;
+}
+.bg-neu-warning .carousel::-webkit-scrollbar-track, .bg-neu-warning .carousel-450::-webkit-scrollbar-track, .bg-neu-warning .carousel-400::-webkit-scrollbar-track, .bg-neu-warning .carousel-350::-webkit-scrollbar-track, .bg-neu-warning .carousel-300::-webkit-scrollbar-track, .bg-neu-warning .carousel-250::-webkit-scrollbar-track, .bg-neu-warning .carousel-200::-webkit-scrollbar-track, .bg-neu-warning .carousel-150::-webkit-scrollbar-track {
+  background: #aaa;
+}
+.bg-neu-warning .carousel::-webkit-scrollbar-thumb:hover, .bg-neu-warning .carousel-450::-webkit-scrollbar-thumb:hover, .bg-neu-warning .carousel-400::-webkit-scrollbar-thumb:hover, .bg-neu-warning .carousel-350::-webkit-scrollbar-thumb:hover, .bg-neu-warning .carousel-300::-webkit-scrollbar-thumb:hover, .bg-neu-warning .carousel-250::-webkit-scrollbar-thumb:hover, .bg-neu-warning .carousel-200::-webkit-scrollbar-thumb:hover, .bg-neu-warning .carousel-150::-webkit-scrollbar-thumb:hover {
+  background: #fff;
+}
+.bg-neu-warning input:disabled::placeholder, .bg-neu-warning .input:disabled::placeholder, .bg-neu-warning textarea:disabled::placeholder, .bg-neu-warning .textarea:disabled::placeholder {
   text-decoration: line-through;
   color: #333;
 }
 .bg-neu-warning .panel, .bg-neu-warning .shadow-neu-warning, .bg-neu-warning .card {
   box-shadow: 10px 10px 40px #d9a029, -10px -10px 40px #ffd837;
 }
-.bg-neu-warning input, .bg-neu-warning textarea {
+.bg-neu-warning input, .bg-neu-warning .input, .bg-neu-warning textarea, .bg-neu-warning .textarea {
   box-shadow: inset 10px 10px 40px #d9a029, inset -10px -10px 40px #ffd837;
 }
-.bg-neu-warning input:disabled, .bg-neu-warning textarea:disabled {
+.bg-neu-warning input:disabled, .bg-neu-warning .input:disabled, .bg-neu-warning textarea:disabled, .bg-neu-warning .textarea:disabled {
   background-color: rgba(229, 229, 231, 0.5);
 }
-.bg-neu-warning button, .bg-neu-warning .button, .bg-neu-warning input[type=button], .bg-neu-warning input[type=submit] {
+.bg-neu-warning button, .bg-neu-warning .button, .bg-neu-warning input[type=button], .bg-neu-warning [type=button].input, .bg-neu-warning input[type=submit], .bg-neu-warning [type=submit].input {
   background: #ffbc30;
   box-shadow: 10px 10px 40px #d9a029, -10px -10px 40px #ffd837;
 }
-.bg-neu-warning button:focus, .bg-neu-warning .button:focus, .bg-neu-warning input[type=button]:focus, .bg-neu-warning input[type=submit]:focus {
+.bg-neu-warning button:focus, .bg-neu-warning .button:focus, .bg-neu-warning input[type=button]:focus, .bg-neu-warning [type=button].input:focus, .bg-neu-warning input[type=submit]:focus, .bg-neu-warning [type=submit].input:focus {
   background: #ffbc30;
   box-shadow: inset 10px 10px 40px #d9a029, inset -10px -10px 40px #ffd837;
 }
-.bg-neu-warning button.convex, .bg-neu-warning .button.convex, .bg-neu-warning input[type=button].convex, .bg-neu-warning input[type=submit].convex {
+.bg-neu-warning button.convex, .bg-neu-warning .button.convex, .bg-neu-warning input[type=button].convex, .bg-neu-warning [type=button].convex.input, .bg-neu-warning input[type=submit].convex, .bg-neu-warning [type=submit].convex.input {
   background: linear-gradient(145deg, #ffc933, #e6a92b);
   box-shadow: 20px 20px 40px #d9a029, -20px -20px 40px #ffd837;
 }
-.bg-neu-warning button.convex:focus, .bg-neu-warning .button.convex:focus, .bg-neu-warning input[type=button].convex:focus, .bg-neu-warning input[type=submit].convex:focus {
+.bg-neu-warning button.convex:focus, .bg-neu-warning .button.convex:focus, .bg-neu-warning input[type=button].convex:focus, .bg-neu-warning [type=button].convex.input:focus, .bg-neu-warning input[type=submit].convex:focus, .bg-neu-warning [type=submit].convex.input:focus {
   background: linear-gradient(145deg, #e6a92b, #ffc933);
 }
 
 .bg-neu-info ::placeholder {
-  color: #ccc;
+  color: #333;
 }
-.bg-neu-info input:disabled::placeholder, .bg-neu-info textarea:disabled::placeholder {
+.bg-neu-info .carousel, .bg-neu-info .carousel-450, .bg-neu-info .carousel-400, .bg-neu-info .carousel-350, .bg-neu-info .carousel-300, .bg-neu-info .carousel-250, .bg-neu-info .carousel-200, .bg-neu-info .carousel-150 {
+  scrollbar-color: #ccc #aaa;
+  scrollbar-width: thin;
+}
+.bg-neu-info .carousel::-webkit-scrollbar-thumb, .bg-neu-info .carousel-450::-webkit-scrollbar-thumb, .bg-neu-info .carousel-400::-webkit-scrollbar-thumb, .bg-neu-info .carousel-350::-webkit-scrollbar-thumb, .bg-neu-info .carousel-300::-webkit-scrollbar-thumb, .bg-neu-info .carousel-250::-webkit-scrollbar-thumb, .bg-neu-info .carousel-200::-webkit-scrollbar-thumb, .bg-neu-info .carousel-150::-webkit-scrollbar-thumb {
+  background: #ccc;
+}
+.bg-neu-info .carousel::-webkit-scrollbar-track, .bg-neu-info .carousel-450::-webkit-scrollbar-track, .bg-neu-info .carousel-400::-webkit-scrollbar-track, .bg-neu-info .carousel-350::-webkit-scrollbar-track, .bg-neu-info .carousel-300::-webkit-scrollbar-track, .bg-neu-info .carousel-250::-webkit-scrollbar-track, .bg-neu-info .carousel-200::-webkit-scrollbar-track, .bg-neu-info .carousel-150::-webkit-scrollbar-track {
+  background: #aaa;
+}
+.bg-neu-info .carousel::-webkit-scrollbar-thumb:hover, .bg-neu-info .carousel-450::-webkit-scrollbar-thumb:hover, .bg-neu-info .carousel-400::-webkit-scrollbar-thumb:hover, .bg-neu-info .carousel-350::-webkit-scrollbar-thumb:hover, .bg-neu-info .carousel-300::-webkit-scrollbar-thumb:hover, .bg-neu-info .carousel-250::-webkit-scrollbar-thumb:hover, .bg-neu-info .carousel-200::-webkit-scrollbar-thumb:hover, .bg-neu-info .carousel-150::-webkit-scrollbar-thumb:hover {
+  background: #fff;
+}
+.bg-neu-info input:disabled::placeholder, .bg-neu-info .input:disabled::placeholder, .bg-neu-info textarea:disabled::placeholder, .bg-neu-info .textarea:disabled::placeholder {
   text-decoration: line-through;
   color: #333;
 }
 .bg-neu-info .panel, .bg-neu-info .shadow-neu-info, .bg-neu-info .card {
   box-shadow: 10px 10px 40px #2f61d9, -10px -10px 40px #3f83ff;
 }
-.bg-neu-info input, .bg-neu-info textarea {
+.bg-neu-info input, .bg-neu-info .input, .bg-neu-info textarea, .bg-neu-info .textarea {
   box-shadow: inset 10px 10px 40px #2f61d9, inset -10px -10px 40px #3f83ff;
 }
-.bg-neu-info input:disabled, .bg-neu-info textarea:disabled {
+.bg-neu-info input:disabled, .bg-neu-info .input:disabled, .bg-neu-info textarea:disabled, .bg-neu-info .textarea:disabled {
   background-color: rgba(229, 229, 231, 0.5);
 }
-.bg-neu-info button, .bg-neu-info .button, .bg-neu-info input[type=button], .bg-neu-info input[type=submit] {
+.bg-neu-info button, .bg-neu-info .button, .bg-neu-info input[type=button], .bg-neu-info [type=button].input, .bg-neu-info input[type=submit], .bg-neu-info [type=submit].input {
   background: #3772ff;
   box-shadow: 10px 10px 40px #2f61d9, -10px -10px 40px #3f83ff;
 }
-.bg-neu-info button:focus, .bg-neu-info .button:focus, .bg-neu-info input[type=button]:focus, .bg-neu-info input[type=submit]:focus {
+.bg-neu-info button:focus, .bg-neu-info .button:focus, .bg-neu-info input[type=button]:focus, .bg-neu-info [type=button].input:focus, .bg-neu-info input[type=submit]:focus, .bg-neu-info [type=submit].input:focus {
   background: #3772ff;
   box-shadow: inset 10px 10px 40px #2f61d9, inset -10px -10px 40px #3f83ff;
 }
-.bg-neu-info button.convex, .bg-neu-info .button.convex, .bg-neu-info input[type=button].convex, .bg-neu-info input[type=submit].convex {
+.bg-neu-info button.convex, .bg-neu-info .button.convex, .bg-neu-info input[type=button].convex, .bg-neu-info [type=button].convex.input, .bg-neu-info input[type=submit].convex, .bg-neu-info [type=submit].convex.input {
   background: linear-gradient(145deg, #3b7aff, #3267e6);
   box-shadow: 20px 20px 40px #2f61d9, -20px -20px 40px #3f83ff;
 }
-.bg-neu-info button.convex:focus, .bg-neu-info .button.convex:focus, .bg-neu-info input[type=button].convex:focus, .bg-neu-info input[type=submit].convex:focus {
+.bg-neu-info button.convex:focus, .bg-neu-info .button.convex:focus, .bg-neu-info input[type=button].convex:focus, .bg-neu-info [type=button].convex.input:focus, .bg-neu-info input[type=submit].convex:focus, .bg-neu-info [type=submit].convex.input:focus {
   background: linear-gradient(145deg, #3267e6, #3b7aff);
 }
 
 .bg-neu-note ::placeholder {
-  color: #ccc;
+  color: #333;
 }
-.bg-neu-note input:disabled::placeholder, .bg-neu-note textarea:disabled::placeholder {
+.bg-neu-note .carousel, .bg-neu-note .carousel-450, .bg-neu-note .carousel-400, .bg-neu-note .carousel-350, .bg-neu-note .carousel-300, .bg-neu-note .carousel-250, .bg-neu-note .carousel-200, .bg-neu-note .carousel-150 {
+  scrollbar-color: #ccc #aaa;
+  scrollbar-width: thin;
+}
+.bg-neu-note .carousel::-webkit-scrollbar-thumb, .bg-neu-note .carousel-450::-webkit-scrollbar-thumb, .bg-neu-note .carousel-400::-webkit-scrollbar-thumb, .bg-neu-note .carousel-350::-webkit-scrollbar-thumb, .bg-neu-note .carousel-300::-webkit-scrollbar-thumb, .bg-neu-note .carousel-250::-webkit-scrollbar-thumb, .bg-neu-note .carousel-200::-webkit-scrollbar-thumb, .bg-neu-note .carousel-150::-webkit-scrollbar-thumb {
+  background: #ccc;
+}
+.bg-neu-note .carousel::-webkit-scrollbar-track, .bg-neu-note .carousel-450::-webkit-scrollbar-track, .bg-neu-note .carousel-400::-webkit-scrollbar-track, .bg-neu-note .carousel-350::-webkit-scrollbar-track, .bg-neu-note .carousel-300::-webkit-scrollbar-track, .bg-neu-note .carousel-250::-webkit-scrollbar-track, .bg-neu-note .carousel-200::-webkit-scrollbar-track, .bg-neu-note .carousel-150::-webkit-scrollbar-track {
+  background: #aaa;
+}
+.bg-neu-note .carousel::-webkit-scrollbar-thumb:hover, .bg-neu-note .carousel-450::-webkit-scrollbar-thumb:hover, .bg-neu-note .carousel-400::-webkit-scrollbar-thumb:hover, .bg-neu-note .carousel-350::-webkit-scrollbar-thumb:hover, .bg-neu-note .carousel-300::-webkit-scrollbar-thumb:hover, .bg-neu-note .carousel-250::-webkit-scrollbar-thumb:hover, .bg-neu-note .carousel-200::-webkit-scrollbar-thumb:hover, .bg-neu-note .carousel-150::-webkit-scrollbar-thumb:hover {
+  background: #fff;
+}
+.bg-neu-note input:disabled::placeholder, .bg-neu-note .input:disabled::placeholder, .bg-neu-note textarea:disabled::placeholder, .bg-neu-note .textarea:disabled::placeholder {
   text-decoration: line-through;
   color: #333;
 }
 .bg-neu-note .panel, .bg-neu-note .shadow-neu-note, .bg-neu-note .card {
   box-shadow: 10px 10px 40px #ba463d, -10px -10px 40px #fc5e53;
 }
-.bg-neu-note input, .bg-neu-note textarea {
+.bg-neu-note input, .bg-neu-note .input, .bg-neu-note textarea, .bg-neu-note .textarea {
   box-shadow: inset 10px 10px 40px #ba463d, inset -10px -10px 40px #fc5e53;
 }
-.bg-neu-note input:disabled, .bg-neu-note textarea:disabled {
+.bg-neu-note input:disabled, .bg-neu-note .input:disabled, .bg-neu-note textarea:disabled, .bg-neu-note .textarea:disabled {
   background-color: rgba(229, 229, 231, 0.5);
 }
-.bg-neu-note button, .bg-neu-note .button, .bg-neu-note input[type=button], .bg-neu-note input[type=submit] {
+.bg-neu-note button, .bg-neu-note .button, .bg-neu-note input[type=button], .bg-neu-note [type=button].input, .bg-neu-note input[type=submit], .bg-neu-note [type=submit].input {
   background: #db5248;
   box-shadow: 10px 10px 40px #ba463d, -10px -10px 40px #fc5e53;
 }
-.bg-neu-note button:focus, .bg-neu-note .button:focus, .bg-neu-note input[type=button]:focus, .bg-neu-note input[type=submit]:focus {
+.bg-neu-note button:focus, .bg-neu-note .button:focus, .bg-neu-note input[type=button]:focus, .bg-neu-note [type=button].input:focus, .bg-neu-note input[type=submit]:focus, .bg-neu-note [type=submit].input:focus {
   background: #db5248;
   box-shadow: inset 10px 10px 40px #ba463d, inset -10px -10px 40px #fc5e53;
 }
-.bg-neu-note button.convex, .bg-neu-note .button.convex, .bg-neu-note input[type=button].convex, .bg-neu-note input[type=submit].convex {
+.bg-neu-note button.convex, .bg-neu-note .button.convex, .bg-neu-note input[type=button].convex, .bg-neu-note [type=button].convex.input, .bg-neu-note input[type=submit].convex, .bg-neu-note [type=submit].convex.input {
   background: linear-gradient(145deg, #ea584d, #c54a41);
   box-shadow: 20px 20px 40px #ba463d, -20px -20px 40px #fc5e53;
 }
-.bg-neu-note button.convex:focus, .bg-neu-note .button.convex:focus, .bg-neu-note input[type=button].convex:focus, .bg-neu-note input[type=submit].convex:focus {
+.bg-neu-note button.convex:focus, .bg-neu-note .button.convex:focus, .bg-neu-note input[type=button].convex:focus, .bg-neu-note [type=button].convex.input:focus, .bg-neu-note input[type=submit].convex:focus, .bg-neu-note [type=submit].convex.input:focus {
   background: linear-gradient(145deg, #c54a41, #ea584d);
 }
 
 .bg-neu-fresh ::placeholder {
-  color: #ccc;
+  color: #333;
 }
-.bg-neu-fresh input:disabled::placeholder, .bg-neu-fresh textarea:disabled::placeholder {
+.bg-neu-fresh .carousel, .bg-neu-fresh .carousel-450, .bg-neu-fresh .carousel-400, .bg-neu-fresh .carousel-350, .bg-neu-fresh .carousel-300, .bg-neu-fresh .carousel-250, .bg-neu-fresh .carousel-200, .bg-neu-fresh .carousel-150 {
+  scrollbar-color: #ccc #aaa;
+  scrollbar-width: thin;
+}
+.bg-neu-fresh .carousel::-webkit-scrollbar-thumb, .bg-neu-fresh .carousel-450::-webkit-scrollbar-thumb, .bg-neu-fresh .carousel-400::-webkit-scrollbar-thumb, .bg-neu-fresh .carousel-350::-webkit-scrollbar-thumb, .bg-neu-fresh .carousel-300::-webkit-scrollbar-thumb, .bg-neu-fresh .carousel-250::-webkit-scrollbar-thumb, .bg-neu-fresh .carousel-200::-webkit-scrollbar-thumb, .bg-neu-fresh .carousel-150::-webkit-scrollbar-thumb {
+  background: #ccc;
+}
+.bg-neu-fresh .carousel::-webkit-scrollbar-track, .bg-neu-fresh .carousel-450::-webkit-scrollbar-track, .bg-neu-fresh .carousel-400::-webkit-scrollbar-track, .bg-neu-fresh .carousel-350::-webkit-scrollbar-track, .bg-neu-fresh .carousel-300::-webkit-scrollbar-track, .bg-neu-fresh .carousel-250::-webkit-scrollbar-track, .bg-neu-fresh .carousel-200::-webkit-scrollbar-track, .bg-neu-fresh .carousel-150::-webkit-scrollbar-track {
+  background: #aaa;
+}
+.bg-neu-fresh .carousel::-webkit-scrollbar-thumb:hover, .bg-neu-fresh .carousel-450::-webkit-scrollbar-thumb:hover, .bg-neu-fresh .carousel-400::-webkit-scrollbar-thumb:hover, .bg-neu-fresh .carousel-350::-webkit-scrollbar-thumb:hover, .bg-neu-fresh .carousel-300::-webkit-scrollbar-thumb:hover, .bg-neu-fresh .carousel-250::-webkit-scrollbar-thumb:hover, .bg-neu-fresh .carousel-200::-webkit-scrollbar-thumb:hover, .bg-neu-fresh .carousel-150::-webkit-scrollbar-thumb:hover {
+  background: #fff;
+}
+.bg-neu-fresh input:disabled::placeholder, .bg-neu-fresh .input:disabled::placeholder, .bg-neu-fresh textarea:disabled::placeholder, .bg-neu-fresh .textarea:disabled::placeholder {
   text-decoration: line-through;
   color: #333;
 }
 .bg-neu-fresh .panel, .bg-neu-fresh .shadow-neu-fresh, .bg-neu-fresh .card {
   box-shadow: 10px 10px 40px #568bd9, -10px -10px 40px #74bbff;
 }
-.bg-neu-fresh input, .bg-neu-fresh textarea {
+.bg-neu-fresh input, .bg-neu-fresh .input, .bg-neu-fresh textarea, .bg-neu-fresh .textarea {
   box-shadow: inset 10px 10px 40px #568bd9, inset -10px -10px 40px #74bbff;
 }
-.bg-neu-fresh input:disabled, .bg-neu-fresh textarea:disabled {
+.bg-neu-fresh input:disabled, .bg-neu-fresh .input:disabled, .bg-neu-fresh textarea:disabled, .bg-neu-fresh .textarea:disabled {
   background-color: rgba(229, 229, 231, 0.5);
 }
-.bg-neu-fresh button, .bg-neu-fresh .button, .bg-neu-fresh input[type=button], .bg-neu-fresh input[type=submit] {
+.bg-neu-fresh button, .bg-neu-fresh .button, .bg-neu-fresh input[type=button], .bg-neu-fresh [type=button].input, .bg-neu-fresh input[type=submit], .bg-neu-fresh [type=submit].input {
   background: #65a3ff;
   box-shadow: 10px 10px 40px #568bd9, -10px -10px 40px #74bbff;
 }
-.bg-neu-fresh button:focus, .bg-neu-fresh .button:focus, .bg-neu-fresh input[type=button]:focus, .bg-neu-fresh input[type=submit]:focus {
+.bg-neu-fresh button:focus, .bg-neu-fresh .button:focus, .bg-neu-fresh input[type=button]:focus, .bg-neu-fresh [type=button].input:focus, .bg-neu-fresh input[type=submit]:focus, .bg-neu-fresh [type=submit].input:focus {
   background: #65a3ff;
   box-shadow: inset 10px 10px 40px #568bd9, inset -10px -10px 40px #74bbff;
 }
-.bg-neu-fresh button.convex, .bg-neu-fresh .button.convex, .bg-neu-fresh input[type=button].convex, .bg-neu-fresh input[type=submit].convex {
+.bg-neu-fresh button.convex, .bg-neu-fresh .button.convex, .bg-neu-fresh input[type=button].convex, .bg-neu-fresh [type=button].convex.input, .bg-neu-fresh input[type=submit].convex, .bg-neu-fresh [type=submit].convex.input {
   background: linear-gradient(145deg, #6caeff, #5b93e6);
   box-shadow: 10px 10px 40px #568bd9, -10px -10px 40px #74bbff;
 }
-.bg-neu-fresh button.convex:focus, .bg-neu-fresh .button.convex:focus, .bg-neu-fresh input[type=button].convex:focus, .bg-neu-fresh input[type=submit].convex:focus {
+.bg-neu-fresh button.convex:focus, .bg-neu-fresh .button.convex:focus, .bg-neu-fresh input[type=button].convex:focus, .bg-neu-fresh [type=button].convex.input:focus, .bg-neu-fresh input[type=submit].convex:focus, .bg-neu-fresh [type=submit].convex.input:focus {
   background: linear-gradient(145deg, #5b93e6, #6caeff);
 }
 
 .bg-neu-light ::placeholder {
   color: #333;
 }
-.bg-neu-light input:disabled::placeholder, .bg-neu-light textarea:disabled::placeholder {
+.bg-neu-light .carousel, .bg-neu-light .carousel-450, .bg-neu-light .carousel-400, .bg-neu-light .carousel-350, .bg-neu-light .carousel-300, .bg-neu-light .carousel-250, .bg-neu-light .carousel-200, .bg-neu-light .carousel-150 {
+  scrollbar-color: #444 #777;
+  scrollbar-width: thin;
+}
+.bg-neu-light .carousel::-webkit-scrollbar-thumb, .bg-neu-light .carousel-450::-webkit-scrollbar-thumb, .bg-neu-light .carousel-400::-webkit-scrollbar-thumb, .bg-neu-light .carousel-350::-webkit-scrollbar-thumb, .bg-neu-light .carousel-300::-webkit-scrollbar-thumb, .bg-neu-light .carousel-250::-webkit-scrollbar-thumb, .bg-neu-light .carousel-200::-webkit-scrollbar-thumb, .bg-neu-light .carousel-150::-webkit-scrollbar-thumb {
+  background: #444;
+}
+.bg-neu-light .carousel::-webkit-scrollbar-track, .bg-neu-light .carousel-450::-webkit-scrollbar-track, .bg-neu-light .carousel-400::-webkit-scrollbar-track, .bg-neu-light .carousel-350::-webkit-scrollbar-track, .bg-neu-light .carousel-300::-webkit-scrollbar-track, .bg-neu-light .carousel-250::-webkit-scrollbar-track, .bg-neu-light .carousel-200::-webkit-scrollbar-track, .bg-neu-light .carousel-150::-webkit-scrollbar-track {
+  background: #777;
+}
+.bg-neu-light .carousel::-webkit-scrollbar-thumb:hover, .bg-neu-light .carousel-450::-webkit-scrollbar-thumb:hover, .bg-neu-light .carousel-400::-webkit-scrollbar-thumb:hover, .bg-neu-light .carousel-350::-webkit-scrollbar-thumb:hover, .bg-neu-light .carousel-300::-webkit-scrollbar-thumb:hover, .bg-neu-light .carousel-250::-webkit-scrollbar-thumb:hover, .bg-neu-light .carousel-200::-webkit-scrollbar-thumb:hover, .bg-neu-light .carousel-150::-webkit-scrollbar-thumb:hover {
+  background: #333;
+}
+.bg-neu-light input:disabled::placeholder, .bg-neu-light .input:disabled::placeholder, .bg-neu-light textarea:disabled::placeholder, .bg-neu-light .textarea:disabled::placeholder {
   text-decoration: line-through;
   color: #333;
 }
 .bg-neu-light .panel, .bg-neu-light .shadow-neu-light, .bg-neu-light .card {
   box-shadow: 10px 10px 40px #cbcbd9, -10px -10px 40px #ffffff;
 }
-.bg-neu-light input, .bg-neu-light textarea {
+.bg-neu-light input, .bg-neu-light .input, .bg-neu-light textarea, .bg-neu-light .textarea {
   box-shadow: inset 10px 10px 40px #cbcbd9, inset -10px -10px 40px #ffffff;
 }
-.bg-neu-light input:disabled, .bg-neu-light textarea:disabled {
+.bg-neu-light input:disabled, .bg-neu-light .input:disabled, .bg-neu-light textarea:disabled, .bg-neu-light .textarea:disabled {
   background-color: rgba(229, 229, 231, 0.5);
 }
-.bg-neu-light button, .bg-neu-light .button, .bg-neu-light input[type=button], .bg-neu-light input[type=submit] {
+.bg-neu-light button, .bg-neu-light .button, .bg-neu-light input[type=button], .bg-neu-light [type=button].input, .bg-neu-light input[type=submit], .bg-neu-light [type=submit].input {
   background: #efefff;
   box-shadow: 10px 10px 40px #cbcbd9, -10px -10px 40px #ffffff;
 }
-.bg-neu-light button:focus, .bg-neu-light .button:focus, .bg-neu-light input[type=button]:focus, .bg-neu-light input[type=submit]:focus {
+.bg-neu-light button:focus, .bg-neu-light .button:focus, .bg-neu-light input[type=button]:focus, .bg-neu-light [type=button].input:focus, .bg-neu-light input[type=submit]:focus, .bg-neu-light [type=submit].input:focus {
   background: #efefff;
   box-shadow: inset 10px 10px 40px #cbcbd9, inset -10px -10px 40px #ffffff;
 }
-.bg-neu-light button.convex, .bg-neu-light .button.convex, .bg-neu-light input[type=button].convex, .bg-neu-light input[type=submit].convex {
+.bg-neu-light button.convex, .bg-neu-light .button.convex, .bg-neu-light input[type=button].convex, .bg-neu-light [type=button].convex.input, .bg-neu-light input[type=submit].convex, .bg-neu-light [type=submit].convex.input {
   background: linear-gradient(145deg, #ffffff, #d7d7d7);
   box-shadow: 20px 20px 40px #cbcbcb, -20px -20px 40px #ffffff;
 }
-.bg-neu-light button.convex:focus, .bg-neu-light .button.convex:focus, .bg-neu-light input[type=button].convex:focus, .bg-neu-light input[type=submit].convex:focus {
+.bg-neu-light button.convex:focus, .bg-neu-light .button.convex:focus, .bg-neu-light input[type=button].convex:focus, .bg-neu-light [type=button].convex.input:focus, .bg-neu-light input[type=submit].convex:focus, .bg-neu-light [type=submit].convex.input:focus {
   background: linear-gradient(145deg, #d7d7d7, #ffffff);
 }
 
 .bg-red ::placeholder {
-  color: #ccc;
+  color: #333;
 }
-.bg-red input:disabled::placeholder, .bg-red textarea:disabled::placeholder {
+.bg-red .carousel, .bg-red .carousel-450, .bg-red .carousel-400, .bg-red .carousel-350, .bg-red .carousel-300, .bg-red .carousel-250, .bg-red .carousel-200, .bg-red .carousel-150 {
+  scrollbar-color: #ccc #aaa;
+  scrollbar-width: thin;
+}
+.bg-red .carousel::-webkit-scrollbar-thumb, .bg-red .carousel-450::-webkit-scrollbar-thumb, .bg-red .carousel-400::-webkit-scrollbar-thumb, .bg-red .carousel-350::-webkit-scrollbar-thumb, .bg-red .carousel-300::-webkit-scrollbar-thumb, .bg-red .carousel-250::-webkit-scrollbar-thumb, .bg-red .carousel-200::-webkit-scrollbar-thumb, .bg-red .carousel-150::-webkit-scrollbar-thumb {
+  background: #ccc;
+}
+.bg-red .carousel::-webkit-scrollbar-track, .bg-red .carousel-450::-webkit-scrollbar-track, .bg-red .carousel-400::-webkit-scrollbar-track, .bg-red .carousel-350::-webkit-scrollbar-track, .bg-red .carousel-300::-webkit-scrollbar-track, .bg-red .carousel-250::-webkit-scrollbar-track, .bg-red .carousel-200::-webkit-scrollbar-track, .bg-red .carousel-150::-webkit-scrollbar-track {
+  background: #aaa;
+}
+.bg-red .carousel::-webkit-scrollbar-thumb:hover, .bg-red .carousel-450::-webkit-scrollbar-thumb:hover, .bg-red .carousel-400::-webkit-scrollbar-thumb:hover, .bg-red .carousel-350::-webkit-scrollbar-thumb:hover, .bg-red .carousel-300::-webkit-scrollbar-thumb:hover, .bg-red .carousel-250::-webkit-scrollbar-thumb:hover, .bg-red .carousel-200::-webkit-scrollbar-thumb:hover, .bg-red .carousel-150::-webkit-scrollbar-thumb:hover {
+  background: #fff;
+}
+.bg-red input:disabled::placeholder, .bg-red .input:disabled::placeholder, .bg-red textarea:disabled::placeholder, .bg-red .textarea:disabled::placeholder {
   text-decoration: line-through;
   color: #333;
 }
 .bg-red .panel, .bg-red .shadow-red, .bg-red .card {
   box-shadow: 10px 10px 40px #cf392e, -10px -10px 40px #ff4d3e;
 }
-.bg-red input, .bg-red textarea {
+.bg-red input, .bg-red .input, .bg-red textarea, .bg-red .textarea {
   box-shadow: inset 10px 10px 40px #cf392e, inset -10px -10px 40px #ff4d3e;
 }
-.bg-red input:disabled, .bg-red textarea:disabled {
+.bg-red input:disabled, .bg-red .input:disabled, .bg-red textarea:disabled, .bg-red .textarea:disabled {
   background-color: rgba(229, 229, 231, 0.5);
 }
-.bg-red button, .bg-red .button, .bg-red input[type=button], .bg-red input[type=submit] {
+.bg-red button, .bg-red .button, .bg-red input[type=button], .bg-red [type=button].input, .bg-red input[type=submit], .bg-red [type=submit].input {
   background: #f44336;
   box-shadow: 10px 10px 40px #cf392e, -10px -10px 40px #ff4d3e;
 }
-.bg-red button:focus, .bg-red .button:focus, .bg-red input[type=button]:focus, .bg-red input[type=submit]:focus {
+.bg-red button:focus, .bg-red .button:focus, .bg-red input[type=button]:focus, .bg-red [type=button].input:focus, .bg-red input[type=submit]:focus, .bg-red [type=submit].input:focus {
   background: #f44336;
   box-shadow: inset 10px 10px 40px #cf392e, inset -10px -10px 40px #ff4d3e;
 }
-.bg-red button.convex, .bg-red .button.convex, .bg-red input[type=button].convex, .bg-red input[type=submit].convex {
+.bg-red button.convex, .bg-red .button.convex, .bg-red input[type=button].convex, .bg-red [type=button].convex.input, .bg-red input[type=submit].convex, .bg-red [type=submit].convex.input {
   background: linear-gradient(145deg, #ff483a, #dc3c31);
   box-shadow: 20px 20px 40px #cf392e, -20px -20px 40px #ff4d3e;
 }
-.bg-red button.convex:focus, .bg-red .button.convex:focus, .bg-red input[type=button].convex:focus, .bg-red input[type=submit].convex:focus {
+.bg-red button.convex:focus, .bg-red .button.convex:focus, .bg-red input[type=button].convex:focus, .bg-red [type=button].convex.input:focus, .bg-red input[type=submit].convex:focus, .bg-red [type=submit].convex.input:focus {
   background: linear-gradient(145deg, #dc3c31, #ff483a);
 }
 
 .bg-pink ::placeholder {
   color: #ccc;
 }
-.bg-pink input:disabled::placeholder, .bg-pink textarea:disabled::placeholder {
+.bg-pink .carousel, .bg-pink .carousel-450, .bg-pink .carousel-400, .bg-pink .carousel-350, .bg-pink .carousel-300, .bg-pink .carousel-250, .bg-pink .carousel-200, .bg-pink .carousel-150 {
+  scrollbar-color: #ccc #aaa;
+  scrollbar-width: thin;
+}
+.bg-pink .carousel::-webkit-scrollbar-thumb, .bg-pink .carousel-450::-webkit-scrollbar-thumb, .bg-pink .carousel-400::-webkit-scrollbar-thumb, .bg-pink .carousel-350::-webkit-scrollbar-thumb, .bg-pink .carousel-300::-webkit-scrollbar-thumb, .bg-pink .carousel-250::-webkit-scrollbar-thumb, .bg-pink .carousel-200::-webkit-scrollbar-thumb, .bg-pink .carousel-150::-webkit-scrollbar-thumb {
+  background: #ccc;
+}
+.bg-pink .carousel::-webkit-scrollbar-track, .bg-pink .carousel-450::-webkit-scrollbar-track, .bg-pink .carousel-400::-webkit-scrollbar-track, .bg-pink .carousel-350::-webkit-scrollbar-track, .bg-pink .carousel-300::-webkit-scrollbar-track, .bg-pink .carousel-250::-webkit-scrollbar-track, .bg-pink .carousel-200::-webkit-scrollbar-track, .bg-pink .carousel-150::-webkit-scrollbar-track {
+  background: #aaa;
+}
+.bg-pink .carousel::-webkit-scrollbar-thumb:hover, .bg-pink .carousel-450::-webkit-scrollbar-thumb:hover, .bg-pink .carousel-400::-webkit-scrollbar-thumb:hover, .bg-pink .carousel-350::-webkit-scrollbar-thumb:hover, .bg-pink .carousel-300::-webkit-scrollbar-thumb:hover, .bg-pink .carousel-250::-webkit-scrollbar-thumb:hover, .bg-pink .carousel-200::-webkit-scrollbar-thumb:hover, .bg-pink .carousel-150::-webkit-scrollbar-thumb:hover {
+  background: #fff;
+}
+.bg-pink input:disabled::placeholder, .bg-pink .input:disabled::placeholder, .bg-pink textarea:disabled::placeholder, .bg-pink .textarea:disabled::placeholder {
   text-decoration: line-through;
   color: #333;
 }
 .bg-pink .panel, .bg-pink .shadow-pink, .bg-pink .card {
   box-shadow: 10px 10px 40px #c61a54, -10px -10px 40px #ff2372;
 }
-.bg-pink input, .bg-pink textarea {
+.bg-pink input, .bg-pink .input, .bg-pink textarea, .bg-pink .textarea {
   box-shadow: inset 10px 10px 40px #c61a54, inset -10px -10px 40px #ff2372;
 }
-.bg-pink input:disabled, .bg-pink textarea:disabled {
+.bg-pink input:disabled, .bg-pink .input:disabled, .bg-pink textarea:disabled, .bg-pink .textarea:disabled {
   background-color: rgba(229, 229, 231, 0.5);
 }
-.bg-pink button, .bg-pink .button, .bg-pink input[type=button], .bg-pink input[type=submit] {
+.bg-pink button, .bg-pink .button, .bg-pink input[type=button], .bg-pink [type=button].input, .bg-pink input[type=submit], .bg-pink [type=submit].input {
   background: #e91e63;
   box-shadow: 10px 10px 40px #c61a54, -10px -10px 40px #ff2372;
 }
-.bg-pink button:focus, .bg-pink .button:focus, .bg-pink input[type=button]:focus, .bg-pink input[type=submit]:focus {
+.bg-pink button:focus, .bg-pink .button:focus, .bg-pink input[type=button]:focus, .bg-pink [type=button].input:focus, .bg-pink input[type=submit]:focus, .bg-pink [type=submit].input:focus {
   background: #e91e63;
   box-shadow: inset 10px 10px 40px #c61a54, inset -10px -10px 40px #ff2372;
 }
-.bg-pink button.convex, .bg-pink .button.convex, .bg-pink input[type=button].convex, .bg-pink input[type=submit].convex {
+.bg-pink button.convex, .bg-pink .button.convex, .bg-pink input[type=button].convex, .bg-pink [type=button].convex.input, .bg-pink input[type=submit].convex, .bg-pink [type=submit].convex.input {
   background: linear-gradient(145deg, #f9206a, #d21b59);
   box-shadow: 20px 20px 40px #c61a54, -20px -20px 40px #ff2372;
 }
-.bg-pink button.convex:focus, .bg-pink .button.convex:focus, .bg-pink input[type=button].convex:focus, .bg-pink input[type=submit].convex:focus {
+.bg-pink button.convex:focus, .bg-pink .button.convex:focus, .bg-pink input[type=button].convex:focus, .bg-pink [type=button].convex.input:focus, .bg-pink input[type=submit].convex:focus, .bg-pink [type=submit].convex.input:focus {
   background: linear-gradient(145deg, #d21b59, #f9206a);
 }
 
 .bg-purple ::placeholder {
   color: #ccc;
 }
-.bg-purple input:disabled::placeholder, .bg-purple textarea:disabled::placeholder {
+.bg-purple .carousel, .bg-purple .carousel-450, .bg-purple .carousel-400, .bg-purple .carousel-350, .bg-purple .carousel-300, .bg-purple .carousel-250, .bg-purple .carousel-200, .bg-purple .carousel-150 {
+  scrollbar-color: #ccc #aaa;
+  scrollbar-width: thin;
+}
+.bg-purple .carousel::-webkit-scrollbar-thumb, .bg-purple .carousel-450::-webkit-scrollbar-thumb, .bg-purple .carousel-400::-webkit-scrollbar-thumb, .bg-purple .carousel-350::-webkit-scrollbar-thumb, .bg-purple .carousel-300::-webkit-scrollbar-thumb, .bg-purple .carousel-250::-webkit-scrollbar-thumb, .bg-purple .carousel-200::-webkit-scrollbar-thumb, .bg-purple .carousel-150::-webkit-scrollbar-thumb {
+  background: #ccc;
+}
+.bg-purple .carousel::-webkit-scrollbar-track, .bg-purple .carousel-450::-webkit-scrollbar-track, .bg-purple .carousel-400::-webkit-scrollbar-track, .bg-purple .carousel-350::-webkit-scrollbar-track, .bg-purple .carousel-300::-webkit-scrollbar-track, .bg-purple .carousel-250::-webkit-scrollbar-track, .bg-purple .carousel-200::-webkit-scrollbar-track, .bg-purple .carousel-150::-webkit-scrollbar-track {
+  background: #aaa;
+}
+.bg-purple .carousel::-webkit-scrollbar-thumb:hover, .bg-purple .carousel-450::-webkit-scrollbar-thumb:hover, .bg-purple .carousel-400::-webkit-scrollbar-thumb:hover, .bg-purple .carousel-350::-webkit-scrollbar-thumb:hover, .bg-purple .carousel-300::-webkit-scrollbar-thumb:hover, .bg-purple .carousel-250::-webkit-scrollbar-thumb:hover, .bg-purple .carousel-200::-webkit-scrollbar-thumb:hover, .bg-purple .carousel-150::-webkit-scrollbar-thumb:hover {
+  background: #fff;
+}
+.bg-purple input:disabled::placeholder, .bg-purple .input:disabled::placeholder, .bg-purple textarea:disabled::placeholder, .bg-purple .textarea:disabled::placeholder {
   text-decoration: line-through;
   color: #333;
 }
 .bg-purple .panel, .bg-purple .shadow-purple, .bg-purple .card {
   box-shadow: 10px 10px 40px #852196, -10px -10px 40px #b32dca;
 }
-.bg-purple input, .bg-purple textarea {
+.bg-purple input, .bg-purple .input, .bg-purple textarea, .bg-purple .textarea {
   box-shadow: inset 10px 10px 40px #852196, inset -10px -10px 40px #b32dca;
 }
-.bg-purple input:disabled, .bg-purple textarea:disabled {
+.bg-purple input:disabled, .bg-purple .input:disabled, .bg-purple textarea:disabled, .bg-purple .textarea:disabled {
   background-color: rgba(229, 229, 231, 0.5);
 }
-.bg-purple button, .bg-purple .button, .bg-purple input[type=button], .bg-purple input[type=submit] {
+.bg-purple button, .bg-purple .button, .bg-purple input[type=button], .bg-purple [type=button].input, .bg-purple input[type=submit], .bg-purple [type=submit].input {
   background: #9c27b0;
   box-shadow: 10px 10px 40px #852196, -10px -10px 40px #b32dca;
 }
-.bg-purple button:focus, .bg-purple .button:focus, .bg-purple input[type=button]:focus, .bg-purple input[type=submit]:focus {
+.bg-purple button:focus, .bg-purple .button:focus, .bg-purple input[type=button]:focus, .bg-purple [type=button].input:focus, .bg-purple input[type=submit]:focus, .bg-purple [type=submit].input:focus {
   background: #9c27b0;
   box-shadow: inset 10px 10px 40px #852196, inset -10px -10px 40px #b32dca;
 }
-.bg-purple button.convex, .bg-purple .button.convex, .bg-purple input[type=button].convex, .bg-purple input[type=submit].convex {
+.bg-purple button.convex, .bg-purple .button.convex, .bg-purple input[type=button].convex, .bg-purple [type=button].convex.input, .bg-purple input[type=submit].convex, .bg-purple [type=submit].convex.input {
   background: linear-gradient(145deg, #a72abc, #8c239e);
   box-shadow: 20px 20px 40px #852196, -20px -20px 40px #b32dca;
 }
-.bg-purple button.convex:focus, .bg-purple .button.convex:focus, .bg-purple input[type=button].convex:focus, .bg-purple input[type=submit].convex:focus {
+.bg-purple button.convex:focus, .bg-purple .button.convex:focus, .bg-purple input[type=button].convex:focus, .bg-purple [type=button].convex.input:focus, .bg-purple input[type=submit].convex:focus, .bg-purple [type=submit].convex.input:focus {
   background: linear-gradient(145deg, #8c239e, #a72abc);
 }
 
 .bg-deep-purple ::placeholder {
   color: #ccc;
 }
-.bg-deep-purple input:disabled::placeholder, .bg-deep-purple textarea:disabled::placeholder {
+.bg-deep-purple .carousel, .bg-deep-purple .carousel-450, .bg-deep-purple .carousel-400, .bg-deep-purple .carousel-350, .bg-deep-purple .carousel-300, .bg-deep-purple .carousel-250, .bg-deep-purple .carousel-200, .bg-deep-purple .carousel-150 {
+  scrollbar-color: #ccc #aaa;
+  scrollbar-width: thin;
+}
+.bg-deep-purple .carousel::-webkit-scrollbar-thumb, .bg-deep-purple .carousel-450::-webkit-scrollbar-thumb, .bg-deep-purple .carousel-400::-webkit-scrollbar-thumb, .bg-deep-purple .carousel-350::-webkit-scrollbar-thumb, .bg-deep-purple .carousel-300::-webkit-scrollbar-thumb, .bg-deep-purple .carousel-250::-webkit-scrollbar-thumb, .bg-deep-purple .carousel-200::-webkit-scrollbar-thumb, .bg-deep-purple .carousel-150::-webkit-scrollbar-thumb {
+  background: #ccc;
+}
+.bg-deep-purple .carousel::-webkit-scrollbar-track, .bg-deep-purple .carousel-450::-webkit-scrollbar-track, .bg-deep-purple .carousel-400::-webkit-scrollbar-track, .bg-deep-purple .carousel-350::-webkit-scrollbar-track, .bg-deep-purple .carousel-300::-webkit-scrollbar-track, .bg-deep-purple .carousel-250::-webkit-scrollbar-track, .bg-deep-purple .carousel-200::-webkit-scrollbar-track, .bg-deep-purple .carousel-150::-webkit-scrollbar-track {
+  background: #aaa;
+}
+.bg-deep-purple .carousel::-webkit-scrollbar-thumb:hover, .bg-deep-purple .carousel-450::-webkit-scrollbar-thumb:hover, .bg-deep-purple .carousel-400::-webkit-scrollbar-thumb:hover, .bg-deep-purple .carousel-350::-webkit-scrollbar-thumb:hover, .bg-deep-purple .carousel-300::-webkit-scrollbar-thumb:hover, .bg-deep-purple .carousel-250::-webkit-scrollbar-thumb:hover, .bg-deep-purple .carousel-200::-webkit-scrollbar-thumb:hover, .bg-deep-purple .carousel-150::-webkit-scrollbar-thumb:hover {
+  background: #fff;
+}
+.bg-deep-purple input:disabled::placeholder, .bg-deep-purple .input:disabled::placeholder, .bg-deep-purple textarea:disabled::placeholder, .bg-deep-purple .textarea:disabled::placeholder {
   text-decoration: line-through;
   color: #333;
 }
 .bg-deep-purple .panel, .bg-deep-purple .shadow-dee, .bg-deep-purple .card-purple {
   box-shadow: 10px 10px 40px #58319c, -10px -10px 40px #7643d2;
 }
-.bg-deep-purple input, .bg-deep-purple textarea {
+.bg-deep-purple input, .bg-deep-purple .input, .bg-deep-purple textarea, .bg-deep-purple .textarea {
   box-shadow: inset 10px 10px 40px #58319c, inset -10px -10px 40px #7643d2;
 }
-.bg-deep-purple input:disabled, .bg-deep-purple textarea:disabled {
+.bg-deep-purple input:disabled, .bg-deep-purple .input:disabled, .bg-deep-purple textarea:disabled, .bg-deep-purple .textarea:disabled {
   background-color: rgba(229, 229, 231, 0.5);
 }
-.bg-deep-purple button, .bg-deep-purple .button, .bg-deep-purple input[type=button], .bg-deep-purple input[type=submit] {
+.bg-deep-purple button, .bg-deep-purple .button, .bg-deep-purple input[type=button], .bg-deep-purple [type=button].input, .bg-deep-purple input[type=submit], .bg-deep-purple [type=submit].input {
   background: #673ab7;
   box-shadow: 10px 10px 40px #58319c, -10px -10px 40px #7643d2;
 }
-.bg-deep-purple button:focus, .bg-deep-purple .button:focus, .bg-deep-purple input[type=button]:focus, .bg-deep-purple input[type=submit]:focus {
+.bg-deep-purple button:focus, .bg-deep-purple .button:focus, .bg-deep-purple input[type=button]:focus, .bg-deep-purple [type=button].input:focus, .bg-deep-purple input[type=submit]:focus, .bg-deep-purple [type=submit].input:focus {
   background: #673ab7;
   box-shadow: inset 10px 10px 40px #58319c, inset -10px -10px 40px #7643d2;
 }
-.bg-deep-purple button.convex, .bg-deep-purple .button.convex, .bg-deep-purple input[type=button].convex, .bg-deep-purple input[type=submit].convex {
+.bg-deep-purple button.convex, .bg-deep-purple .button.convex, .bg-deep-purple input[type=button].convex, .bg-deep-purple [type=button].convex.input, .bg-deep-purple input[type=submit].convex, .bg-deep-purple [type=submit].convex.input {
   background: linear-gradient(145deg, #6e3ec4, #5d34a5);
   box-shadow: 20px 20px 40px #58319c, -20px -20px 40px #7643d2;
 }
-.bg-deep-purple button.convex:focus, .bg-deep-purple .button.convex:focus, .bg-deep-purple input[type=button].convex:focus, .bg-deep-purple input[type=submit].convex:focus {
+.bg-deep-purple button.convex:focus, .bg-deep-purple .button.convex:focus, .bg-deep-purple input[type=button].convex:focus, .bg-deep-purple [type=button].convex.input:focus, .bg-deep-purple input[type=submit].convex:focus, .bg-deep-purple [type=submit].convex.input:focus {
   background: linear-gradient(145deg, #5d34a5, #6e3ec4);
 }
 
 .bg-indigo ::placeholder {
   color: #ccc;
 }
-.bg-indigo input:disabled::placeholder, .bg-indigo textarea:disabled::placeholder {
+.bg-indigo .carousel, .bg-indigo .carousel-450, .bg-indigo .carousel-400, .bg-indigo .carousel-350, .bg-indigo .carousel-300, .bg-indigo .carousel-250, .bg-indigo .carousel-200, .bg-indigo .carousel-150 {
+  scrollbar-color: #ccc #aaa;
+  scrollbar-width: thin;
+}
+.bg-indigo .carousel::-webkit-scrollbar-thumb, .bg-indigo .carousel-450::-webkit-scrollbar-thumb, .bg-indigo .carousel-400::-webkit-scrollbar-thumb, .bg-indigo .carousel-350::-webkit-scrollbar-thumb, .bg-indigo .carousel-300::-webkit-scrollbar-thumb, .bg-indigo .carousel-250::-webkit-scrollbar-thumb, .bg-indigo .carousel-200::-webkit-scrollbar-thumb, .bg-indigo .carousel-150::-webkit-scrollbar-thumb {
+  background: #ccc;
+}
+.bg-indigo .carousel::-webkit-scrollbar-track, .bg-indigo .carousel-450::-webkit-scrollbar-track, .bg-indigo .carousel-400::-webkit-scrollbar-track, .bg-indigo .carousel-350::-webkit-scrollbar-track, .bg-indigo .carousel-300::-webkit-scrollbar-track, .bg-indigo .carousel-250::-webkit-scrollbar-track, .bg-indigo .carousel-200::-webkit-scrollbar-track, .bg-indigo .carousel-150::-webkit-scrollbar-track {
+  background: #aaa;
+}
+.bg-indigo .carousel::-webkit-scrollbar-thumb:hover, .bg-indigo .carousel-450::-webkit-scrollbar-thumb:hover, .bg-indigo .carousel-400::-webkit-scrollbar-thumb:hover, .bg-indigo .carousel-350::-webkit-scrollbar-thumb:hover, .bg-indigo .carousel-300::-webkit-scrollbar-thumb:hover, .bg-indigo .carousel-250::-webkit-scrollbar-thumb:hover, .bg-indigo .carousel-200::-webkit-scrollbar-thumb:hover, .bg-indigo .carousel-150::-webkit-scrollbar-thumb:hover {
+  background: #fff;
+}
+.bg-indigo input:disabled::placeholder, .bg-indigo .input:disabled::placeholder, .bg-indigo textarea:disabled::placeholder, .bg-indigo .textarea:disabled::placeholder {
   text-decoration: line-through;
   color: #333;
 }
 .bg-indigo .panel, .bg-indigo .shadow-indigo, .bg-indigo .card {
   box-shadow: 10px 10px 40px #36459a, -10px -10px 40px #485dd0;
 }
-.bg-indigo input, .bg-indigo textarea {
+.bg-indigo input, .bg-indigo .input, .bg-indigo textarea, .bg-indigo .textarea {
   box-shadow: inset 10px 10px 40px #36459a, inset -10px -10px 40px #485dd0;
 }
-.bg-indigo input:disabled, .bg-indigo textarea:disabled {
+.bg-indigo input:disabled, .bg-indigo .input:disabled, .bg-indigo textarea:disabled, .bg-indigo .textarea:disabled {
   background-color: rgba(229, 229, 231, 0.5);
 }
-.bg-indigo button, .bg-indigo .button, .bg-indigo input[type=button], .bg-indigo input[type=submit] {
+.bg-indigo button, .bg-indigo .button, .bg-indigo input[type=button], .bg-indigo [type=button].input, .bg-indigo input[type=submit], .bg-indigo [type=submit].input {
   background: #3f51b5;
   box-shadow: 10px 10px 40px #36459a, -10px -10px 40px #485dd0;
 }
-.bg-indigo button:focus, .bg-indigo .button:focus, .bg-indigo input[type=button]:focus, .bg-indigo input[type=submit]:focus {
+.bg-indigo button:focus, .bg-indigo .button:focus, .bg-indigo input[type=button]:focus, .bg-indigo [type=button].input:focus, .bg-indigo input[type=submit]:focus, .bg-indigo [type=submit].input:focus {
   background: #3f51b5;
   box-shadow: inset 10px 10px 40px #36459a, inset -10px -10px 40px #485dd0;
 }
-.bg-indigo button.convex, .bg-indigo .button.convex, .bg-indigo input[type=button].convex, .bg-indigo input[type=submit].convex {
+.bg-indigo button.convex, .bg-indigo .button.convex, .bg-indigo input[type=button].convex, .bg-indigo [type=button].convex.input, .bg-indigo input[type=submit].convex, .bg-indigo [type=submit].convex.input {
   background: linear-gradient(145deg, #4357c2, #3949a3);
   box-shadow: 10px 10px 40px #36459a, -10px -10px 40px #485dd0;
 }
-.bg-indigo button.convex:focus, .bg-indigo .button.convex:focus, .bg-indigo input[type=button].convex:focus, .bg-indigo input[type=submit].convex:focus {
+.bg-indigo button.convex:focus, .bg-indigo .button.convex:focus, .bg-indigo input[type=button].convex:focus, .bg-indigo [type=button].convex.input:focus, .bg-indigo input[type=submit].convex:focus, .bg-indigo [type=submit].convex.input:focus {
   background: linear-gradient(145deg, #3949a3, #4357c2);
 }
 
 .bg-blue ::placeholder {
   color: #ccc;
 }
-.bg-blue input:disabled::placeholder, .bg-blue textarea:disabled::placeholder {
+.bg-blue .carousel, .bg-blue .carousel-450, .bg-blue .carousel-400, .bg-blue .carousel-350, .bg-blue .carousel-300, .bg-blue .carousel-250, .bg-blue .carousel-200, .bg-blue .carousel-150 {
+  scrollbar-color: #ccc #aaa;
+  scrollbar-width: thin;
+}
+.bg-blue .carousel::-webkit-scrollbar-thumb, .bg-blue .carousel-450::-webkit-scrollbar-thumb, .bg-blue .carousel-400::-webkit-scrollbar-thumb, .bg-blue .carousel-350::-webkit-scrollbar-thumb, .bg-blue .carousel-300::-webkit-scrollbar-thumb, .bg-blue .carousel-250::-webkit-scrollbar-thumb, .bg-blue .carousel-200::-webkit-scrollbar-thumb, .bg-blue .carousel-150::-webkit-scrollbar-thumb {
+  background: #ccc;
+}
+.bg-blue .carousel::-webkit-scrollbar-track, .bg-blue .carousel-450::-webkit-scrollbar-track, .bg-blue .carousel-400::-webkit-scrollbar-track, .bg-blue .carousel-350::-webkit-scrollbar-track, .bg-blue .carousel-300::-webkit-scrollbar-track, .bg-blue .carousel-250::-webkit-scrollbar-track, .bg-blue .carousel-200::-webkit-scrollbar-track, .bg-blue .carousel-150::-webkit-scrollbar-track {
+  background: #aaa;
+}
+.bg-blue .carousel::-webkit-scrollbar-thumb:hover, .bg-blue .carousel-450::-webkit-scrollbar-thumb:hover, .bg-blue .carousel-400::-webkit-scrollbar-thumb:hover, .bg-blue .carousel-350::-webkit-scrollbar-thumb:hover, .bg-blue .carousel-300::-webkit-scrollbar-thumb:hover, .bg-blue .carousel-250::-webkit-scrollbar-thumb:hover, .bg-blue .carousel-200::-webkit-scrollbar-thumb:hover, .bg-blue .carousel-150::-webkit-scrollbar-thumb:hover {
+  background: #fff;
+}
+.bg-blue input:disabled::placeholder, .bg-blue .input:disabled::placeholder, .bg-blue textarea:disabled::placeholder, .bg-blue .textarea:disabled::placeholder {
   text-decoration: line-through;
   color: #333;
 }
 .bg-blue .panel, .bg-blue .shadow-blue, .bg-blue .card {
   box-shadow: 10px 10px 40px #1c80cf, -10px -10px 40px #26adff;
 }
-.bg-blue input, .bg-blue textarea {
+.bg-blue input, .bg-blue .input, .bg-blue textarea, .bg-blue .textarea {
   box-shadow: inset 10px 10px 40px #1c80cf, inset -10px -10px 40px #26adff;
 }
-.bg-blue input:disabled, .bg-blue textarea:disabled {
+.bg-blue input:disabled, .bg-blue .input:disabled, .bg-blue textarea:disabled, .bg-blue .textarea:disabled {
   background-color: rgba(229, 229, 231, 0.5);
 }
-.bg-blue button, .bg-blue .button, .bg-blue input[type=button], .bg-blue input[type=submit] {
+.bg-blue button, .bg-blue .button, .bg-blue input[type=button], .bg-blue [type=button].input, .bg-blue input[type=submit], .bg-blue [type=submit].input {
   background: #2196f3;
   box-shadow: 10px 10px 40px #1c80cf, -10px -10px 40px #26adff;
 }
-.bg-blue button:focus, .bg-blue .button:focus, .bg-blue input[type=button]:focus, .bg-blue input[type=submit]:focus {
+.bg-blue button:focus, .bg-blue .button:focus, .bg-blue input[type=button]:focus, .bg-blue [type=button].input:focus, .bg-blue input[type=submit]:focus, .bg-blue [type=submit].input:focus {
   background: #2196f3;
   box-shadow: inset 10px 10px 40px #1c80cf, inset -10px -10px 40px #26adff;
 }
-.bg-blue button.convex, .bg-blue .button.convex, .bg-blue input[type=button].convex, .bg-blue input[type=submit].convex {
+.bg-blue button.convex, .bg-blue .button.convex, .bg-blue input[type=button].convex, .bg-blue [type=button].convex.input, .bg-blue input[type=submit].convex, .bg-blue [type=submit].convex.input {
   background: linear-gradient(145deg, #23a1ff, #1e87db);
   box-shadow: 20px 20px 40px #1c80cf, -20px -20px 40px #26adff;
 }
-.bg-blue button.convex:focus, .bg-blue .button.convex:focus, .bg-blue input[type=button].convex:focus, .bg-blue input[type=submit].convex:focus {
+.bg-blue button.convex:focus, .bg-blue .button.convex:focus, .bg-blue input[type=button].convex:focus, .bg-blue [type=button].convex.input:focus, .bg-blue input[type=submit].convex:focus, .bg-blue [type=submit].convex.input:focus {
   background: linear-gradient(145deg, #1e87db, #23a1ff);
 }
 
 .bg-light-blue ::placeholder {
   color: #ccc;
 }
-.bg-light-blue input:disabled::placeholder, .bg-light-blue textarea:disabled::placeholder {
+.bg-light-blue .carousel, .bg-light-blue .carousel-450, .bg-light-blue .carousel-400, .bg-light-blue .carousel-350, .bg-light-blue .carousel-300, .bg-light-blue .carousel-250, .bg-light-blue .carousel-200, .bg-light-blue .carousel-150 {
+  scrollbar-color: #ccc #aaa;
+  scrollbar-width: thin;
+}
+.bg-light-blue .carousel::-webkit-scrollbar-thumb, .bg-light-blue .carousel-450::-webkit-scrollbar-thumb, .bg-light-blue .carousel-400::-webkit-scrollbar-thumb, .bg-light-blue .carousel-350::-webkit-scrollbar-thumb, .bg-light-blue .carousel-300::-webkit-scrollbar-thumb, .bg-light-blue .carousel-250::-webkit-scrollbar-thumb, .bg-light-blue .carousel-200::-webkit-scrollbar-thumb, .bg-light-blue .carousel-150::-webkit-scrollbar-thumb {
+  background: #ccc;
+}
+.bg-light-blue .carousel::-webkit-scrollbar-track, .bg-light-blue .carousel-450::-webkit-scrollbar-track, .bg-light-blue .carousel-400::-webkit-scrollbar-track, .bg-light-blue .carousel-350::-webkit-scrollbar-track, .bg-light-blue .carousel-300::-webkit-scrollbar-track, .bg-light-blue .carousel-250::-webkit-scrollbar-track, .bg-light-blue .carousel-200::-webkit-scrollbar-track, .bg-light-blue .carousel-150::-webkit-scrollbar-track {
+  background: #aaa;
+}
+.bg-light-blue .carousel::-webkit-scrollbar-thumb:hover, .bg-light-blue .carousel-450::-webkit-scrollbar-thumb:hover, .bg-light-blue .carousel-400::-webkit-scrollbar-thumb:hover, .bg-light-blue .carousel-350::-webkit-scrollbar-thumb:hover, .bg-light-blue .carousel-300::-webkit-scrollbar-thumb:hover, .bg-light-blue .carousel-250::-webkit-scrollbar-thumb:hover, .bg-light-blue .carousel-200::-webkit-scrollbar-thumb:hover, .bg-light-blue .carousel-150::-webkit-scrollbar-thumb:hover {
+  background: #fff;
+}
+.bg-light-blue input:disabled::placeholder, .bg-light-blue .input:disabled::placeholder, .bg-light-blue textarea:disabled::placeholder, .bg-light-blue .textarea:disabled::placeholder {
   text-decoration: line-through;
   color: #333;
 }
 .bg-light-blue .panel, .bg-light-blue .shadow-ligh, .bg-light-blue .card-blue {
   box-shadow: 10px 10px 40px #0390cf, -10px -10px 40px #03c2ff;
 }
-.bg-light-blue input, .bg-light-blue textarea {
+.bg-light-blue input, .bg-light-blue .input, .bg-light-blue textarea, .bg-light-blue .textarea {
   box-shadow: inset 10px 10px 40px #0390cf, inset -10px -10px 40px #03c2ff;
 }
-.bg-light-blue input:disabled, .bg-light-blue textarea:disabled {
+.bg-light-blue input:disabled, .bg-light-blue .input:disabled, .bg-light-blue textarea:disabled, .bg-light-blue .textarea:disabled {
   background-color: rgba(229, 229, 231, 0.5);
 }
-.bg-light-blue button, .bg-light-blue .button, .bg-light-blue input[type=button], .bg-light-blue input[type=submit] {
+.bg-light-blue button, .bg-light-blue .button, .bg-light-blue input[type=button], .bg-light-blue [type=button].input, .bg-light-blue input[type=submit], .bg-light-blue [type=submit].input {
   background: #03a9f4;
   box-shadow: 10px 10px 40px #0390cf, -10px -10px 40px #03c2ff;
 }
-.bg-light-blue button:focus, .bg-light-blue .button:focus, .bg-light-blue input[type=button]:focus, .bg-light-blue input[type=submit]:focus {
+.bg-light-blue button:focus, .bg-light-blue .button:focus, .bg-light-blue input[type=button]:focus, .bg-light-blue [type=button].input:focus, .bg-light-blue input[type=submit]:focus, .bg-light-blue [type=submit].input:focus {
   background: #03a9f4;
   box-shadow: inset 10px 10px 40px #0390cf, inset -10px -10px 40px #03c2ff;
 }
-.bg-light-blue button.convex, .bg-light-blue .button.convex, .bg-light-blue input[type=button].convex, .bg-light-blue input[type=submit].convex {
+.bg-light-blue button.convex, .bg-light-blue .button.convex, .bg-light-blue input[type=button].convex, .bg-light-blue [type=button].convex.input, .bg-light-blue input[type=submit].convex, .bg-light-blue [type=submit].convex.input {
   background: linear-gradient(145deg, #03b5ff, #0398dc);
   box-shadow: 20px 20px 40px #0390cf, -20px -20px 40px #03c2ff;
 }
-.bg-light-blue button.convex:focus, .bg-light-blue .button.convex:focus, .bg-light-blue input[type=button].convex:focus, .bg-light-blue input[type=submit].convex:focus {
+.bg-light-blue button.convex:focus, .bg-light-blue .button.convex:focus, .bg-light-blue input[type=button].convex:focus, .bg-light-blue [type=button].convex.input:focus, .bg-light-blue input[type=submit].convex:focus, .bg-light-blue [type=submit].convex.input:focus {
   background: linear-gradient(145deg, #0398dc, #03b5ff);
 }
 
 .bg-cyan ::placeholder {
   color: #ccc;
 }
-.bg-cyan input:disabled::placeholder, .bg-cyan textarea:disabled::placeholder {
+.bg-cyan .carousel, .bg-cyan .carousel-450, .bg-cyan .carousel-400, .bg-cyan .carousel-350, .bg-cyan .carousel-300, .bg-cyan .carousel-250, .bg-cyan .carousel-200, .bg-cyan .carousel-150 {
+  scrollbar-color: #ccc #aaa;
+  scrollbar-width: thin;
+}
+.bg-cyan .carousel::-webkit-scrollbar-thumb, .bg-cyan .carousel-450::-webkit-scrollbar-thumb, .bg-cyan .carousel-400::-webkit-scrollbar-thumb, .bg-cyan .carousel-350::-webkit-scrollbar-thumb, .bg-cyan .carousel-300::-webkit-scrollbar-thumb, .bg-cyan .carousel-250::-webkit-scrollbar-thumb, .bg-cyan .carousel-200::-webkit-scrollbar-thumb, .bg-cyan .carousel-150::-webkit-scrollbar-thumb {
+  background: #ccc;
+}
+.bg-cyan .carousel::-webkit-scrollbar-track, .bg-cyan .carousel-450::-webkit-scrollbar-track, .bg-cyan .carousel-400::-webkit-scrollbar-track, .bg-cyan .carousel-350::-webkit-scrollbar-track, .bg-cyan .carousel-300::-webkit-scrollbar-track, .bg-cyan .carousel-250::-webkit-scrollbar-track, .bg-cyan .carousel-200::-webkit-scrollbar-track, .bg-cyan .carousel-150::-webkit-scrollbar-track {
+  background: #aaa;
+}
+.bg-cyan .carousel::-webkit-scrollbar-thumb:hover, .bg-cyan .carousel-450::-webkit-scrollbar-thumb:hover, .bg-cyan .carousel-400::-webkit-scrollbar-thumb:hover, .bg-cyan .carousel-350::-webkit-scrollbar-thumb:hover, .bg-cyan .carousel-300::-webkit-scrollbar-thumb:hover, .bg-cyan .carousel-250::-webkit-scrollbar-thumb:hover, .bg-cyan .carousel-200::-webkit-scrollbar-thumb:hover, .bg-cyan .carousel-150::-webkit-scrollbar-thumb:hover {
+  background: #fff;
+}
+.bg-cyan input:disabled::placeholder, .bg-cyan .input:disabled::placeholder, .bg-cyan textarea:disabled::placeholder, .bg-cyan .textarea:disabled::placeholder {
   text-decoration: line-through;
   color: #333;
 }
 .bg-cyan .panel, .bg-cyan .shadow-cyan, .bg-cyan .card {
   box-shadow: 10px 10px 40px #00a0b4, -10px -10px 40px #00d8f4;
 }
-.bg-cyan input, .bg-cyan textarea {
+.bg-cyan input, .bg-cyan .input, .bg-cyan textarea, .bg-cyan .textarea {
   box-shadow: inset 10px 10px 40px #00a0b4, inset -10px -10px 40px #00d8f4;
 }
-.bg-cyan input:disabled, .bg-cyan textarea:disabled {
+.bg-cyan input:disabled, .bg-cyan .input:disabled, .bg-cyan textarea:disabled, .bg-cyan .textarea:disabled {
   background-color: rgba(229, 229, 231, 0.5);
 }
-.bg-cyan button, .bg-cyan .button, .bg-cyan input[type=button], .bg-cyan input[type=submit] {
+.bg-cyan button, .bg-cyan .button, .bg-cyan input[type=button], .bg-cyan [type=button].input, .bg-cyan input[type=submit], .bg-cyan [type=submit].input {
   background: #00bcd4;
   box-shadow: 10px 10px 40px #00a0b4, -10px -10px 40px #00d8f4;
 }
-.bg-cyan button:focus, .bg-cyan .button:focus, .bg-cyan input[type=button]:focus, .bg-cyan input[type=submit]:focus {
+.bg-cyan button:focus, .bg-cyan .button:focus, .bg-cyan input[type=button]:focus, .bg-cyan [type=button].input:focus, .bg-cyan input[type=submit]:focus, .bg-cyan [type=submit].input:focus {
   background: #00bcd4;
   box-shadow: inset 10px 10px 40px #00a0b4, inset -10px -10px 40px #00d8f4;
 }
-.bg-cyan button.convex, .bg-cyan .button.convex, .bg-cyan input[type=button].convex, .bg-cyan input[type=submit].convex {
+.bg-cyan button.convex, .bg-cyan .button.convex, .bg-cyan input[type=button].convex, .bg-cyan [type=button].convex.input, .bg-cyan input[type=submit].convex, .bg-cyan [type=submit].convex.input {
   background: linear-gradient(145deg, #00c9e3, #00a9bf);
   box-shadow: 20px 20px 40px #00a0b4, -20px -20px 40px #00d8f4;
 }
-.bg-cyan button.convex:focus, .bg-cyan .button.convex:focus, .bg-cyan input[type=button].convex:focus, .bg-cyan input[type=submit].convex:focus {
+.bg-cyan button.convex:focus, .bg-cyan .button.convex:focus, .bg-cyan input[type=button].convex:focus, .bg-cyan [type=button].convex.input:focus, .bg-cyan input[type=submit].convex:focus, .bg-cyan [type=submit].convex.input:focus {
   background: linear-gradient(145deg, #00a9bf, #00c9e3);
 }
 
 .bg-teal ::placeholder {
   color: #ccc;
 }
-.bg-teal input:disabled::placeholder, .bg-teal textarea:disabled::placeholder {
+.bg-teal .carousel, .bg-teal .carousel-450, .bg-teal .carousel-400, .bg-teal .carousel-350, .bg-teal .carousel-300, .bg-teal .carousel-250, .bg-teal .carousel-200, .bg-teal .carousel-150 {
+  scrollbar-color: #ccc #aaa;
+  scrollbar-width: thin;
+}
+.bg-teal .carousel::-webkit-scrollbar-thumb, .bg-teal .carousel-450::-webkit-scrollbar-thumb, .bg-teal .carousel-400::-webkit-scrollbar-thumb, .bg-teal .carousel-350::-webkit-scrollbar-thumb, .bg-teal .carousel-300::-webkit-scrollbar-thumb, .bg-teal .carousel-250::-webkit-scrollbar-thumb, .bg-teal .carousel-200::-webkit-scrollbar-thumb, .bg-teal .carousel-150::-webkit-scrollbar-thumb {
+  background: #ccc;
+}
+.bg-teal .carousel::-webkit-scrollbar-track, .bg-teal .carousel-450::-webkit-scrollbar-track, .bg-teal .carousel-400::-webkit-scrollbar-track, .bg-teal .carousel-350::-webkit-scrollbar-track, .bg-teal .carousel-300::-webkit-scrollbar-track, .bg-teal .carousel-250::-webkit-scrollbar-track, .bg-teal .carousel-200::-webkit-scrollbar-track, .bg-teal .carousel-150::-webkit-scrollbar-track {
+  background: #aaa;
+}
+.bg-teal .carousel::-webkit-scrollbar-thumb:hover, .bg-teal .carousel-450::-webkit-scrollbar-thumb:hover, .bg-teal .carousel-400::-webkit-scrollbar-thumb:hover, .bg-teal .carousel-350::-webkit-scrollbar-thumb:hover, .bg-teal .carousel-300::-webkit-scrollbar-thumb:hover, .bg-teal .carousel-250::-webkit-scrollbar-thumb:hover, .bg-teal .carousel-200::-webkit-scrollbar-thumb:hover, .bg-teal .carousel-150::-webkit-scrollbar-thumb:hover {
+  background: #fff;
+}
+.bg-teal input:disabled::placeholder, .bg-teal .input:disabled::placeholder, .bg-teal textarea:disabled::placeholder, .bg-teal .textarea:disabled::placeholder {
   text-decoration: line-through;
   color: #333;
 }
 .bg-teal .panel, .bg-teal .shadow-teal, .bg-teal .card {
   box-shadow: 10px 10px 40px #008074, -10px -10px 40px #00ad9c;
 }
-.bg-teal input, .bg-teal textarea {
+.bg-teal input, .bg-teal .input, .bg-teal textarea, .bg-teal .textarea {
   box-shadow: inset 10px 10px 40px #008074, inset -10px -10px 40px #00ad9c;
 }
-.bg-teal input:disabled, .bg-teal textarea:disabled {
+.bg-teal input:disabled, .bg-teal .input:disabled, .bg-teal textarea:disabled, .bg-teal .textarea:disabled {
   background-color: rgba(229, 229, 231, 0.5);
 }
-.bg-teal button, .bg-teal .button, .bg-teal input[type=button], .bg-teal input[type=submit] {
+.bg-teal button, .bg-teal .button, .bg-teal input[type=button], .bg-teal [type=button].input, .bg-teal input[type=submit], .bg-teal [type=submit].input {
   background: #009688;
   box-shadow: 10px 10px 40px #008074, -10px -10px 40px #00ad9c;
 }
-.bg-teal button:focus, .bg-teal .button:focus, .bg-teal input[type=button]:focus, .bg-teal input[type=submit]:focus {
+.bg-teal button:focus, .bg-teal .button:focus, .bg-teal input[type=button]:focus, .bg-teal [type=button].input:focus, .bg-teal input[type=submit]:focus, .bg-teal [type=submit].input:focus {
   background: #009688;
   box-shadow: inset 10px 10px 40px #008074, inset -10px -10px 40px #00ad9c;
 }
-.bg-teal button.convex, .bg-teal .button.convex, .bg-teal input[type=button].convex, .bg-teal input[type=submit].convex {
+.bg-teal button.convex, .bg-teal .button.convex, .bg-teal input[type=button].convex, .bg-teal [type=button].convex.input, .bg-teal input[type=submit].convex, .bg-teal [type=submit].convex.input {
   background: linear-gradient(145deg, #00a192, #00877a);
   box-shadow: 20px 20px 40px #008074, -20px -20px 40px #00ad9c;
 }
-.bg-teal button.convex:focus, .bg-teal .button.convex:focus, .bg-teal input[type=button].convex:focus, .bg-teal input[type=submit].convex:focus {
+.bg-teal button.convex:focus, .bg-teal .button.convex:focus, .bg-teal input[type=button].convex:focus, .bg-teal [type=button].convex.input:focus, .bg-teal input[type=submit].convex:focus, .bg-teal [type=submit].convex.input:focus {
   background: linear-gradient(145deg, #00877a, #00a192);
 }
 
 .bg-green ::placeholder {
   color: #ccc;
 }
-.bg-green input:disabled::placeholder, .bg-green textarea:disabled::placeholder {
+.bg-green .carousel, .bg-green .carousel-450, .bg-green .carousel-400, .bg-green .carousel-350, .bg-green .carousel-300, .bg-green .carousel-250, .bg-green .carousel-200, .bg-green .carousel-150 {
+  scrollbar-color: #ccc #aaa;
+  scrollbar-width: thin;
+}
+.bg-green .carousel::-webkit-scrollbar-thumb, .bg-green .carousel-450::-webkit-scrollbar-thumb, .bg-green .carousel-400::-webkit-scrollbar-thumb, .bg-green .carousel-350::-webkit-scrollbar-thumb, .bg-green .carousel-300::-webkit-scrollbar-thumb, .bg-green .carousel-250::-webkit-scrollbar-thumb, .bg-green .carousel-200::-webkit-scrollbar-thumb, .bg-green .carousel-150::-webkit-scrollbar-thumb {
+  background: #ccc;
+}
+.bg-green .carousel::-webkit-scrollbar-track, .bg-green .carousel-450::-webkit-scrollbar-track, .bg-green .carousel-400::-webkit-scrollbar-track, .bg-green .carousel-350::-webkit-scrollbar-track, .bg-green .carousel-300::-webkit-scrollbar-track, .bg-green .carousel-250::-webkit-scrollbar-track, .bg-green .carousel-200::-webkit-scrollbar-track, .bg-green .carousel-150::-webkit-scrollbar-track {
+  background: #aaa;
+}
+.bg-green .carousel::-webkit-scrollbar-thumb:hover, .bg-green .carousel-450::-webkit-scrollbar-thumb:hover, .bg-green .carousel-400::-webkit-scrollbar-thumb:hover, .bg-green .carousel-350::-webkit-scrollbar-thumb:hover, .bg-green .carousel-300::-webkit-scrollbar-thumb:hover, .bg-green .carousel-250::-webkit-scrollbar-thumb:hover, .bg-green .carousel-200::-webkit-scrollbar-thumb:hover, .bg-green .carousel-150::-webkit-scrollbar-thumb:hover {
+  background: #fff;
+}
+.bg-green input:disabled::placeholder, .bg-green .input:disabled::placeholder, .bg-green textarea:disabled::placeholder, .bg-green .textarea:disabled::placeholder {
   text-decoration: line-through;
   color: #333;
 }
 .bg-green .panel, .bg-green .shadow-green, .bg-green .card {
   box-shadow: 10px 10px 40px #419544, -10px -10px 40px #57c95c;
 }
-.bg-green input, .bg-green textarea {
+.bg-green input, .bg-green .input, .bg-green textarea, .bg-green .textarea {
   box-shadow: inset 10px 10px 40px #419544, inset -10px -10px 40px #57c95c;
 }
-.bg-green input:disabled, .bg-green textarea:disabled {
+.bg-green input:disabled, .bg-green .input:disabled, .bg-green textarea:disabled, .bg-green .textarea:disabled {
   background-color: rgba(229, 229, 231, 0.5);
 }
-.bg-green button, .bg-green .button, .bg-green input[type=button], .bg-green input[type=submit] {
+.bg-green button, .bg-green .button, .bg-green input[type=button], .bg-green [type=button].input, .bg-green input[type=submit], .bg-green [type=submit].input {
   background: #4caf50;
   box-shadow: 10px 10px 40px #419544, -10px -10px 40px #57c95c;
 }
-.bg-green button:focus, .bg-green .button:focus, .bg-green input[type=button]:focus, .bg-green input[type=submit]:focus {
+.bg-green button:focus, .bg-green .button:focus, .bg-green input[type=button]:focus, .bg-green [type=button].input:focus, .bg-green input[type=submit]:focus, .bg-green [type=submit].input:focus {
   background: #4caf50;
   box-shadow: inset 10px 10px 40px #419544, inset -10px -10px 40px #57c95c;
 }
-.bg-green button.convex, .bg-green .button.convex, .bg-green input[type=button].convex, .bg-green input[type=submit].convex {
+.bg-green button.convex, .bg-green .button.convex, .bg-green input[type=button].convex, .bg-green [type=button].convex.input, .bg-green input[type=submit].convex, .bg-green [type=submit].convex.input {
   background: linear-gradient(145deg, #51bb56, #449e48);
   box-shadow: 20px 20px 40px #419544, -20px -20px 40px #57c95c;
 }
-.bg-green button.convex:focus, .bg-green .button.convex:focus, .bg-green input[type=button].convex:focus, .bg-green input[type=submit].convex:focus {
+.bg-green button.convex:focus, .bg-green .button.convex:focus, .bg-green input[type=button].convex:focus, .bg-green [type=button].convex.input:focus, .bg-green input[type=submit].convex:focus, .bg-green [type=submit].convex.input:focus {
   background: linear-gradient(145deg, #449e48, #51bb56);
 }
 
 .bg-light-green ::placeholder {
   color: #ccc;
 }
-.bg-light-green input:disabled::placeholder, .bg-light-green textarea:disabled::placeholder {
+.bg-light-green .carousel, .bg-light-green .carousel-450, .bg-light-green .carousel-400, .bg-light-green .carousel-350, .bg-light-green .carousel-300, .bg-light-green .carousel-250, .bg-light-green .carousel-200, .bg-light-green .carousel-150 {
+  scrollbar-color: #ccc #aaa;
+  scrollbar-width: thin;
+}
+.bg-light-green .carousel::-webkit-scrollbar-thumb, .bg-light-green .carousel-450::-webkit-scrollbar-thumb, .bg-light-green .carousel-400::-webkit-scrollbar-thumb, .bg-light-green .carousel-350::-webkit-scrollbar-thumb, .bg-light-green .carousel-300::-webkit-scrollbar-thumb, .bg-light-green .carousel-250::-webkit-scrollbar-thumb, .bg-light-green .carousel-200::-webkit-scrollbar-thumb, .bg-light-green .carousel-150::-webkit-scrollbar-thumb {
+  background: #ccc;
+}
+.bg-light-green .carousel::-webkit-scrollbar-track, .bg-light-green .carousel-450::-webkit-scrollbar-track, .bg-light-green .carousel-400::-webkit-scrollbar-track, .bg-light-green .carousel-350::-webkit-scrollbar-track, .bg-light-green .carousel-300::-webkit-scrollbar-track, .bg-light-green .carousel-250::-webkit-scrollbar-track, .bg-light-green .carousel-200::-webkit-scrollbar-track, .bg-light-green .carousel-150::-webkit-scrollbar-track {
+  background: #aaa;
+}
+.bg-light-green .carousel::-webkit-scrollbar-thumb:hover, .bg-light-green .carousel-450::-webkit-scrollbar-thumb:hover, .bg-light-green .carousel-400::-webkit-scrollbar-thumb:hover, .bg-light-green .carousel-350::-webkit-scrollbar-thumb:hover, .bg-light-green .carousel-300::-webkit-scrollbar-thumb:hover, .bg-light-green .carousel-250::-webkit-scrollbar-thumb:hover, .bg-light-green .carousel-200::-webkit-scrollbar-thumb:hover, .bg-light-green .carousel-150::-webkit-scrollbar-thumb:hover {
+  background: #fff;
+}
+.bg-light-green input:disabled::placeholder, .bg-light-green .input:disabled::placeholder, .bg-light-green textarea:disabled::placeholder, .bg-light-green .textarea:disabled::placeholder {
   text-decoration: line-through;
   color: #333;
 }
 .bg-light-green .panel, .bg-light-green .shadow-ligh, .bg-light-green .card-green {
   box-shadow: 10px 10px 40px #76a63f, -10px -10px 40px #a0e055;
 }
-.bg-light-green input, .bg-light-green textarea {
+.bg-light-green input, .bg-light-green .input, .bg-light-green textarea, .bg-light-green .textarea {
   box-shadow: inset 10px 10px 40px #76a63f, inset -10px -10px 40px #a0e055;
 }
-.bg-light-green input:disabled, .bg-light-green textarea:disabled {
+.bg-light-green input:disabled, .bg-light-green .input:disabled, .bg-light-green textarea:disabled, .bg-light-green .textarea:disabled {
   background-color: rgba(229, 229, 231, 0.5);
 }
-.bg-light-green button, .bg-light-green .button, .bg-light-green input[type=button], .bg-light-green input[type=submit] {
+.bg-light-green button, .bg-light-green .button, .bg-light-green input[type=button], .bg-light-green [type=button].input, .bg-light-green input[type=submit], .bg-light-green [type=submit].input {
   background: #8bc34a;
   box-shadow: 10px 10px 40px #76a63f, -10px -10px 40px #a0e055;
 }
-.bg-light-green button:focus, .bg-light-green .button:focus, .bg-light-green input[type=button]:focus, .bg-light-green input[type=submit]:focus {
+.bg-light-green button:focus, .bg-light-green .button:focus, .bg-light-green input[type=button]:focus, .bg-light-green [type=button].input:focus, .bg-light-green input[type=submit]:focus, .bg-light-green [type=submit].input:focus {
   background: #8bc34a;
   box-shadow: inset 10px 10px 40px #76a63f, inset -10px -10px 40px #a0e055;
 }
-.bg-light-green button.convex, .bg-light-green .button.convex, .bg-light-green input[type=button].convex, .bg-light-green input[type=submit].convex {
+.bg-light-green button.convex, .bg-light-green .button.convex, .bg-light-green input[type=button].convex, .bg-light-green [type=button].convex.input, .bg-light-green input[type=submit].convex, .bg-light-green [type=submit].convex.input {
   background: linear-gradient(145deg, #95d14f, #7db043);
   box-shadow: 20px 20px 40px #76a63f, -20px -20px 40px #a0e055;
 }
-.bg-light-green button.convex:focus, .bg-light-green .button.convex:focus, .bg-light-green input[type=button].convex:focus, .bg-light-green input[type=submit].convex:focus {
+.bg-light-green button.convex:focus, .bg-light-green .button.convex:focus, .bg-light-green input[type=button].convex:focus, .bg-light-green [type=button].convex.input:focus, .bg-light-green input[type=submit].convex:focus, .bg-light-green [type=submit].convex.input:focus {
   background: linear-gradient(145deg, #7db043, #95d14f);
 }
 
 .bg-lime ::placeholder {
   color: #ccc;
 }
-.bg-lime input:disabled::placeholder, .bg-lime textarea:disabled::placeholder {
+.bg-lime .carousel, .bg-lime .carousel-450, .bg-lime .carousel-400, .bg-lime .carousel-350, .bg-lime .carousel-300, .bg-lime .carousel-250, .bg-lime .carousel-200, .bg-lime .carousel-150 {
+  scrollbar-color: #ccc #aaa;
+  scrollbar-width: thin;
+}
+.bg-lime .carousel::-webkit-scrollbar-thumb, .bg-lime .carousel-450::-webkit-scrollbar-thumb, .bg-lime .carousel-400::-webkit-scrollbar-thumb, .bg-lime .carousel-350::-webkit-scrollbar-thumb, .bg-lime .carousel-300::-webkit-scrollbar-thumb, .bg-lime .carousel-250::-webkit-scrollbar-thumb, .bg-lime .carousel-200::-webkit-scrollbar-thumb, .bg-lime .carousel-150::-webkit-scrollbar-thumb {
+  background: #ccc;
+}
+.bg-lime .carousel::-webkit-scrollbar-track, .bg-lime .carousel-450::-webkit-scrollbar-track, .bg-lime .carousel-400::-webkit-scrollbar-track, .bg-lime .carousel-350::-webkit-scrollbar-track, .bg-lime .carousel-300::-webkit-scrollbar-track, .bg-lime .carousel-250::-webkit-scrollbar-track, .bg-lime .carousel-200::-webkit-scrollbar-track, .bg-lime .carousel-150::-webkit-scrollbar-track {
+  background: #aaa;
+}
+.bg-lime .carousel::-webkit-scrollbar-thumb:hover, .bg-lime .carousel-450::-webkit-scrollbar-thumb:hover, .bg-lime .carousel-400::-webkit-scrollbar-thumb:hover, .bg-lime .carousel-350::-webkit-scrollbar-thumb:hover, .bg-lime .carousel-300::-webkit-scrollbar-thumb:hover, .bg-lime .carousel-250::-webkit-scrollbar-thumb:hover, .bg-lime .carousel-200::-webkit-scrollbar-thumb:hover, .bg-lime .carousel-150::-webkit-scrollbar-thumb:hover {
+  background: #fff;
+}
+.bg-lime input:disabled::placeholder, .bg-lime .input:disabled::placeholder, .bg-lime textarea:disabled::placeholder, .bg-lime .textarea:disabled::placeholder {
   text-decoration: line-through;
   color: #333;
 }
 .bg-lime .panel, .bg-lime .shadow-lime, .bg-lime .card {
   box-shadow: 10px 10px 40px #aebb30, -10px -10px 40px #ecfd42;
 }
-.bg-lime input, .bg-lime textarea {
+.bg-lime input, .bg-lime .input, .bg-lime textarea, .bg-lime .textarea {
   box-shadow: inset 10px 10px 40px #aebb30, inset -10px -10px 40px #ecfd42;
 }
-.bg-lime input:disabled, .bg-lime textarea:disabled {
+.bg-lime input:disabled, .bg-lime .input:disabled, .bg-lime textarea:disabled, .bg-lime .textarea:disabled {
   background-color: rgba(229, 229, 231, 0.5);
 }
-.bg-lime button, .bg-lime .button, .bg-lime input[type=button], .bg-lime input[type=submit] {
+.bg-lime button, .bg-lime .button, .bg-lime input[type=button], .bg-lime [type=button].input, .bg-lime input[type=submit], .bg-lime [type=submit].input {
   background: #cddc39;
   box-shadow: 10px 10px 40px #aebb30, -10px -10px 40px #ecfd42;
 }
-.bg-lime button:focus, .bg-lime .button:focus, .bg-lime input[type=button]:focus, .bg-lime input[type=submit]:focus {
+.bg-lime button:focus, .bg-lime .button:focus, .bg-lime input[type=button]:focus, .bg-lime [type=button].input:focus, .bg-lime input[type=submit]:focus, .bg-lime [type=submit].input:focus {
   background: #cddc39;
   box-shadow: inset 10px 10px 40px #aebb30, inset -10px -10px 40px #ecfd42;
 }
-.bg-lime button.convex, .bg-lime .button.convex, .bg-lime input[type=button].convex, .bg-lime input[type=submit].convex {
+.bg-lime button.convex, .bg-lime .button.convex, .bg-lime input[type=button].convex, .bg-lime [type=button].convex.input, .bg-lime input[type=submit].convex, .bg-lime [type=submit].convex.input {
   background: linear-gradient(145deg, #dbeb3d, #b9c633);
   box-shadow: 20px 20px 40px #aebb30, -20px -20px 40px #ecfd42;
 }
-.bg-lime button.convex:focus, .bg-lime .button.convex:focus, .bg-lime input[type=button].convex:focus, .bg-lime input[type=submit].convex:focus {
+.bg-lime button.convex:focus, .bg-lime .button.convex:focus, .bg-lime input[type=button].convex:focus, .bg-lime [type=button].convex.input:focus, .bg-lime input[type=submit].convex:focus, .bg-lime [type=submit].convex.input:focus {
   background: linear-gradient(145deg, #b9c633, #dbeb3d);
 }
 
 .bg-yellow ::placeholder {
-  color: #ccc;
+  color: #333;
 }
-.bg-yellow input:disabled::placeholder, .bg-yellow textarea:disabled::placeholder {
+.bg-yellow .carousel, .bg-yellow .carousel-450, .bg-yellow .carousel-400, .bg-yellow .carousel-350, .bg-yellow .carousel-300, .bg-yellow .carousel-250, .bg-yellow .carousel-200, .bg-yellow .carousel-150 {
+  scrollbar-color: #ccc #aaa;
+  scrollbar-width: thin;
+}
+.bg-yellow .carousel::-webkit-scrollbar-thumb, .bg-yellow .carousel-450::-webkit-scrollbar-thumb, .bg-yellow .carousel-400::-webkit-scrollbar-thumb, .bg-yellow .carousel-350::-webkit-scrollbar-thumb, .bg-yellow .carousel-300::-webkit-scrollbar-thumb, .bg-yellow .carousel-250::-webkit-scrollbar-thumb, .bg-yellow .carousel-200::-webkit-scrollbar-thumb, .bg-yellow .carousel-150::-webkit-scrollbar-thumb {
+  background: #ccc;
+}
+.bg-yellow .carousel::-webkit-scrollbar-track, .bg-yellow .carousel-450::-webkit-scrollbar-track, .bg-yellow .carousel-400::-webkit-scrollbar-track, .bg-yellow .carousel-350::-webkit-scrollbar-track, .bg-yellow .carousel-300::-webkit-scrollbar-track, .bg-yellow .carousel-250::-webkit-scrollbar-track, .bg-yellow .carousel-200::-webkit-scrollbar-track, .bg-yellow .carousel-150::-webkit-scrollbar-track {
+  background: #aaa;
+}
+.bg-yellow .carousel::-webkit-scrollbar-thumb:hover, .bg-yellow .carousel-450::-webkit-scrollbar-thumb:hover, .bg-yellow .carousel-400::-webkit-scrollbar-thumb:hover, .bg-yellow .carousel-350::-webkit-scrollbar-thumb:hover, .bg-yellow .carousel-300::-webkit-scrollbar-thumb:hover, .bg-yellow .carousel-250::-webkit-scrollbar-thumb:hover, .bg-yellow .carousel-200::-webkit-scrollbar-thumb:hover, .bg-yellow .carousel-150::-webkit-scrollbar-thumb:hover {
+  background: #fff;
+}
+.bg-yellow input:disabled::placeholder, .bg-yellow .input:disabled::placeholder, .bg-yellow textarea:disabled::placeholder, .bg-yellow .textarea:disabled::placeholder {
   text-decoration: line-through;
   color: #333;
 }
 .bg-yellow .panel, .bg-yellow .shadow-yellow, .bg-yellow .card {
   box-shadow: 10px 10px 40px #d9c832, -10px -10px 40px #ffff44;
 }
-.bg-yellow input, .bg-yellow textarea {
+.bg-yellow input, .bg-yellow .input, .bg-yellow textarea, .bg-yellow .textarea {
   box-shadow: inset 10px 10px 40px #d9c832, inset -10px -10px 40px #ffff44;
 }
-.bg-yellow input:disabled, .bg-yellow textarea:disabled {
+.bg-yellow input:disabled, .bg-yellow .input:disabled, .bg-yellow textarea:disabled, .bg-yellow .textarea:disabled {
   background-color: rgba(229, 229, 231, 0.5);
 }
-.bg-yellow button, .bg-yellow .button, .bg-yellow input[type=button], .bg-yellow input[type=submit] {
+.bg-yellow button, .bg-yellow .button, .bg-yellow input[type=button], .bg-yellow [type=button].input, .bg-yellow input[type=submit], .bg-yellow [type=submit].input {
   background: #ffeb3b;
   box-shadow: 10px 10px 40px #d9c832, -10px -10px 40px #ffff44;
 }
-.bg-yellow button:focus, .bg-yellow .button:focus, .bg-yellow input[type=button]:focus, .bg-yellow input[type=submit]:focus {
+.bg-yellow button:focus, .bg-yellow .button:focus, .bg-yellow input[type=button]:focus, .bg-yellow [type=button].input:focus, .bg-yellow input[type=submit]:focus, .bg-yellow [type=submit].input:focus {
   background: #ffeb3b;
   box-shadow: inset 10px 10px 40px #d9c832, inset -10px -10px 40px #ffff44;
 }
-.bg-yellow button.convex, .bg-yellow .button.convex, .bg-yellow input[type=button].convex, .bg-yellow input[type=submit].convex {
+.bg-yellow button.convex, .bg-yellow .button.convex, .bg-yellow input[type=button].convex, .bg-yellow [type=button].convex.input, .bg-yellow input[type=submit].convex, .bg-yellow [type=submit].convex.input {
   background: linear-gradient(145deg, #fffb3f, #e6d435);
   box-shadow: 20px 20px 40px #d9c832, -20px -20px 40px #ffff44;
 }
-.bg-yellow button.convex:focus, .bg-yellow .button.convex:focus, .bg-yellow input[type=button].convex:focus, .bg-yellow input[type=submit].convex:focus {
+.bg-yellow button.convex:focus, .bg-yellow .button.convex:focus, .bg-yellow input[type=button].convex:focus, .bg-yellow [type=button].convex.input:focus, .bg-yellow input[type=submit].convex:focus, .bg-yellow [type=submit].convex.input:focus {
   background: linear-gradient(145deg, #e6d435, #fffb3f);
 }
 
 .bg-amber ::placeholder {
   color: #ccc;
 }
-.bg-amber input:disabled::placeholder, .bg-amber textarea:disabled::placeholder {
+.bg-amber .carousel, .bg-amber .carousel-450, .bg-amber .carousel-400, .bg-amber .carousel-350, .bg-amber .carousel-300, .bg-amber .carousel-250, .bg-amber .carousel-200, .bg-amber .carousel-150 {
+  scrollbar-color: #ccc #aaa;
+  scrollbar-width: thin;
+}
+.bg-amber .carousel::-webkit-scrollbar-thumb, .bg-amber .carousel-450::-webkit-scrollbar-thumb, .bg-amber .carousel-400::-webkit-scrollbar-thumb, .bg-amber .carousel-350::-webkit-scrollbar-thumb, .bg-amber .carousel-300::-webkit-scrollbar-thumb, .bg-amber .carousel-250::-webkit-scrollbar-thumb, .bg-amber .carousel-200::-webkit-scrollbar-thumb, .bg-amber .carousel-150::-webkit-scrollbar-thumb {
+  background: #ccc;
+}
+.bg-amber .carousel::-webkit-scrollbar-track, .bg-amber .carousel-450::-webkit-scrollbar-track, .bg-amber .carousel-400::-webkit-scrollbar-track, .bg-amber .carousel-350::-webkit-scrollbar-track, .bg-amber .carousel-300::-webkit-scrollbar-track, .bg-amber .carousel-250::-webkit-scrollbar-track, .bg-amber .carousel-200::-webkit-scrollbar-track, .bg-amber .carousel-150::-webkit-scrollbar-track {
+  background: #aaa;
+}
+.bg-amber .carousel::-webkit-scrollbar-thumb:hover, .bg-amber .carousel-450::-webkit-scrollbar-thumb:hover, .bg-amber .carousel-400::-webkit-scrollbar-thumb:hover, .bg-amber .carousel-350::-webkit-scrollbar-thumb:hover, .bg-amber .carousel-300::-webkit-scrollbar-thumb:hover, .bg-amber .carousel-250::-webkit-scrollbar-thumb:hover, .bg-amber .carousel-200::-webkit-scrollbar-thumb:hover, .bg-amber .carousel-150::-webkit-scrollbar-thumb:hover {
+  background: #fff;
+}
+.bg-amber input:disabled::placeholder, .bg-amber .input:disabled::placeholder, .bg-amber textarea:disabled::placeholder, .bg-amber .textarea:disabled::placeholder {
   text-decoration: line-through;
   color: #333;
 }
 .bg-amber .panel, .bg-amber .shadow-amber, .bg-amber .card {
   box-shadow: 10px 10px 40px #d9a406, -10px -10px 40px #ffde08;
 }
-.bg-amber input, .bg-amber textarea {
+.bg-amber input, .bg-amber .input, .bg-amber textarea, .bg-amber .textarea {
   box-shadow: inset 10px 10px 40px #d9a406, inset -10px -10px 40px #ffde08;
 }
-.bg-amber input:disabled, .bg-amber textarea:disabled {
+.bg-amber input:disabled, .bg-amber .input:disabled, .bg-amber textarea:disabled, .bg-amber .textarea:disabled {
   background-color: rgba(229, 229, 231, 0.5);
 }
-.bg-amber button, .bg-amber .button, .bg-amber input[type=button], .bg-amber input[type=submit] {
+.bg-amber button, .bg-amber .button, .bg-amber input[type=button], .bg-amber [type=button].input, .bg-amber input[type=submit], .bg-amber [type=submit].input {
   background: #ffc107;
   box-shadow: 10px 10px 40px #d9a406, -10px -10px 40px #ffde08;
 }
-.bg-amber button:focus, .bg-amber .button:focus, .bg-amber input[type=button]:focus, .bg-amber input[type=submit]:focus {
+.bg-amber button:focus, .bg-amber .button:focus, .bg-amber input[type=button]:focus, .bg-amber [type=button].input:focus, .bg-amber input[type=submit]:focus, .bg-amber [type=submit].input:focus {
   background: #ffc107;
   box-shadow: inset 10px 10px 40px #d9a406, inset -10px -10px 40px #ffde08;
 }
-.bg-amber button.convex, .bg-amber .button.convex, .bg-amber input[type=button].convex, .bg-amber input[type=submit].convex {
+.bg-amber button.convex, .bg-amber .button.convex, .bg-amber input[type=button].convex, .bg-amber [type=button].convex.input, .bg-amber input[type=submit].convex, .bg-amber [type=submit].convex.input {
   background: linear-gradient(145deg, #ffcf07, #e6ae06);
   box-shadow: 20px 20px 40px #d9a406, -20px -20px 40px #ffde08;
 }
-.bg-amber button.convex:focus, .bg-amber .button.convex:focus, .bg-amber input[type=button].convex:focus, .bg-amber input[type=submit].convex:focus {
+.bg-amber button.convex:focus, .bg-amber .button.convex:focus, .bg-amber input[type=button].convex:focus, .bg-amber [type=button].convex.input:focus, .bg-amber input[type=submit].convex:focus, .bg-amber [type=submit].convex.input:focus {
   background: linear-gradient(145deg, #e6ae06, #ffcf07);
 }
 
 .bg-orange ::placeholder {
   color: #ccc;
 }
-.bg-orange input:disabled::placeholder, .bg-orange textarea:disabled::placeholder {
+.bg-orange .carousel, .bg-orange .carousel-450, .bg-orange .carousel-400, .bg-orange .carousel-350, .bg-orange .carousel-300, .bg-orange .carousel-250, .bg-orange .carousel-200, .bg-orange .carousel-150 {
+  scrollbar-color: #ccc #aaa;
+  scrollbar-width: thin;
+}
+.bg-orange .carousel::-webkit-scrollbar-thumb, .bg-orange .carousel-450::-webkit-scrollbar-thumb, .bg-orange .carousel-400::-webkit-scrollbar-thumb, .bg-orange .carousel-350::-webkit-scrollbar-thumb, .bg-orange .carousel-300::-webkit-scrollbar-thumb, .bg-orange .carousel-250::-webkit-scrollbar-thumb, .bg-orange .carousel-200::-webkit-scrollbar-thumb, .bg-orange .carousel-150::-webkit-scrollbar-thumb {
+  background: #ccc;
+}
+.bg-orange .carousel::-webkit-scrollbar-track, .bg-orange .carousel-450::-webkit-scrollbar-track, .bg-orange .carousel-400::-webkit-scrollbar-track, .bg-orange .carousel-350::-webkit-scrollbar-track, .bg-orange .carousel-300::-webkit-scrollbar-track, .bg-orange .carousel-250::-webkit-scrollbar-track, .bg-orange .carousel-200::-webkit-scrollbar-track, .bg-orange .carousel-150::-webkit-scrollbar-track {
+  background: #aaa;
+}
+.bg-orange .carousel::-webkit-scrollbar-thumb:hover, .bg-orange .carousel-450::-webkit-scrollbar-thumb:hover, .bg-orange .carousel-400::-webkit-scrollbar-thumb:hover, .bg-orange .carousel-350::-webkit-scrollbar-thumb:hover, .bg-orange .carousel-300::-webkit-scrollbar-thumb:hover, .bg-orange .carousel-250::-webkit-scrollbar-thumb:hover, .bg-orange .carousel-200::-webkit-scrollbar-thumb:hover, .bg-orange .carousel-150::-webkit-scrollbar-thumb:hover {
+  background: #fff;
+}
+.bg-orange input:disabled::placeholder, .bg-orange .input:disabled::placeholder, .bg-orange textarea:disabled::placeholder, .bg-orange .textarea:disabled::placeholder {
   text-decoration: line-through;
   color: #333;
 }
 .bg-orange .panel, .bg-orange .shadow-orange, .bg-orange .card {
   box-shadow: 10px 10px 40px #d98100, -10px -10px 40px #ffaf00;
 }
-.bg-orange input, .bg-orange textarea {
+.bg-orange input, .bg-orange .input, .bg-orange textarea, .bg-orange .textarea {
   box-shadow: inset 10px 10px 40px #d98100, inset -10px -10px 40px #ffaf00;
 }
-.bg-orange input:disabled, .bg-orange textarea:disabled {
+.bg-orange input:disabled, .bg-orange .input:disabled, .bg-orange textarea:disabled, .bg-orange .textarea:disabled {
   background-color: rgba(229, 229, 231, 0.5);
 }
-.bg-orange button, .bg-orange .button, .bg-orange input[type=button], .bg-orange input[type=submit] {
+.bg-orange button, .bg-orange .button, .bg-orange input[type=button], .bg-orange [type=button].input, .bg-orange input[type=submit], .bg-orange [type=submit].input {
   background: #ff9800;
   box-shadow: 10px 10px 40px #d98100, -10px -10px 40px #ffaf00;
 }
-.bg-orange button:focus, .bg-orange .button:focus, .bg-orange input[type=button]:focus, .bg-orange input[type=submit]:focus {
+.bg-orange button:focus, .bg-orange .button:focus, .bg-orange input[type=button]:focus, .bg-orange [type=button].input:focus, .bg-orange input[type=submit]:focus, .bg-orange [type=submit].input:focus {
   background: #ff9800;
   box-shadow: inset 10px 10px 40px #d98100, inset -10px -10px 40px #ffaf00;
 }
-.bg-orange button.convex, .bg-orange .button.convex, .bg-orange input[type=button].convex, .bg-orange input[type=submit].convex {
+.bg-orange button.convex, .bg-orange .button.convex, .bg-orange input[type=button].convex, .bg-orange [type=button].convex.input, .bg-orange input[type=submit].convex, .bg-orange [type=submit].convex.input {
   background: linear-gradient(145deg, #ff9300, #e67b00);
   box-shadow: 20px 20px 40px #d97400, -20px -20px 40px #ff9e00;
 }
-.bg-orange button.convex:focus, .bg-orange .button.convex:focus, .bg-orange input[type=button].convex:focus, .bg-orange input[type=submit].convex:focus {
+.bg-orange button.convex:focus, .bg-orange .button.convex:focus, .bg-orange input[type=button].convex:focus, .bg-orange [type=button].convex.input:focus, .bg-orange input[type=submit].convex:focus, .bg-orange [type=submit].convex.input:focus {
   background: linear-gradient(145deg, #e67b00, #ff9300);
 }
 
 .bg-deep-orange ::placeholder {
-  color: #ccc;
+  color: #333;
 }
-.bg-deep-orange input:disabled::placeholder, .bg-deep-orange textarea:disabled::placeholder {
+.bg-deep-orange .carousel, .bg-deep-orange .carousel-450, .bg-deep-orange .carousel-400, .bg-deep-orange .carousel-350, .bg-deep-orange .carousel-300, .bg-deep-orange .carousel-250, .bg-deep-orange .carousel-200, .bg-deep-orange .carousel-150 {
+  scrollbar-color: #ccc #aaa;
+  scrollbar-width: thin;
+}
+.bg-deep-orange .carousel::-webkit-scrollbar-thumb, .bg-deep-orange .carousel-450::-webkit-scrollbar-thumb, .bg-deep-orange .carousel-400::-webkit-scrollbar-thumb, .bg-deep-orange .carousel-350::-webkit-scrollbar-thumb, .bg-deep-orange .carousel-300::-webkit-scrollbar-thumb, .bg-deep-orange .carousel-250::-webkit-scrollbar-thumb, .bg-deep-orange .carousel-200::-webkit-scrollbar-thumb, .bg-deep-orange .carousel-150::-webkit-scrollbar-thumb {
+  background: #ccc;
+}
+.bg-deep-orange .carousel::-webkit-scrollbar-track, .bg-deep-orange .carousel-450::-webkit-scrollbar-track, .bg-deep-orange .carousel-400::-webkit-scrollbar-track, .bg-deep-orange .carousel-350::-webkit-scrollbar-track, .bg-deep-orange .carousel-300::-webkit-scrollbar-track, .bg-deep-orange .carousel-250::-webkit-scrollbar-track, .bg-deep-orange .carousel-200::-webkit-scrollbar-track, .bg-deep-orange .carousel-150::-webkit-scrollbar-track {
+  background: #aaa;
+}
+.bg-deep-orange .carousel::-webkit-scrollbar-thumb:hover, .bg-deep-orange .carousel-450::-webkit-scrollbar-thumb:hover, .bg-deep-orange .carousel-400::-webkit-scrollbar-thumb:hover, .bg-deep-orange .carousel-350::-webkit-scrollbar-thumb:hover, .bg-deep-orange .carousel-300::-webkit-scrollbar-thumb:hover, .bg-deep-orange .carousel-250::-webkit-scrollbar-thumb:hover, .bg-deep-orange .carousel-200::-webkit-scrollbar-thumb:hover, .bg-deep-orange .carousel-150::-webkit-scrollbar-thumb:hover {
+  background: #fff;
+}
+.bg-deep-orange input:disabled::placeholder, .bg-deep-orange .input:disabled::placeholder, .bg-deep-orange textarea:disabled::placeholder, .bg-deep-orange .textarea:disabled::placeholder {
   text-decoration: line-through;
   color: #333;
 }
 .bg-deep-orange .panel, .bg-deep-orange .shadow-dee, .bg-deep-orange .card-orange {
   box-shadow: 10px 10px 40px #d94a1d, -10px -10px 40px #ff6427;
 }
-.bg-deep-orange input, .bg-deep-orange textarea {
+.bg-deep-orange input, .bg-deep-orange .input, .bg-deep-orange textarea, .bg-deep-orange .textarea {
   box-shadow: inset 10px 10px 40px #d94a1d, inset -10px -10px 40px #ff6427;
 }
-.bg-deep-orange input:disabled, .bg-deep-orange textarea:disabled {
+.bg-deep-orange input:disabled, .bg-deep-orange .input:disabled, .bg-deep-orange textarea:disabled, .bg-deep-orange .textarea:disabled {
   background-color: rgba(229, 229, 231, 0.5);
 }
-.bg-deep-orange button, .bg-deep-orange .button, .bg-deep-orange input[type=button], .bg-deep-orange input[type=submit] {
+.bg-deep-orange button, .bg-deep-orange .button, .bg-deep-orange input[type=button], .bg-deep-orange [type=button].input, .bg-deep-orange input[type=submit], .bg-deep-orange [type=submit].input {
   background: #ff5722;
   box-shadow: 10px 10px 40px #d94a1d, -10px -10px 40px #ff6427;
 }
-.bg-deep-orange button:focus, .bg-deep-orange .button:focus, .bg-deep-orange input[type=button]:focus, .bg-deep-orange input[type=submit]:focus {
+.bg-deep-orange button:focus, .bg-deep-orange .button:focus, .bg-deep-orange input[type=button]:focus, .bg-deep-orange [type=button].input:focus, .bg-deep-orange input[type=submit]:focus, .bg-deep-orange [type=submit].input:focus {
   background: #ff5722;
   box-shadow: inset 10px 10px 40px #d94a1d, inset -10px -10px 40px #ff6427;
 }
-.bg-deep-orange button.convex, .bg-deep-orange .button.convex, .bg-deep-orange input[type=button].convex, .bg-deep-orange input[type=submit].convex {
+.bg-deep-orange button.convex, .bg-deep-orange .button.convex, .bg-deep-orange input[type=button].convex, .bg-deep-orange [type=button].convex.input, .bg-deep-orange input[type=submit].convex, .bg-deep-orange [type=submit].convex.input {
   background: linear-gradient(145deg, #ff5d24, #e64e1f);
   box-shadow: 20px 20px 40px #d94a1d, -20px -20px 40px #ff6427;
 }
-.bg-deep-orange button.convex:focus, .bg-deep-orange .button.convex:focus, .bg-deep-orange input[type=button].convex:focus, .bg-deep-orange input[type=submit].convex:focus {
+.bg-deep-orange button.convex:focus, .bg-deep-orange .button.convex:focus, .bg-deep-orange input[type=button].convex:focus, .bg-deep-orange [type=button].convex.input:focus, .bg-deep-orange input[type=submit].convex:focus, .bg-deep-orange [type=submit].convex.input:focus {
   background: linear-gradient(145deg, #e64e1f, #ff5d24);
 }
 
 .bg-brown ::placeholder {
   color: #ccc;
 }
-.bg-brown input:disabled::placeholder, .bg-brown textarea:disabled::placeholder {
+.bg-brown .carousel, .bg-brown .carousel-450, .bg-brown .carousel-400, .bg-brown .carousel-350, .bg-brown .carousel-300, .bg-brown .carousel-250, .bg-brown .carousel-200, .bg-brown .carousel-150 {
+  scrollbar-color: #ccc #aaa;
+  scrollbar-width: thin;
+}
+.bg-brown .carousel::-webkit-scrollbar-thumb, .bg-brown .carousel-450::-webkit-scrollbar-thumb, .bg-brown .carousel-400::-webkit-scrollbar-thumb, .bg-brown .carousel-350::-webkit-scrollbar-thumb, .bg-brown .carousel-300::-webkit-scrollbar-thumb, .bg-brown .carousel-250::-webkit-scrollbar-thumb, .bg-brown .carousel-200::-webkit-scrollbar-thumb, .bg-brown .carousel-150::-webkit-scrollbar-thumb {
+  background: #ccc;
+}
+.bg-brown .carousel::-webkit-scrollbar-track, .bg-brown .carousel-450::-webkit-scrollbar-track, .bg-brown .carousel-400::-webkit-scrollbar-track, .bg-brown .carousel-350::-webkit-scrollbar-track, .bg-brown .carousel-300::-webkit-scrollbar-track, .bg-brown .carousel-250::-webkit-scrollbar-track, .bg-brown .carousel-200::-webkit-scrollbar-track, .bg-brown .carousel-150::-webkit-scrollbar-track {
+  background: #aaa;
+}
+.bg-brown .carousel::-webkit-scrollbar-thumb:hover, .bg-brown .carousel-450::-webkit-scrollbar-thumb:hover, .bg-brown .carousel-400::-webkit-scrollbar-thumb:hover, .bg-brown .carousel-350::-webkit-scrollbar-thumb:hover, .bg-brown .carousel-300::-webkit-scrollbar-thumb:hover, .bg-brown .carousel-250::-webkit-scrollbar-thumb:hover, .bg-brown .carousel-200::-webkit-scrollbar-thumb:hover, .bg-brown .carousel-150::-webkit-scrollbar-thumb:hover {
+  background: #fff;
+}
+.bg-brown input:disabled::placeholder, .bg-brown .input:disabled::placeholder, .bg-brown textarea:disabled::placeholder, .bg-brown .textarea:disabled::placeholder {
   text-decoration: line-through;
   color: #333;
 }
 .bg-brown .panel, .bg-brown .shadow-brown, .bg-brown .card {
   box-shadow: 10px 10px 40px #67483d, -10px -10px 40px #8b6253;
 }
-.bg-brown input, .bg-brown textarea {
+.bg-brown input, .bg-brown .input, .bg-brown textarea, .bg-brown .textarea {
   box-shadow: inset 10px 10px 40px #67483d, inset -10px -10px 40px #8b6253;
 }
-.bg-brown input:disabled, .bg-brown textarea:disabled {
+.bg-brown input:disabled, .bg-brown .input:disabled, .bg-brown textarea:disabled, .bg-brown .textarea:disabled {
   background-color: rgba(229, 229, 231, 0.5);
 }
-.bg-brown button, .bg-brown .button, .bg-brown input[type=button], .bg-brown input[type=submit] {
+.bg-brown button, .bg-brown .button, .bg-brown input[type=button], .bg-brown [type=button].input, .bg-brown input[type=submit], .bg-brown [type=submit].input {
   background: #795548;
   box-shadow: 10px 10px 40px #67483d, -10px -10px 40px #8b6253;
 }
-.bg-brown button:focus, .bg-brown .button:focus, .bg-brown input[type=button]:focus, .bg-brown input[type=submit]:focus {
+.bg-brown button:focus, .bg-brown .button:focus, .bg-brown input[type=button]:focus, .bg-brown [type=button].input:focus, .bg-brown input[type=submit]:focus, .bg-brown [type=submit].input:focus {
   background: #795548;
   box-shadow: inset 10px 10px 40px #67483d, inset -10px -10px 40px #8b6253;
 }
-.bg-brown button.convex, .bg-brown .button.convex, .bg-brown input[type=button].convex, .bg-brown input[type=submit].convex {
+.bg-brown button.convex, .bg-brown .button.convex, .bg-brown input[type=button].convex, .bg-brown [type=button].convex.input, .bg-brown input[type=submit].convex, .bg-brown [type=submit].convex.input {
   background: linear-gradient(145deg, #815b4d, #6d4d41);
   box-shadow: 20px 20px 40px #67483d, -20px -20px 40px #8b6253;
 }
-.bg-brown button.convex:focus, .bg-brown .button.convex:focus, .bg-brown input[type=button].convex:focus, .bg-brown input[type=submit].convex:focus {
+.bg-brown button.convex:focus, .bg-brown .button.convex:focus, .bg-brown input[type=button].convex:focus, .bg-brown [type=button].convex.input:focus, .bg-brown input[type=submit].convex:focus, .bg-brown [type=submit].convex.input:focus {
   background: linear-gradient(145deg, #6d4d41, #815b4d);
 }
 
 .bg-gray ::placeholder {
-  color: #ccc;
+  color: #333;
 }
-.bg-gray input:disabled::placeholder, .bg-gray textarea:disabled::placeholder {
+.bg-gray .carousel, .bg-gray .carousel-450, .bg-gray .carousel-400, .bg-gray .carousel-350, .bg-gray .carousel-300, .bg-gray .carousel-250, .bg-gray .carousel-200, .bg-gray .carousel-150 {
+  scrollbar-color: #ccc #aaa;
+  scrollbar-width: thin;
+}
+.bg-gray .carousel::-webkit-scrollbar-thumb, .bg-gray .carousel-450::-webkit-scrollbar-thumb, .bg-gray .carousel-400::-webkit-scrollbar-thumb, .bg-gray .carousel-350::-webkit-scrollbar-thumb, .bg-gray .carousel-300::-webkit-scrollbar-thumb, .bg-gray .carousel-250::-webkit-scrollbar-thumb, .bg-gray .carousel-200::-webkit-scrollbar-thumb, .bg-gray .carousel-150::-webkit-scrollbar-thumb {
+  background: #ccc;
+}
+.bg-gray .carousel::-webkit-scrollbar-track, .bg-gray .carousel-450::-webkit-scrollbar-track, .bg-gray .carousel-400::-webkit-scrollbar-track, .bg-gray .carousel-350::-webkit-scrollbar-track, .bg-gray .carousel-300::-webkit-scrollbar-track, .bg-gray .carousel-250::-webkit-scrollbar-track, .bg-gray .carousel-200::-webkit-scrollbar-track, .bg-gray .carousel-150::-webkit-scrollbar-track {
+  background: #aaa;
+}
+.bg-gray .carousel::-webkit-scrollbar-thumb:hover, .bg-gray .carousel-450::-webkit-scrollbar-thumb:hover, .bg-gray .carousel-400::-webkit-scrollbar-thumb:hover, .bg-gray .carousel-350::-webkit-scrollbar-thumb:hover, .bg-gray .carousel-300::-webkit-scrollbar-thumb:hover, .bg-gray .carousel-250::-webkit-scrollbar-thumb:hover, .bg-gray .carousel-200::-webkit-scrollbar-thumb:hover, .bg-gray .carousel-150::-webkit-scrollbar-thumb:hover {
+  background: #fff;
+}
+.bg-gray input:disabled::placeholder, .bg-gray .input:disabled::placeholder, .bg-gray textarea:disabled::placeholder, .bg-gray .textarea:disabled::placeholder {
   text-decoration: line-through;
   color: #333;
 }
 .bg-gray .panel, .bg-gray .shadow-gray, .bg-gray .card {
   box-shadow: 10px 10px 40px #868686, -10px -10px 40px #b6b6b6;
 }
-.bg-gray input, .bg-gray textarea {
+.bg-gray input, .bg-gray .input, .bg-gray textarea, .bg-gray .textarea {
   box-shadow: inset 10px 10px 40px #868686, inset -10px -10px 40px #b6b6b6;
 }
-.bg-gray input:disabled, .bg-gray textarea:disabled {
+.bg-gray input:disabled, .bg-gray .input:disabled, .bg-gray textarea:disabled, .bg-gray .textarea:disabled {
   background-color: rgba(229, 229, 231, 0.5);
 }
-.bg-gray button, .bg-gray .button, .bg-gray input[type=button], .bg-gray input[type=submit] {
+.bg-gray button, .bg-gray .button, .bg-gray input[type=button], .bg-gray [type=button].input, .bg-gray input[type=submit], .bg-gray [type=submit].input {
   background: #9e9e9e;
   box-shadow: 10px 10px 40px #868686, -10px -10px 40px #b6b6b6;
 }
-.bg-gray button:focus, .bg-gray .button:focus, .bg-gray input[type=button]:focus, .bg-gray input[type=submit]:focus {
+.bg-gray button:focus, .bg-gray .button:focus, .bg-gray input[type=button]:focus, .bg-gray [type=button].input:focus, .bg-gray input[type=submit]:focus, .bg-gray [type=submit].input:focus {
   background: #9e9e9e;
   box-shadow: inset 10px 10px 40px #868686, inset -10px -10px 40px #b6b6b6;
 }
-.bg-gray button.convex, .bg-gray .button.convex, .bg-gray input[type=button].convex, .bg-gray input[type=submit].convex {
+.bg-gray button.convex, .bg-gray .button.convex, .bg-gray input[type=button].convex, .bg-gray [type=button].convex.input, .bg-gray input[type=submit].convex, .bg-gray [type=submit].convex.input {
   background: linear-gradient(145deg, #a9a9a9, #8e8e8e);
   box-shadow: 20px 20px 40px #868686, -20px -20px 40px #b6b6b6;
 }
-.bg-gray button.convex:focus, .bg-gray .button.convex:focus, .bg-gray input[type=button].convex:focus, .bg-gray input[type=submit].convex:focus {
+.bg-gray button.convex:focus, .bg-gray .button.convex:focus, .bg-gray input[type=button].convex:focus, .bg-gray [type=button].convex.input:focus, .bg-gray input[type=submit].convex:focus, .bg-gray [type=submit].convex.input:focus {
   background: linear-gradient(145deg, #8e8e8e, #a9a9a9);
 }
 
 .bg-blue-gray ::placeholder {
   color: #ccc;
 }
-.bg-blue-gray input:disabled::placeholder, .bg-blue-gray textarea:disabled::placeholder {
+.bg-blue-gray .carousel, .bg-blue-gray .carousel-450, .bg-blue-gray .carousel-400, .bg-blue-gray .carousel-350, .bg-blue-gray .carousel-300, .bg-blue-gray .carousel-250, .bg-blue-gray .carousel-200, .bg-blue-gray .carousel-150 {
+  scrollbar-color: #ccc #aaa;
+  scrollbar-width: thin;
+}
+.bg-blue-gray .carousel::-webkit-scrollbar-thumb, .bg-blue-gray .carousel-450::-webkit-scrollbar-thumb, .bg-blue-gray .carousel-400::-webkit-scrollbar-thumb, .bg-blue-gray .carousel-350::-webkit-scrollbar-thumb, .bg-blue-gray .carousel-300::-webkit-scrollbar-thumb, .bg-blue-gray .carousel-250::-webkit-scrollbar-thumb, .bg-blue-gray .carousel-200::-webkit-scrollbar-thumb, .bg-blue-gray .carousel-150::-webkit-scrollbar-thumb {
+  background: #ccc;
+}
+.bg-blue-gray .carousel::-webkit-scrollbar-track, .bg-blue-gray .carousel-450::-webkit-scrollbar-track, .bg-blue-gray .carousel-400::-webkit-scrollbar-track, .bg-blue-gray .carousel-350::-webkit-scrollbar-track, .bg-blue-gray .carousel-300::-webkit-scrollbar-track, .bg-blue-gray .carousel-250::-webkit-scrollbar-track, .bg-blue-gray .carousel-200::-webkit-scrollbar-track, .bg-blue-gray .carousel-150::-webkit-scrollbar-track {
+  background: #aaa;
+}
+.bg-blue-gray .carousel::-webkit-scrollbar-thumb:hover, .bg-blue-gray .carousel-450::-webkit-scrollbar-thumb:hover, .bg-blue-gray .carousel-400::-webkit-scrollbar-thumb:hover, .bg-blue-gray .carousel-350::-webkit-scrollbar-thumb:hover, .bg-blue-gray .carousel-300::-webkit-scrollbar-thumb:hover, .bg-blue-gray .carousel-250::-webkit-scrollbar-thumb:hover, .bg-blue-gray .carousel-200::-webkit-scrollbar-thumb:hover, .bg-blue-gray .carousel-150::-webkit-scrollbar-thumb:hover {
+  background: #fff;
+}
+.bg-blue-gray input:disabled::placeholder, .bg-blue-gray .input:disabled::placeholder, .bg-blue-gray textarea:disabled::placeholder, .bg-blue-gray .textarea:disabled::placeholder {
   text-decoration: line-through;
   color: #333;
 }
 .bg-blue-gray .panel, .bg-blue-gray .shadow-blue-gray, .bg-blue-gray .card {
   box-shadow: 10px 10px 40px #526a76, -10px -10px 40px #6e90a0;
 }
-.bg-blue-gray input, .bg-blue-gray textarea {
+.bg-blue-gray input, .bg-blue-gray .input, .bg-blue-gray textarea, .bg-blue-gray .textarea {
   box-shadow: inset 10px 10px 40px #526a76, inset -10px -10px 40px #6e90a0;
 }
-.bg-blue-gray input:disabled, .bg-blue-gray textarea:disabled {
+.bg-blue-gray input:disabled, .bg-blue-gray .input:disabled, .bg-blue-gray textarea:disabled, .bg-blue-gray .textarea:disabled {
   background-color: rgba(229, 229, 231, 0.5);
 }
-.bg-blue-gray button, .bg-blue-gray .button, .bg-blue-gray input[type=button], .bg-blue-gray input[type=submit] {
+.bg-blue-gray button, .bg-blue-gray .button, .bg-blue-gray input[type=button], .bg-blue-gray [type=button].input, .bg-blue-gray input[type=submit], .bg-blue-gray [type=submit].input {
   background: #607d8b;
   box-shadow: 10px 10px 40px #526a76, -10px -10px 40px #6e90a0;
 }
-.bg-blue-gray button:focus, .bg-blue-gray .button:focus, .bg-blue-gray input[type=button]:focus, .bg-blue-gray input[type=submit]:focus {
+.bg-blue-gray button:focus, .bg-blue-gray .button:focus, .bg-blue-gray input[type=button]:focus, .bg-blue-gray [type=button].input:focus, .bg-blue-gray input[type=submit]:focus, .bg-blue-gray [type=submit].input:focus {
   background: #607d8b;
   box-shadow: inset 10px 10px 40px #526a76, inset -10px -10px 40px #6e90a0;
 }
-.bg-blue-gray button.convex, .bg-blue-gray .button.convex, .bg-blue-gray input[type=button].convex, .bg-blue-gray input[type=submit].convex {
+.bg-blue-gray button.convex, .bg-blue-gray .button.convex, .bg-blue-gray input[type=button].convex, .bg-blue-gray [type=button].convex.input, .bg-blue-gray input[type=submit].convex, .bg-blue-gray [type=submit].convex.input {
   background: linear-gradient(145deg, #678695, #56717d);
   box-shadow: 20px 20px 40px #526a76, -20px -20px 40px #6e90a0;
 }
-.bg-blue-gray button.convex:focus, .bg-blue-gray .button.convex:focus, .bg-blue-gray input[type=button].convex:focus, .bg-blue-gray input[type=submit].convex:focus {
+.bg-blue-gray button.convex:focus, .bg-blue-gray .button.convex:focus, .bg-blue-gray input[type=button].convex:focus, .bg-blue-gray [type=button].convex.input:focus, .bg-blue-gray input[type=submit].convex:focus, .bg-blue-gray [type=submit].convex.input:focus {
   background: linear-gradient(145deg, #56717d, #678695);
-}
-
-.grid-columns-2, .grid-columns-3, .grid-columns-4, .grid-columns-5, .grid-columns-6, .grid-columns-7, .grid-columns-8 {
-  grid-template-columns: repeat(1, 1fr);
 }
 
 .grid img, .carousel img, .carousel-450 img, .carousel-400 img, .carousel-350 img, .carousel-300 img, .carousel-250 img, .carousel-200 img, .carousel-150 img, .grid-columns-2 img, .grid-columns-3 img, .grid-columns-4 img, .grid-columns-5 img, .grid-columns-6 img, .grid-columns-7 img, .grid-columns-8 img {
   width: 100%;
   height: auto;
+}
+
+.grid-columns-2, .grid-columns-3, .grid-columns-4, .grid-columns-5, .grid-columns-6, .grid-columns-7, .grid-columns-8 {
+  grid-template-columns: repeat(1, 1fr);
 }
 
 @media only screen and (min-width: 768px) {
@@ -3790,7 +4297,7 @@ textarea {
   white-space: normal;
   text-overflow: ellipsis;
 }
-.card button, .card .button, .card .input, .card input {
+.card button, .card .button, .card .input, .card input, .card .textarea, .card textarea {
   margin: 1rem 1rem;
 }
 .card.bg-white {
@@ -3962,23 +4469,23 @@ nav a, nav li, .nav a, .nav li {
 
 .flex-direction-row {
   flex-direction: row;
-  -webkit-flex-direction: row;
   -ms-flex-direction: row;
+  -webkit-flex-direction: row;
 }
 .flex-direction-row-reverse {
   flex-direction: row-reverse;
-  -webkit-flex-direction: row-reverse;
   -ms-flex-direction: row-reverse;
+  -webkit-flex-direction: row-reverse;
 }
 .flex-direction-column {
   flex-direction: column;
-  -webkit-flex-direction: column;
   -ms-flex-direction: column;
+  -webkit-flex-direction: column;
 }
 .flex-direction-column-reverse {
   flex-direction: column-reverse;
-  -webkit-flex-direction: column-reverse;
   -ms-flex-direction: column-reverse;
+  -webkit-flex-direction: column-reverse;
 }
 
 .justify-content-center {
@@ -4100,19 +4607,335 @@ nav a, nav li, .nav a, .nav li {
 }
 
 .place-items-center {
-  place-items: center;
+  place-items: center center;
   align-items: center;
   -webkit-align-items: center;
-  justify-content: center;
-  -webkit-justify-content: center;
+  justify-items: center;
+}
+.place-items-center-start {
+  place-items: center start;
+  align-items: center;
+  -webkit-align-items: center;
+  justify-items: start;
+}
+.place-items-center-end {
+  place-items: center end;
+  align-items: center;
+  -webkit-align-items: center;
+  justify-items: end;
+}
+.place-items-center-stretch {
+  place-items: center stretch;
+  align-items: center;
+  -webkit-align-items: center;
+  justify-items: stretch;
+}
+.place-items-stretch {
+  place-items: stretch stretch;
+  align-items: stretch;
+  -webkit-align-items: stretch;
+  justify-items: stretch;
+}
+.place-items-stretch-center {
+  place-items: center center;
+  align-items: center;
+  -webkit-align-items: center;
+  justify-items: center;
+}
+.place-items-stretch-start {
+  place-items: center start;
+  align-items: center;
+  -webkit-align-items: center;
+  justify-items: start;
+}
+.place-items-stretch-end {
+  place-items: center end;
+  align-items: center;
+  -webkit-align-items: center;
+  justify-items: end;
+}
+.place-items-baseline-center {
+  place-items: baseline center;
+  align-items: baseline;
+  -webkit-align-items: baseline;
+  justify-items: center;
+}
+.place-items-baseline-start {
+  place-items: baseline start;
+  align-items: baseline;
+  -webkit-align-items: baseline;
+  justify-items: start;
+}
+.place-items-baseline-end {
+  place-items: baseline end;
+  align-items: baseline;
+  -webkit-align-items: baseline;
+  justify-items: end;
+}
+.place-items-baseline-stretch {
+  place-items: baseline stretch;
+  align-items: baseline;
+  -webkit-align-items: baseline;
+  justify-items: stretch;
+}
+.place-items-flex-start-center {
+  place-items: flex-start center;
+  align-items: flex-start;
+  -webkit-align-items: flex-start;
+  justify-items: center;
+}
+.place-items-flex-start-start {
+  place-items: flex-start start;
+  align-items: flex-start;
+  -webkit-align-items: flex-start;
+  justify-items: start;
+}
+.place-items-flex-start-end {
+  place-items: flex-start end;
+  align-items: flex-start;
+  -webkit-align-items: flex-start;
+  justify-items: end;
+}
+.place-items-flex-start-stretch {
+  place-items: flex-start stretch;
+  align-items: flex-start;
+  -webkit-align-items: flex-start;
+  justify-items: stretch;
+}
+.place-items-flex-end-center {
+  place-items: flex-end center;
+  align-items: flex-end;
+  -webkit-align-items: flex-end;
+  justify-items: center;
+}
+.place-items-flex-end-start {
+  place-items: flex-end start;
+  align-items: flex-end;
+  -webkit-align-items: flex-end;
+  justify-items: start;
+}
+.place-items-flex-end-end {
+  place-items: flex-end end;
+  align-items: flex-end;
+  -webkit-align-items: flex-end;
+  justify-items: end;
+}
+.place-items-flex-end-stretch {
+  place-items: flex-end stretch;
+  align-items: flex-end;
+  -webkit-align-items: flex-end;
+  justify-items: stretch;
 }
 
 .place-content-center {
-  place-content: center;
-  justify-content: center;
-  -webkit-justify-content: center;
+  place-content: center center;
   align-content: center;
   -webkit-align-content: center;
+  justify-content: center;
+  -webkit-justify-content: center;
+}
+.place-content-center-flex-start {
+  place-content: center flex-start;
+  align-content: center;
+  -webkit-align-content: center;
+  justify-content: flex-start;
+  -webkit-justify-content: flex-start;
+}
+.place-content-center-flex-end {
+  place-content: center flex-end;
+  align-content: center;
+  -webkit-align-content: center;
+  justify-content: flex-end;
+  -webkit-justify-content: flex-end;
+}
+.place-content-center-space-between {
+  place-content: center space-between;
+  align-content: center;
+  -webkit-align-content: center;
+  justify-content: space-between;
+  -webkit-justify-content: space-between;
+}
+.place-content-center-space-around {
+  place-content: center space-around;
+  align-content: center;
+  -webkit-align-content: center;
+  justify-content: space-around;
+  -webkit-justify-content: space-around;
+}
+.place-content-center-space-evenly {
+  place-content: center space-evenly;
+  align-content: center;
+  -webkit-align-content: center;
+  justify-content: space-evenly;
+  -webkit-justify-content: space-evenly;
+}
+.place-content-flex-start {
+  place-content: flex-start flex-start;
+  align-content: flex-start;
+  -webkit-align-content: flex-start;
+  justify-content: flex-start;
+  -webkit-justify-content: flex-start;
+}
+.place-content-flex-start-center {
+  place-content: flex-start center;
+  align-content: flex-start;
+  -webkit-align-content: flex-start;
+  justify-content: center;
+  -webkit-justify-content: center;
+}
+.place-content-flex-start-flex-end {
+  place-content: flex-start flex-end;
+  align-content: flex-start;
+  -webkit-align-content: flex-start;
+  justify-content: flex-end;
+  -webkit-justify-content: flex-end;
+}
+.place-content-flex-start-space-between {
+  place-content: flex-start space-between;
+  align-content: flex-start;
+  -webkit-align-content: flex-start;
+  justify-content: space-between;
+  -webkit-justify-content: space-between;
+}
+.place-content-flex-start-space-around {
+  place-content: flex-start space-around;
+  align-content: flex-start;
+  -webkit-align-content: flex-start;
+  justify-content: space-around;
+  -webkit-justify-content: space-around;
+}
+.place-content-flex-start-space-evenly {
+  place-content: flex-start space-evenly;
+  align-content: flex-start;
+  -webkit-align-content: flex-start;
+  justify-content: space-evenly;
+  -webkit-justify-content: space-evenly;
+}
+.place-content-flex-end {
+  place-content: flex-end flex-end;
+  align-content: flex-end;
+  -webkit-align-content: flex-end;
+  justify-content: flex-end;
+  -webkit-justify-content: flex-end;
+}
+.place-content-flex-end-flex-start {
+  place-content: flex-end flex-start;
+  align-content: flex-end;
+  -webkit-align-content: flex-end;
+  justify-content: flex-start;
+  -webkit-justify-content: flex-start;
+}
+.place-content-flex-end-center {
+  place-content: flex-end center;
+  align-content: flex-end;
+  -webkit-align-content: flex-end;
+  justify-content: center;
+  -webkit-justify-content: center;
+}
+.place-content-flex-end-space-between {
+  place-content: flex-end space-between;
+  align-content: flex-end;
+  -webkit-align-content: flex-end;
+  justify-content: space-between;
+  -webkit-justify-content: space-between;
+}
+.place-content-flex-end-space-around {
+  place-content: flex-end space-around;
+  align-content: flex-end;
+  -webkit-align-content: flex-end;
+  justify-content: space-around;
+  -webkit-justify-content: space-around;
+}
+.place-content-flex-end-space-evenly {
+  place-content: flex-end space-evenly;
+  align-content: flex-end;
+  -webkit-align-content: flex-end;
+  justify-content: space-evenly;
+  -webkit-justify-content: space-evenly;
+}
+.place-content-stretch-center {
+  place-content: stretch center;
+  align-content: stretch;
+  -webkit-align-content: stretch;
+  justify-content: center;
+  -webkit-justify-content: center;
+}
+.place-content-stretch-flex-start {
+  place-content: stretch flex-start;
+  align-content: stretch;
+  -webkit-align-content: stretch;
+  justify-content: flex-start;
+  -webkit-justify-content: flex-start;
+}
+.place-content-stretch-flex-end {
+  place-content: stretch flex-end;
+  align-content: stretch;
+  -webkit-align-content: stretch;
+  justify-content: flex-end;
+  -webkit-justify-content: flex-end;
+}
+.place-content-stretch-space-between {
+  place-content: stretch space-between;
+  align-content: stretch;
+  -webkit-align-content: stretch;
+  justify-content: space-between;
+  -webkit-justify-content: space-between;
+}
+.place-content-stretch-space-around {
+  place-content: stretch space-around;
+  align-content: stretch;
+  -webkit-align-content: stretch;
+  justify-content: space-around;
+  -webkit-justify-content: space-around;
+}
+.place-content-stretch-space-evenly {
+  place-content: stretch space-evenly;
+  align-content: stretch;
+  -webkit-align-content: stretch;
+  justify-content: space-evenly;
+  -webkit-justify-content: space-evenly;
+}
+.place-content-space-between {
+  place-content: space-between space-between;
+  align-content: space-between;
+  -webkit-align-content: space-between;
+  justify-content: space-between;
+  -webkit-justify-content: space-between;
+}
+.place-content-space-between-center {
+  place-content: space-between center;
+  align-content: space-between;
+  -webkit-align-content: space-between;
+  justify-content: center;
+  -webkit-justify-content: center;
+}
+.place-content-space-between-flex-start {
+  place-content: space-between flex-start;
+  align-content: space-between;
+  -webkit-align-content: space-between;
+  justify-content: flex-start;
+  -webkit-justify-content: flex-start;
+}
+.place-content-space-between-flex-end {
+  place-content: space-between flex-end;
+  align-content: space-between;
+  -webkit-align-content: space-between;
+  justify-content: flex-end;
+  -webkit-justify-content: flex-end;
+}
+.place-content-space-between-space-around {
+  place-content: space-between space-around;
+  align-content: space-between;
+  -webkit-align-content: space-between;
+  justify-content: space-around;
+  -webkit-justify-content: space-around;
+}
+.place-content-space-between-space-evenly {
+  place-content: space-between space-evenly;
+  align-content: space-between;
+  -webkit-align-content: space-between;
+  justify-content: space-evenly;
+  -webkit-justify-content: space-evenly;
 }
 
 img.panel {
@@ -4126,14 +4949,29 @@ img.panel {
     content: "";
   }*/
   grid-template-columns: repeat(100, calc(320px - 1rem));
+  overflow-x: scroll;
+  overflow-y: hidden;
+  padding-bottom: 1rem;
+}
+.carousel.no-scrollbar, .no-scrollbar.carousel-450, .no-scrollbar.carousel-400, .no-scrollbar.carousel-350, .no-scrollbar.carousel-300, .no-scrollbar.carousel-250, .no-scrollbar.carousel-200, .no-scrollbar.carousel-150 {
   -ms-overflow-style: none;
   scrollbar-width: none;
-  overflow-y: scroll;
 }
-.carousel::-webkit-scrollbar, .carousel-450::-webkit-scrollbar, .carousel-400::-webkit-scrollbar, .carousel-350::-webkit-scrollbar, .carousel-300::-webkit-scrollbar, .carousel-250::-webkit-scrollbar, .carousel-200::-webkit-scrollbar, .carousel-150::-webkit-scrollbar {
+.carousel.no-scrollbar::-webkit-scrollbar, .no-scrollbar.carousel-450::-webkit-scrollbar, .no-scrollbar.carousel-400::-webkit-scrollbar, .no-scrollbar.carousel-350::-webkit-scrollbar, .no-scrollbar.carousel-300::-webkit-scrollbar, .no-scrollbar.carousel-250::-webkit-scrollbar, .no-scrollbar.carousel-200::-webkit-scrollbar, .no-scrollbar.carousel-150::-webkit-scrollbar {
   display: none;
 }
-
+.carousel::-webkit-scrollbar, .carousel-450::-webkit-scrollbar, .carousel-400::-webkit-scrollbar, .carousel-350::-webkit-scrollbar, .carousel-300::-webkit-scrollbar, .carousel-250::-webkit-scrollbar, .carousel-200::-webkit-scrollbar, .carousel-150::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+.carousel::-webkit-scrollbar-thumb, .carousel-450::-webkit-scrollbar-thumb, .carousel-400::-webkit-scrollbar-thumb, .carousel-350::-webkit-scrollbar-thumb, .carousel-300::-webkit-scrollbar-thumb, .carousel-250::-webkit-scrollbar-thumb, .carousel-200::-webkit-scrollbar-thumb, .carousel-150::-webkit-scrollbar-thumb {
+  border-radius: 2px;
+  margin-top: 0.5rem;
+}
+.carousel::-webkit-scrollbar-track, .carousel-450::-webkit-scrollbar-track, .carousel-400::-webkit-scrollbar-track, .carousel-350::-webkit-scrollbar-track, .carousel-300::-webkit-scrollbar-track, .carousel-250::-webkit-scrollbar-track, .carousel-200::-webkit-scrollbar-track, .carousel-150::-webkit-scrollbar-track {
+  border-radius: 2px;
+  margin-top: 0.5rem;
+}
 .carousel-150 {
   grid-template-columns: repeat(100, calc(150px - 1rem));
 }
@@ -4162,58 +5000,10 @@ img.panel {
   grid-template-columns: repeat(100, calc(450px - 1rem));
 }
 
-/*
-@media screen and (min-width: 600px) and (max-width: 768px) {
-  .s-carousel {
-    display: grid;
-    display: -moz-grid;
-    display: -ms-grid;
-    gap: 1rem;
-    overflow-y: scroll;
-    grid-template-columns: repeat(100, calc(250px - 1rem));
-    -ms-overflow-style: none;
-    !*scrollbar-width: none;*!
-
-    &::-webkit-scrollbar {
-      display: none
-    }
-  }
+.no-shadow {
+  box-shadow: none !important;
 }
 
-@media screen and (min-width: 768px) {
-  .m-carousel {
-    display: grid;
-    display: -moz-grid;
-    display: -ms-grid;
-    gap: 1rem;
-    overflow-y: scroll;
-    grid-template-columns: repeat(100, calc(360px - 1rem));
-    -ms-overflow-style: none;
-    !*scrollbar-width: none;*!
-
-    &::-webkit-scrollbar {
-      display: none
-    }
-  }
-}
-
-@media screen and (min-width: 992px) {
-  .l-carousel {
-    display: grid;
-    display: -moz-grid;
-    display: -ms-grid;
-    gap: 1rem;
-    overflow-y: scroll;
-    grid-template-columns: repeat(100, calc(450px - 1rem));
-    -ms-overflow-style: none;
-    !*scrollbar-width: none;*!
-
-    &::-webkit-scrollbar {
-      display: none
-    }
-  }
-}
-*/
 /* MARGINS */
 .m0 {
   margin: 0 !important;

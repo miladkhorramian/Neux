@@ -1,0 +1,6 @@
+.setBackground (@color) when (lightness(@color) >= 50%) {
+  background: black;
+}
+.setBackground (@color) when (lightness(@color) < 50%) {
+  background: #ccc;
+}

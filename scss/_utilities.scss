@@ -16,8 +16,11 @@
   position: -webkit-sticky;
 }
 
+.static {
+  position: static;
+}
+
 .container {
-  //position: relative;
   width: 100%;
   margin-left: auto;
   margin-right: auto;
@@ -73,33 +76,31 @@
   }
 }
 
+.row::before, .row::after, .row-firm::before, .row-firm::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
 .row {
+  @extend .flex;
   width: 100%;
-  display: flex;
   flex-direction: column;
 }
 
 .row-firm {
   @extend .flex;
   width: 100%;
-  flex-direction: row!important;
+  flex-direction: row !important;
   height: auto;
 
-  div {
+   & > div, & > img {
     margin: .5rem auto;
   }
 }
 
-
-.row::before, .row::after {
-  content: "";
-  display: block;
-  clear: both;
-}
-
 @media (min-width: 992px) {
   .container {
-    /*max-width: 960px;*/
     padding: 0 1.5rem;
   }
   .row {
@@ -109,21 +110,18 @@
 
 @media (min-width: 1200px) {
   .container {
-    //max-width: 1140px;
     padding: 0 10rem;
   }
 }
 
 @media (min-width: 1600px) {
   .container {
-    //max-width: 1500px;
     padding: 0 8rem;
   }
 }
 
 @media (min-width: 2500px) {
   .container {
-    //max-width: 2300px;
     padding: 0 12rem;
   }
 }
@@ -149,8 +147,8 @@
 .one-sixth, .five-sixth,
 .one-seventh, .two-seventh, .three-seventh, .four-seventh, .five-seventh, .six-seventh,
 .one-eighth, .three-eighth, .five-eighth, .seven-eighth {
-  padding: 0 .5rem;
-  margin: auto .5rem;
+  padding: .5rem;
+  margin: .5rem;
 
   img {
     width: 100%;
@@ -158,11 +156,13 @@
   }
 }
 
+/*
 .s-col-1, .s-col-2, .s-col-3, .s-col-4, .s-col-5, .s-col-6, .s-col-7, .s-col-8, .s-col-9, .s-col-10, .s-col-11, .s-col-12,
 .m-col-1, .m-col-2, .m-col-3, .m-col-4, .m-col-5, .m-col-6, .m-col-7, .m-col-8, .m-col-9, .m-col-10, .m-col-11, .m-col-12,
 .l-col-1, .l-col-2, .l-col-3, .l-col-4, .l-col-5, .l-col-6, .l-col-7, .l-col-8, .l-col-9, .l-col-10, .l-col-11, .l-col-12 {
   width: 100%;
 }
+*/
 
 /*@media only screen and (min-width:601px){
   .cc-col-m1{width:8.3333%} .cc-col-m2{width:16.6666%} .cc-col-m3{width:25%} .cc-col-m4{width:33.3333%} .cc-col-m5{width:41.6666%} .cc-col-m6{width:50%} .cc-col-m7{width:58.3333%} .cc-col-m8{width:66.6666%} .cc-col-m9{width:75%} .cc-col-m10{width:83.3333%} .cc-col-m11{width:91.6666%} .cc-col-m12{width:100%}
@@ -182,83 +182,31 @@
   width: 100%;
 }
 
+// Col Classes on 768+ screens
 @media screen and (min-width: 768px) {
-  .col-1, .col-2, .col-3 {
-    width: 25%;
-  }
-  /*.col-4, .col-5, .col-6, .col-7, .col-8 {
-    width: 50%;
-  }*/
+  .col-1 {width: 7.333333%}
 
-  .col-4, .col-5 {
-    width: 35%;
-  }
+  .col-2 {width: 15.666666%}
 
-  .col-6 {
-    width: 50%;
-  }
+  .col-3 {width: 25.000000%}
 
-  .col-7, .col-8 {
-    width: 65%;
-  }
+  .col-4 {width: 32.333333%}
 
-  .col-9, .col-10, .col-11 {
-    width: 75%;
-  }
-  .col-12 {
-    width: 100%;
-  }
-}
+  .col-5 {width: 40.666666%}
 
-// Col Classes on 992+ screens
-@media screen and (min-width: 992px) {
-  .col-1 {
-    width: 7.333333%
-  }
+  .col-6 {width: 49.000000%}
 
-  .col-2 {
-    width: 15.666666%
-  }
+  .col-7 {width: 57.333333%}
 
-  .col-3 {
-    width: 25.000000%
-  }
+  .col-8 {width: 65.666666%}
 
-  .col-4 {
-    width: 32.333333%
-  }
+  .col-9 {width: 74.000000%}
 
-  .col-5 {
-    width: 40.666666%
-  }
+  .col-10 {width: 82.333333%}
 
-  .col-6 {
-    width: 49.000000%
-  }
+  .col-11 {width: 90.666666%}
 
-  .col-7 {
-    width: 57.333333%
-  }
-
-  .col-8 {
-    width: 65.666666%
-  }
-
-  .col-9 {
-    width: 74.000000%
-  }
-
-  .col-10 {
-    width: 82.333333%
-  }
-
-  .col-11 {
-    width: 90.666666%
-  }
-
-  .col-12 {
-    width: 99.000000%
-  }
+  .col-12 {width: 99.000000%}
 }
 
 .half {
@@ -266,11 +214,11 @@
 }
 
 .one-third {
-  width: 34.0000%;
+  width: 33.333333%;
 }
 
 .two-third {
-  width: 66.000000%;
+  width: 66.666666%;
 }
 
 .one-fourth {
@@ -298,7 +246,7 @@
 }
 
 .one-sixth {
-  width: 16.666667%;
+  width: 16.666666%;
 }
 
 .five-sixth {
@@ -347,6 +295,53 @@
 
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
+  .s-col-1 {
+    width: 7.333333% !important;
+  }
+
+  .s-col-2 {
+    width: 15.666666% !important;
+  }
+
+  .s-col-3 {
+    width: 25.000000% !important;
+  }
+
+  .s-col-4 {
+    width: 32.333333% !important;
+  }
+
+  .s-col-5 {
+    width: 40.666666% !important;
+  }
+
+  .s-col-6 {
+    width: 49.000000% !important;
+  }
+
+  .s-col-7 {
+    width: 57.333333% !important;
+  }
+
+  .s-col-8 {
+    width: 65.666666% !important;
+  }
+
+  .s-col-9 {
+    width: 74.000000% !important;
+  }
+
+  .s-col-10 {
+    width: 82.333333% !important;
+  }
+
+  .s-col-11 {
+    width: 90.666666% !important;
+  }
+
+  .s-col-12 {
+    width: 99.000000% !important;
+  }
 }
 
 /* Portrait tablets and large phones, etc */
@@ -504,10 +499,53 @@
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
-}
+  .l-col-1 {
+    width: 7.333333%
+  }
 
-@media (min-width: 768px) {
+  .l-col-2 {
+    width: 15.666666%
+  }
 
+  .l-col-3 {
+    width: 25.000000%
+  }
+
+  .l-col-4 {
+    width: 32.333333%
+  }
+
+  .l-col-5 {
+    width: 40.666666%
+  }
+
+  .l-col-6 {
+    width: 49.000000%
+  }
+
+  .l-col-7 {
+    width: 57.333333%
+  }
+
+  .l-col-8 {
+    width: 65.666666%
+  }
+
+  .l-col-9 {
+    width: 74.000000%
+  }
+
+  .l-col-10 {
+    width: 82.333333%
+  }
+
+  .l-col-11 {
+    width: 90.666666%
+  }
+
+  .l-col-12 {
+    width: 99.000000%
+  }
 }
 
 
@@ -656,15 +694,19 @@
   &1 {
     border-width: 1px;
   }
+
   &2 {
     border-width: 2px;
   }
+
   &3 {
     border-width: 3px;
   }
+
   &4 {
     border-width: 4px;
   }
+
   &5 {
     border-width: 5px;
   }
@@ -673,15 +715,19 @@
   &t1 {
     border-top-width: 1px;
   }
+
   &t2 {
     border-top-width: 2px;
   }
+
   &t3 {
     border-top-width: 3px;
   }
+
   &t4 {
     border-top-width: 4px;
   }
+
   &t5 {
     border-top-width: 5px;
   }
@@ -690,15 +736,19 @@
   &b1 {
     border-bottom-width: 1px;
   }
+
   &b2 {
     border-bottom-width: 2px;
   }
+
   &b3 {
     border-bottom-width: 3px;
   }
+
   &b4 {
     border-bottom-width: 4px;
   }
+
   &b5 {
     border-bottom-width: 5px;
   }
@@ -707,15 +757,19 @@
   &l1 {
     border-left-width: 1px;
   }
+
   &l2 {
     border-left-width: 2px;
   }
+
   &l3 {
     border-left-width: 3px;
   }
+
   &l4 {
     border-left-width: 4px;
   }
+
   &l5 {
     border-left-width: 5px;
   }
@@ -724,15 +778,19 @@
   &r1 {
     border-right-width: 1px;
   }
+
   &r2 {
     border-right-width: 2px;
   }
+
   &r3 {
     border-right-width: 3px;
   }
+
   &r4 {
     border-right-width: 4px;
   }
+
   &r5 {
     border-right-width: 5px;
   }

@@ -42,8 +42,33 @@
   -webkit-align-self: $value;
 }
 
-@mixin flexDirection($value) {
-  flex-direction: $value;
-  -webkit-flex-direction: $value;
-  -ms-flex-direction: $value;
+@mixin placeContent ($align, $justify) {
+  place-content: $align $justify;
+  @include alignContent($align);
+  @include justifyContent($justify);
+}
+
+@mixin placeItems ($align, $justify) {
+  place-items: $align $justify;
+  @include alignItems($align);
+  justify-items: $justify;
+}
+
+@mixin carousel($backgroundColor) {
+  .carousel {
+    scrollbar-color: setScrollbarThumbColor($backgroundColor) setScrollbarTrackColor(($backgroundColor));
+    scrollbar-width: thin;
+
+    &::-webkit-scrollbar-thumb {
+      background: setScrollbarThumbColor($backgroundColor);
+    }
+
+    &::-webkit-scrollbar-track {
+      background: setScrollbarTrackColor(($backgroundColor));
+    }
+
+    &::-webkit-scrollbar-thumb:hover {
+      background: setScrollbarThumbColorHover($backgroundColor);
+    }
+  }
 }

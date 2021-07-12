@@ -442,6 +442,7 @@ The carousel or merry go around effect lets you to display the content in a slid
 
 `.carousel-450`: Each column is set to `450px` width.
 
+Also, `.no-scrollbar` will hide the horizontal scrollbar off of the carousel element.
 
 #### Shout outs
 

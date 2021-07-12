@@ -6,6 +6,18 @@
 @import "utilities";
 @import "pallette";
 
+.input {
+  @extend input;
+}
+
+.button {
+  @extend button;
+}
+
+.textarea {
+  @extend textarea;
+}
+
 // Convex and Concave
 .bg-white {
   .concave, &.concave, .convex, &.convex {
@@ -465,9 +477,11 @@
   }
 }
 
-// Placeholders, Panel (inheritance), Shadows, Card (inheritance)
+// Placeholders, Carousel Scrollbars, Panel (inheritance), Shadows, Card (inheritance)
 .bg-white {
   @include placeholder(white);
+  @include carousel(white);
+
 
   input:disabled::placeholder, textarea:disabled::placeholder, textarea:disabled::placeholder {
     text-decoration: line-through;
@@ -509,6 +523,8 @@
 
 .bg-neu-dark {
   @include placeholder($neu-dark);
+  @include carousel($neu-dark);
+
 
   input:disabled::placeholder, textarea:disabled::placeholder {
     text-decoration: line-through;
@@ -550,6 +566,8 @@
 
 .bg-neu-dark-gray {
   @include placeholder($neu-dark-gray);
+  @include carousel($neu-dark-gray);
+
 
   input:disabled::placeholder, textarea:disabled::placeholder {
     text-decoration: line-through;
@@ -591,6 +609,8 @@
 
 .bg-neu-gray {
   @include placeholder($neu-gray);
+  @include carousel($neu-gray);
+
 
   input:disabled::placeholder, textarea:disabled::placeholder {
     text-decoration: line-through;
@@ -632,6 +652,8 @@
 
 .bg-neu-medium-gray {
   @include placeholder($neu-medium-gray);
+  @include carousel($neu-medium-gray);
+
 
   input:disabled::placeholder, textarea:disabled::placeholder {
     text-decoration: line-through;
@@ -673,6 +695,8 @@
 
 .bg-neu-light-gray {
   @include placeholder($neu-light-gray);
+  @include carousel($neu-light-gray);
+
 
   input:disabled::placeholder, textarea:disabled::placeholder {
     text-decoration: line-through;
@@ -714,6 +738,8 @@
 
 .bg-neu-error {
   @include placeholder($neu-error);
+  @include carousel($neu-error);
+
 
   input:disabled::placeholder, textarea:disabled::placeholder {
     text-decoration: line-through;
@@ -756,6 +782,8 @@
 
 .bg-neu-success {
   @include placeholder($neu-success);
+  @include carousel($neu-success);
+
 
   input:disabled::placeholder, textarea:disabled::placeholder {
     text-decoration: line-through;
@@ -798,6 +826,8 @@
 
 .bg-neu-warning {
   @include placeholder($neu-warning);
+  @include carousel($neu-warning);
+
 
   input:disabled::placeholder, textarea:disabled::placeholder {
     text-decoration: line-through;
@@ -840,6 +870,8 @@
 
 .bg-neu-info {
   @include placeholder($neu-info);
+  @include carousel($neu-info);
+
 
   input:disabled::placeholder, textarea:disabled::placeholder {
     text-decoration: line-through;
@@ -882,6 +914,8 @@
 
 .bg-neu-note {
   @include placeholder($neu-note);
+  @include carousel($neu-note);
+
 
   input:disabled::placeholder, textarea:disabled::placeholder {
     text-decoration: line-through;
@@ -923,6 +957,8 @@
 
 .bg-neu-fresh {
   @include placeholder($neu-fresh);
+  @include carousel($neu-fresh);
+
 
   input:disabled::placeholder, textarea:disabled::placeholder {
     text-decoration: line-through;
@@ -964,6 +1000,8 @@
 
 .bg-neu-light {
   @include placeholder($neu-light);
+  @include carousel($neu-light);
+
 
   input:disabled::placeholder, textarea:disabled::placeholder {
     text-decoration: line-through;
@@ -1006,6 +1044,8 @@
 
 .bg-red {
   @include placeholder($red);
+  @include carousel($red);
+
 
   input:disabled::placeholder, textarea:disabled::placeholder {
     text-decoration: line-through;
@@ -1048,6 +1088,8 @@
 
 .bg-pink {
   @include placeholder($pink);
+  @include carousel($pink);
+
 
   input:disabled::placeholder, textarea:disabled::placeholder {
     text-decoration: line-through;
@@ -1090,6 +1132,8 @@
 
 .bg-purple {
   @include placeholder($purple);
+  @include carousel($purple);
+
 
   input:disabled::placeholder, textarea:disabled::placeholder {
     text-decoration: line-through;
@@ -1131,6 +1175,8 @@
 
 .bg-deep-purple {
   @include placeholder($deep-purple);
+  @include carousel($deep-purple);
+
 
   input:disabled::placeholder, textarea:disabled::placeholder {
     text-decoration: line-through;
@@ -1172,6 +1218,8 @@
 
 .bg-indigo {
   @include placeholder($indigo);
+  @include carousel($indigo);
+
 
   input:disabled::placeholder, textarea:disabled::placeholder {
     text-decoration: line-through;
@@ -1213,6 +1261,8 @@
 
 .bg-blue {
   @include placeholder($blue);
+  @include carousel($blue);
+
 
   input:disabled::placeholder, textarea:disabled::placeholder {
     text-decoration: line-through;
@@ -1254,6 +1304,8 @@
 
 .bg-light-blue {
   @include placeholder($light-blue);
+  @include carousel($light-blue);
+
 
   input:disabled::placeholder, textarea:disabled::placeholder {
     text-decoration: line-through;
@@ -1296,6 +1348,8 @@
 
 .bg-cyan {
   @include placeholder($cyan);
+  @include carousel($cyan);
+
 
   input:disabled::placeholder, textarea:disabled::placeholder {
     text-decoration: line-through;
@@ -1338,6 +1392,8 @@
 
 .bg-teal {
   @include placeholder($teal);
+  @include carousel($teal);
+
 
   input:disabled::placeholder, textarea:disabled::placeholder {
     text-decoration: line-through;
@@ -1379,6 +1435,8 @@
 
 .bg-green {
   @include placeholder($green);
+  @include carousel($green);
+
 
   input:disabled::placeholder, textarea:disabled::placeholder {
     text-decoration: line-through;
@@ -1420,6 +1478,8 @@
 
 .bg-light-green {
   @include placeholder($light-green);
+  @include carousel($light-green);
+
 
   input:disabled::placeholder, textarea:disabled::placeholder {
     text-decoration: line-through;
@@ -1461,6 +1521,8 @@
 
 .bg-lime {
   @include placeholder($lime);
+  @include carousel($lime);
+
 
   input:disabled::placeholder, textarea:disabled::placeholder {
     text-decoration: line-through;
@@ -1502,6 +1564,8 @@
 
 .bg-yellow {
   @include placeholder($yellow);
+  @include carousel($yellow);
+
 
   input:disabled::placeholder, textarea:disabled::placeholder {
     text-decoration: line-through;
@@ -1543,6 +1607,8 @@
 
 .bg-amber {
   @include placeholder($amber);
+  @include carousel($amber);
+
 
   input:disabled::placeholder, textarea:disabled::placeholder {
     text-decoration: line-through;
@@ -1584,6 +1650,8 @@
 
 .bg-orange {
   @include placeholder($orange);
+  @include carousel($orange);
+
 
   input:disabled::placeholder, textarea:disabled::placeholder {
     text-decoration: line-through;
@@ -1625,6 +1693,8 @@
 
 .bg-deep-orange {
   @include placeholder($deep-orange);
+  @include carousel($deep-orange);
+
 
   input:disabled::placeholder, textarea:disabled::placeholder {
     text-decoration: line-through;
@@ -1666,6 +1736,8 @@
 
 .bg-brown {
   @include placeholder($brown);
+  @include carousel($brown);
+
 
   input:disabled::placeholder, textarea:disabled::placeholder {
     text-decoration: line-through;
@@ -1707,6 +1779,8 @@
 
 .bg-gray {
   @include placeholder($gray);
+  @include carousel($gray);
+
 
   input:disabled::placeholder, textarea:disabled::placeholder {
     text-decoration: line-through;
@@ -1748,6 +1822,8 @@
 
 .bg-blue-gray {
   @include placeholder($blue-gray);
+  @include carousel($blue-gray);
+
 
   input:disabled::placeholder, textarea:disabled::placeholder {
     text-decoration: line-through;
@@ -1788,12 +1864,6 @@
 }
 
 // Grid view classes for mobile devices
-.grid-columns-2, .grid-columns-3, .grid-columns-4, .grid-columns-5, .grid-columns-6, .grid-columns-7, .grid-columns-8 {
-  @extend .grid;
-  @include gridColumns(1);
-}
-
-
 .grid {
   img {
     width: 100%;
@@ -1801,12 +1871,16 @@
   }
 }
 
+.grid-columns-2, .grid-columns-3, .grid-columns-4, .grid-columns-5, .grid-columns-6, .grid-columns-7, .grid-columns-8 {
+  @extend .grid;
+  @include gridColumns(1);
+}
+
 @media only screen and (min-width: 768px) {
   .grid-columns-2, .grid-columns-3, .grid-columns-4, .grid-columns-5, .grid-columns-6, .grid-columns-7, .grid-columns-8 {
     @include gridColumns(2);
   }
 }
-
 
 // Grid view classes for 992+ px screens
 @media only screen and (min-width: 992px) {
@@ -1998,7 +2072,7 @@
     text-overflow: ellipsis;
   }
 
-  button, .button, .input, input {
+  button, .button, .input, input, .textarea, textarea {
     margin: 1rem 1rem;
   }
 
@@ -2180,6 +2254,7 @@
   font-size: 45px
 }
 
+// Nav Tag
 nav, .nav {
   @extend .flex;
   @extend .row;
@@ -2210,6 +2285,7 @@ nav, .nav {
   @include alignItems(stretch);
 }
 
+// Flex Direction
 .flex-direction {
   &-row {
     @include flexDirection(row);
@@ -2228,6 +2304,7 @@ nav, .nav {
   }
 }
 
+// Grid and Flex Alignment Options
 .justify-content {
   &-center {
     @include justifyContent(center)
@@ -2258,15 +2335,19 @@ nav, .nav {
   &-flex-start {
     @include alignItems(flex-start)
   }
+
   &-flex-end {
     @include alignItems(flex-end)
   }
+
   &-center {
     @include alignItems(center)
   }
+
   &-stretch {
     @include alignItems(stretch)
   }
+
   &-baseline {
     @include alignItems(baseline)
   }
@@ -2276,18 +2357,23 @@ nav, .nav {
   &-flex-start {
     @include alignContent(flex-start)
   }
+
   &-flex-end {
     @include alignContent(flex-end)
   }
+
   &-center {
     @include alignContent(center)
   }
+
   &-stretch {
     @include alignContent(stretch)
   }
+
   &-space-between {
     @include alignContent(space-between)
   }
+
   &-space-around {
     @include alignContent(space-around)
   }
@@ -2337,12 +2423,15 @@ nav, .nav {
   &-center {
     justify-items: center;
   }
+
   &-start {
     justify-items: start;
   }
+
   &-end {
     justify-items: end;
   }
+
   &-stretch {
     justify-items: stretch;
   }
@@ -2350,17 +2439,231 @@ nav, .nav {
 
 .place-items {
   &-center {
-    place-items: center;
-    @include alignItems(center);
-    @include justifyContent(center);
+    @include placeItems(center, center);
+
+    &-start {
+      @include placeItems(center, start);
+
+    }
+
+    &-end {
+      @include placeItems(center, end);
+
+    }
+
+    &-stretch {
+      @include placeItems(center, stretch);
+
+    }
+  }
+
+  &-stretch {
+    @include placeItems(stretch, stretch);
+
+    &-center {
+      @include placeItems(center, center);
+
+    }
+
+    &-start {
+      @include placeItems(center, start);
+
+    }
+
+    &-end {
+      @include placeItems(center, end);
+
+    }
+  }
+
+  &-baseline {
+    &-center {
+      @include placeItems(baseline, center);
+
+    }
+
+    &-start {
+      @include placeItems(baseline, start);
+
+    }
+
+    &-end {
+      @include placeItems(baseline, end);
+
+    }
+
+    &-stretch {
+      @include placeItems(baseline, stretch);
+
+    }
+  }
+
+  &-flex-start {
+    &-center {
+      @include placeItems(flex-start, center);
+
+    }
+
+    &-start {
+      @include placeItems(flex-start, start);
+
+    }
+
+    &-end {
+      @include placeItems(flex-start, end);
+
+    }
+
+    &-stretch {
+      @include placeItems(flex-start, stretch);
+
+    }
+  }
+
+  &-flex-end {
+    &-center {
+      @include placeItems(flex-end, center);
+
+    }
+
+    &-start {
+      @include placeItems(flex-end, start);
+
+    }
+
+    &-end {
+      @include placeItems(flex-end, end);
+
+    }
+
+    &-stretch {
+      @include placeItems(flex-end, stretch);
+
+    }
   }
 }
 
 .place-content {
   &-center {
-    place-content: center;
-    @include justifyContent(center);
-    @include alignContent(center);
+    @include placeContent(center, center);
+
+    &-flex-start {
+      @include placeContent(center, flex-start);
+    }
+
+    &-flex-end {
+      @include placeContent(center, flex-end);
+    }
+
+    &-space-between {
+      @include placeContent(center, space-between);
+    }
+
+    &-space-around {
+      @include placeContent(center, space-around);
+    }
+
+    &-space-evenly {
+      @include placeContent(center, space-evenly);
+    }
+  }
+
+  &-flex-start {
+    @include placeContent(flex-start, flex-start);
+
+    &-center {
+      @include placeContent(flex-start, center);
+    }
+
+    &-flex-end {
+      @include placeContent(flex-start, flex-end);
+    }
+
+    &-space-between {
+      @include placeContent(flex-start, space-between);
+    }
+
+    &-space-around {
+      @include placeContent(flex-start, space-around);
+    }
+
+    &-space-evenly {
+      @include placeContent(flex-start, space-evenly);
+    }
+  }
+
+  &-flex-end {
+    @include placeContent(flex-end, flex-end);
+
+    &-flex-start {
+      @include placeContent(flex-end, flex-start);
+    }
+
+    &-center {
+      @include placeContent(flex-end, center);
+    }
+
+    &-space-between {
+      @include placeContent(flex-end, space-between);
+    }
+
+    &-space-around {
+      @include placeContent(flex-end, space-around);
+    }
+
+    &-space-evenly {
+      @include placeContent(flex-end, space-evenly);
+    }
+  }
+
+  &-stretch {
+    &-center {
+      @include placeContent(stretch, center);
+    }
+
+    &-flex-start {
+      @include placeContent(stretch, flex-start);
+    }
+
+    &-flex-end {
+      @include placeContent(stretch, flex-end);
+    }
+
+    &-space-between {
+      @include placeContent(stretch, space-between);
+    }
+
+    &-space-around {
+      @include placeContent(stretch, space-around);
+    }
+
+    &-space-evenly {
+      @include placeContent(stretch, space-evenly);
+    }
+  }
+
+  &-space-between {
+    @include placeContent(space-between, space-between);
+
+    &-center {
+      @include placeContent(space-between, center);
+    }
+
+    &-flex-start {
+      @include placeContent(space-between, flex-start);
+    }
+
+    &-flex-end {
+      @include placeContent(space-between, flex-end);
+    }
+
+    &-space-around {
+      @include placeContent(space-between, space-around);
+    }
+
+    &-space-evenly {
+      @include placeContent(space-between, space-evenly);
+    }
   }
 }
 
@@ -2370,7 +2673,7 @@ img.panel {
   box-shadow: inherit;
 }
 
-
+// Carousels
 .carousel {
   /*&::before, &::after {
     content: "";
@@ -2379,12 +2682,39 @@ img.panel {
   @extend .grid;
   grid-template-columns: repeat(100, calc(320px - 1rem));
   //grid-template-columns: .01rem repeat(100, calc(320px - 1rem)) .01rem;
-  -ms-overflow-style: none;
-  scrollbar-width: none;
-  overflow-y: scroll;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  padding-bottom: 1rem;
+
+  &.no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  &.no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
 
   &::-webkit-scrollbar {
-    display: none
+    //display: none
+    width: 10px;
+    height: 10px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    //background: #444;
+    border-radius: 2px;
+    margin-top: .5rem;
+  }
+
+  &::-webkit-scrollbar-track {
+    //background: #222;
+    border-radius: 2px;
+    margin-top: .5rem;
+  }
+
+  &::-webkit-scrollbar-thumb:hover {
+    //background: #ccc;
   }
 }
 
@@ -2423,57 +2753,9 @@ img.panel {
   grid-template-columns: repeat(100, calc(450px - 1rem));
 }
 
-/*
-@media screen and (min-width: 600px) and (max-width: 768px) {
-  .s-carousel {
-    display: grid;
-    display: -moz-grid;
-    display: -ms-grid;
-    gap: 1rem;
-    overflow-y: scroll;
-    grid-template-columns: repeat(100, calc(250px - 1rem));
-    -ms-overflow-style: none;
-    !*scrollbar-width: none;*!
-
-    &::-webkit-scrollbar {
-      display: none
-    }
-  }
+// Additional Utility Classes
+.no-shadow {
+  box-shadow: none !important;
 }
-
-@media screen and (min-width: 768px) {
-  .m-carousel {
-    display: grid;
-    display: -moz-grid;
-    display: -ms-grid;
-    gap: 1rem;
-    overflow-y: scroll;
-    grid-template-columns: repeat(100, calc(360px - 1rem));
-    -ms-overflow-style: none;
-    !*scrollbar-width: none;*!
-
-    &::-webkit-scrollbar {
-      display: none
-    }
-  }
-}
-
-@media screen and (min-width: 992px) {
-  .l-carousel {
-    display: grid;
-    display: -moz-grid;
-    display: -ms-grid;
-    gap: 1rem;
-    overflow-y: scroll;
-    grid-template-columns: repeat(100, calc(450px - 1rem));
-    -ms-overflow-style: none;
-    !*scrollbar-width: none;*!
-
-    &::-webkit-scrollbar {
-      display: none
-    }
-  }
-}
-*/
 
 @import "adjusters";
